@@ -624,6 +624,18 @@
       "updated_at": "2026-07-01T13:30:00+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4638012891389954"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4639306893419532": {
+      "area_m2": "62.4",
+      "community": "和顺欣苑(东区)",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 81,
+      "rent": 4000,
+      "title": "和顺新苑带固定车位的精装电梯一房押一付一费随时可看",
+      "updated_at": "2026-07-01T13:32:49+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4639306893419532"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4639577090022409": {
       "area_m2": "39",
       "community": "沪南路2500号楼",
@@ -961,6 +973,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:32:26+00:00",
+  "updated_at": "2026-07-01T13:32:49+00:00",
   "version": 1
 }
