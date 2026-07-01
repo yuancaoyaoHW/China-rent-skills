@@ -948,6 +948,18 @@
       "updated_at": "2026-07-01T13:22:13+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4642262079546373"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4642537755567118": {
+      "area_m2": "39.7",
+      "community": "莲安东路79弄小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 102,
+      "rent": 4000,
+      "title": "一房 楼梯二楼 看房有钥匙 可办居住证 宠物友好",
+      "updated_at": "2026-07-01T13:40:37+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4642537755567118"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643251537290241": {
       "area_m2": "40",
       "community": "公元新村",
@@ -1213,6 +1225,6 @@
       "url": "https://sh.zu.ke.com/zufang/SH2179860674669182976.html"
     }
   },
-  "updated_at": "2026-07-01T13:40:12+00:00",
+  "updated_at": "2026-07-01T13:40:37+00:00",
   "version": 1
 }
