@@ -180,6 +180,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4639820402958336"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640808596267017": {
+      "area_m2": "29.6",
+      "community": "港城中环汇领寓",
+      "layout": "1室0厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 23,
+      "rent": 2670,
+      "title": "临张江近御桥靠商飞 国企保租房无费",
+      "updated_at": "2026-07-01T13:22:21+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640808596267017"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4641978409165829": {
       "area_m2": "35",
       "community": "川周公路2788弄小区",
@@ -265,6 +277,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:22:13+00:00",
+  "updated_at": "2026-07-01T13:22:21+00:00",
   "version": 1
 }
