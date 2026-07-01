@@ -348,6 +348,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4639820402958336"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640478004125703": {
+      "area_m2": "38",
+      "community": "沪南路2500号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 47,
+      "rent": 2800,
+      "title": "御桥近地铁11号线18号线一室一厅一卫一厨38平米全明户型",
+      "updated_at": "2026-07-01T13:25:51+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640478004125703"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4640545125571596": {
       "area_m2": "29",
       "community": "芳华路63号小区",
@@ -553,6 +565,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:25:46+00:00",
+  "updated_at": "2026-07-01T13:25:51+00:00",
   "version": 1
 }
