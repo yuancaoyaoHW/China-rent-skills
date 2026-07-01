@@ -103,12 +103,41 @@ class RentalPreferenceServiceTests(unittest.TestCase):
 
         def runner(args, cwd):
             calls.append(args)
+            if args[:3] == ["git", "branch", "--show-current"]:
+                return subprocess.CompletedProcess(args, 0, stdout="main\n", stderr="")
+            if args[:3] == ["git", "rev-list", "--count"]:
+                return subprocess.CompletedProcess(args, 0, stdout="0\n", stderr="")
             return subprocess.CompletedProcess(args, 0, stdout="", stderr="")
 
         result = service.git_commit_and_push(Path("repo"), "Update rental preferences", runner=runner)
 
         self.assertEqual(result["status"], "unchanged")
-        self.assertEqual(calls, [["git", "status", "--porcelain", "--", "rental_preferences.json"]])
+        self.assertEqual(
+            calls,
+            [
+                ["git", "status", "--porcelain", "--", "rental_preferences.json"],
+                ["git", "branch", "--show-current"],
+                ["git", "rev-list", "--count", "origin/main..HEAD"],
+            ],
+        )
+
+    def test_git_commit_and_push_pushes_when_file_unchanged_but_branch_is_ahead(self):
+        calls = []
+
+        def runner(args, cwd):
+            calls.append(args)
+            if args[:3] == ["git", "status", "--porcelain"]:
+                return subprocess.CompletedProcess(args, 0, stdout="", stderr="")
+            if args[:3] == ["git", "branch", "--show-current"]:
+                return subprocess.CompletedProcess(args, 0, stdout="main\n", stderr="")
+            if args[:3] == ["git", "rev-list", "--count"]:
+                return subprocess.CompletedProcess(args, 0, stdout="3\n", stderr="")
+            return subprocess.CompletedProcess(args, 0, stdout="", stderr="")
+
+        result = service.git_commit_and_push(Path("repo"), "Update rental preferences", runner=runner)
+
+        self.assertEqual(result["status"], "pushed")
+        self.assertIn(["git", "push", "origin", "main"], calls)
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@
 import argparse
 import json
 import subprocess
+import threading
 from datetime import datetime, timezone
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -11,6 +12,7 @@ from typing import Callable
 
 PREFERENCES_FILE = "rental_preferences.json"
 VALID_PREFS = {"", "like", "dislike"}
+SYNC_LOCK = threading.Lock()
 
 
 class BadRequest(ValueError):
@@ -134,6 +136,39 @@ def require_success(result: subprocess.CompletedProcess, action: str) -> None:
         raise RuntimeError(f"{action} failed: {detail}")
 
 
+def current_branch(repo_root: Path, runner: Callable[[list[str], Path], subprocess.CompletedProcess]) -> str:
+    branch = runner(["git", "branch", "--show-current"], repo_root)
+    require_success(branch, "git branch")
+    branch_name = branch.stdout.strip()
+    if not branch_name:
+        raise RuntimeError("Cannot push from a detached HEAD")
+    return branch_name
+
+
+def branch_ahead_count(
+    repo_root: Path,
+    branch_name: str,
+    runner: Callable[[list[str], Path], subprocess.CompletedProcess],
+) -> int:
+    result = runner(["git", "rev-list", "--count", f"origin/{branch_name}..HEAD"], repo_root)
+    if result.returncode != 0:
+        return 0
+    try:
+        return int(result.stdout.strip() or "0")
+    except ValueError:
+        return 0
+
+
+def push_current_branch(
+    repo_root: Path,
+    runner: Callable[[list[str], Path], subprocess.CompletedProcess],
+) -> dict:
+    branch_name = current_branch(repo_root, runner)
+    push_result = runner(["git", "push", "origin", branch_name], repo_root)
+    require_success(push_result, "git push")
+    return {"status": "pushed", "pushed": True, "branch": branch_name}
+
+
 def git_commit_and_push(
     repo_root: Path,
     message: str,
@@ -143,6 +178,12 @@ def git_commit_and_push(
     status = runner(["git", "status", "--porcelain", "--", PREFERENCES_FILE], repo_root)
     require_success(status, "git status")
     if not status.stdout.strip():
+        if push:
+            branch_name = current_branch(repo_root, runner)
+            if branch_ahead_count(repo_root, branch_name, runner) > 0:
+                push_result = runner(["git", "push", "origin", branch_name], repo_root)
+                require_success(push_result, "git push")
+                return {"status": "pushed", "pushed": True, "branch": branch_name}
         return {"status": "unchanged", "pushed": False}
 
     add = runner(["git", "add", PREFERENCES_FILE], repo_root)
@@ -153,15 +194,7 @@ def git_commit_and_push(
     if not push:
         return {"status": "committed", "pushed": False}
 
-    branch = runner(["git", "branch", "--show-current"], repo_root)
-    require_success(branch, "git branch")
-    branch_name = branch.stdout.strip()
-    if not branch_name:
-        raise RuntimeError("Cannot push from a detached HEAD")
-
-    push_result = runner(["git", "push", "origin", branch_name], repo_root)
-    require_success(push_result, "git push")
-    return {"status": "pushed", "pushed": True, "branch": branch_name}
+    return push_current_branch(repo_root, runner)
 
 
 class RentalPreferenceHandler(SimpleHTTPRequestHandler):
@@ -191,15 +224,16 @@ class RentalPreferenceHandler(SimpleHTTPRequestHandler):
             return
         try:
             payload = self.read_json_body()
-            if path == "/api/preferences/bulk":
-                saved = save_preferences_bulk(self.repo_root, payload)
-            else:
-                saved = save_preference(self.repo_root, payload)
-            git_result = git_commit_and_push(
-                self.repo_root,
-                "Update rental preferences",
-                push=self.auto_push,
-            )
+            with SYNC_LOCK:
+                if path == "/api/preferences/bulk":
+                    saved = save_preferences_bulk(self.repo_root, payload)
+                else:
+                    saved = save_preference(self.repo_root, payload)
+                git_result = git_commit_and_push(
+                    self.repo_root,
+                    "Update rental preferences",
+                    push=self.auto_push,
+                )
             self.send_json({"ok": True, "save": saved, "git": git_result})
         except BadRequest as exc:
             self.send_json({"ok": False, "error": str(exc)}, status=HTTPStatus.BAD_REQUEST)
