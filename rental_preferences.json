@@ -240,6 +240,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4629550252682247"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4630563693210632": {
+      "area_m2": "55.5",
+      "community": "白杨小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 54,
+      "rent": 3800,
+      "title": "虽然装修简单但房屋干净整洁而且租金实惠看中还可以谈实图实价",
+      "updated_at": "2026-07-01T13:26:35+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4630563693210632"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4630751525121032": {
       "area_m2": "40",
       "community": "萃宸璟庭",
@@ -637,6 +649,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:26:30+00:00",
+  "updated_at": "2026-07-01T13:26:35+00:00",
   "version": 1
 }
