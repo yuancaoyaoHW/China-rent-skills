@@ -48,6 +48,18 @@
       "updated_at": "2026-07-01T13:23:40+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4535115755400200"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4536301132735501": {
+      "area_m2": "80",
+      "community": "康桥鑫都",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 65,
+      "rent": 3800,
+      "title": "装修好空配 随时好看房 近生态公园 张江 康桥东路 地铁11",
+      "updated_at": "2026-07-01T13:28:15+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4536301132735501"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4544767744828426": {
       "area_m2": "31",
       "community": "港城中环汇领寓",
@@ -769,6 +781,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:28:10+00:00",
+  "updated_at": "2026-07-01T13:28:15+00:00",
   "version": 1
 }
