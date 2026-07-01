@@ -96,6 +96,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4586711030717450"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4588121846440961": {
+      "area_m2": "78.5",
+      "community": "秀康新城达城家园",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 43,
+      "rent": 3800,
+      "title": "新上 电梯南北两房 可长租 可办居住证 看房随时",
+      "updated_at": "2026-07-01T13:25:28+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4588121846440961"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4603902265549834": {
       "area_m2": "45",
       "community": "紫薇路372号楼",
@@ -505,6 +517,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:25:23+00:00",
+  "updated_at": "2026-07-01T13:25:28+00:00",
   "version": 1
 }
