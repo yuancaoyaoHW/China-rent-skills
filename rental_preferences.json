@@ -372,6 +372,18 @@
       "updated_at": "2026-07-01T13:34:27+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4616781071997952"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4618468704789507": {
+      "area_m2": "57.9",
+      "community": "唐丰苑",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 95,
+      "rent": 4000,
+      "title": "新上！实拍 近唐镇地铁2号线 精装一房 拎包入住 随时看房",
+      "updated_at": "2026-07-01T13:35:57+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4618468704789507"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4618535797793800": {
       "area_m2": "37",
       "community": "唐陆公路3898号宿舍楼",
@@ -1129,6 +1141,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:35:51+00:00",
+  "updated_at": "2026-07-01T13:35:57+00:00",
   "version": 1
 }
