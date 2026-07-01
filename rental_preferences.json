@@ -324,6 +324,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4606745891658753"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4616781071997952": {
+      "area_m2": "57.3",
+      "community": "莱阳北小区",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 89,
+      "rent": 3900,
+      "title": "靠近12号线东陆路地铁口 可办停车位 办居住证 随时看房",
+      "updated_at": "2026-07-01T13:34:27+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4616781071997952"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4618535797793800": {
       "area_m2": "37",
       "community": "唐陆公路3898号宿舍楼",
@@ -1057,6 +1069,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:34:14+00:00",
+  "updated_at": "2026-07-01T13:34:27+00:00",
   "version": 1
 }
