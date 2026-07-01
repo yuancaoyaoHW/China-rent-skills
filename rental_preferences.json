@@ -600,6 +600,18 @@
       "updated_at": "2026-07-01T13:24:10+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4640950734216198"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4641840348568577": {
+      "area_m2": "78.4",
+      "community": "康桥月苑(北区)",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 69,
+      "rent": 4000,
+      "title": "（杜绝虚假） 康桥月苑 电梯两房 价格实惠 随时看房",
+      "updated_at": "2026-07-01T13:28:52+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4641840348568577"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4641978409165829": {
       "area_m2": "35",
       "community": "川周公路2788弄小区",
@@ -817,6 +829,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:28:44+00:00",
+  "updated_at": "2026-07-01T13:28:52+00:00",
   "version": 1
 }
