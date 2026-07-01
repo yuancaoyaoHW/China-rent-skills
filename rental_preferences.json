@@ -72,6 +72,18 @@
       "updated_at": "2026-07-01T13:24:42+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4571326658567178"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4579899244307460": {
+      "area_m2": "78.5",
+      "community": "秀康新城达城家园",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 42,
+      "rent": 3800,
+      "title": "商品房电梯南北通大两房 可长租办居住证 崂山旁",
+      "updated_at": "2026-07-01T13:25:23+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4579899244307460"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4586711030717450": {
       "area_m2": "30",
       "community": "港城中环汇领寓",
@@ -493,6 +505,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:25:12+00:00",
+  "updated_at": "2026-07-01T13:25:23+00:00",
   "version": 1
 }
