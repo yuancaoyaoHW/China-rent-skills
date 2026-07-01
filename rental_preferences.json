@@ -60,6 +60,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4603902265549834"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4604379326096387": {
+      "area_m2": "38",
+      "community": "沪南路2420号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 28,
+      "rent": 2500,
+      "title": "18号线 御桥 家电齐全 押一付一 拎包入住",
+      "updated_at": "2026-07-01T13:23:49+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4604379326096387"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4605431038155781": {
       "area_m2": "90.6",
       "community": "汇腾东苑",
@@ -325,6 +337,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:23:44+00:00",
+  "updated_at": "2026-07-01T13:23:49+00:00",
   "version": 1
 }
