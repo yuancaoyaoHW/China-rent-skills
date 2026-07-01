@@ -15,6 +15,7 @@ edge_profile/
 .env
 *.key
 secrets.json
+amap_key.txt
 
 # Temporary collection artifacts (regenerable, large)
 _collect_config.json
@@ -23,6 +24,14 @@ _save_page2.py
 http-server-*.log
 http-server-*.err.log
 rental-pref-service-*.log
+_b64*.txt
+_b64dec.py
+_decode_region.py
+_fetch_regions.py
+_inspect*.py
+_inspect_fang.py
+fang_*_page.html
+fang_jinqiao_parsed.csv
 
 # OS junk
 Thumbs.db

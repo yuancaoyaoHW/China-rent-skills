@@ -89,6 +89,45 @@ python scripts/geocode_visualize.py shortlist.csv --city 上海 --output geocode
 
 If `AMAP_JS_KEY` is not embedded, the generated HTML will ask for a JS API key when opened. Prefer this for shareable artifacts because embedded browser keys are visible in the file.
 
+## Incremental Listings: Data-View Separation (Preview Page)
+
+The `zhangjiang_shortlist_15km_preview.html` page separates data from view: listings, amenities, and build-year notes live in a sibling `zhangjiang_listings_15km.json` file, and the page fetches it at runtime via `fetch('zhangjiang_listings_15km.json', {cache:'no-store'})`. The same `rental_pref_service.py` serves the JSON as a static file — no backend change needed.
+
+**Why this matters:** adding a new batch of listings no longer requires editing HTML or regenerating the page. You append to the JSON and refresh the browser — the map and cards update immediately.
+
+### Adding a batch of incremental listings
+
+```bash
+# 1. Normalize + geocode the new batch (produces CSV/JSON with longitude/latitude)
+python scripts/normalize_listings.py new_batch.csv --output new_batch_normalized.csv --format csv --budget-max 4000
+python scripts/geocode_visualize.py new_batch_normalized.csv --city 上海 --output new_batch_geocoded.csv --skip-geocode  # if coords already present
+
+# 2. Merge into the preview JSON (dedupes by URL; preserves hand-annotated rich fields on existing entries)
+python scripts/append_listings.py new_batch_geocoded.csv --json zhangjiang_listings_15km.json
+
+# 3. Refresh the browser — no service restart needed
+#    http://127.0.0.1:8766/zhangjiang_shortlist_15km_preview.html
+```
+
+`append_listings.py` behaviour:
+- **Existing listing (same URL, case-insensitive):** only fills base fields that are empty in the JSON entry. Never overwrites hand-annotated fields (`amenity_verified`, `nearest_metro`, `nearest_mall`, `buildYears`, `work`, `residential_priority`).
+- **New listing:** inserts with rich fields defaulted to `配套待核验` / `地铁待核验` / `amenity_verified: false`, computes `work` km from `--work-lon`/`--work-lat` (default: 张江昆仑芯 121.606222, 31.180732), assigns the next rank.
+- Re-sorts all listings by score desc and renumbers rank.
+- `--dry-run` prints the plan without writing.
+
+### Hand-annotated rich fields
+
+These fields are NOT produced by `normalize_listings.py` or `geocode_visualize.py` — they come from manual research (POI verification, build-year lookup, amenity confirmation). The merge script preserves them on existing entries and defaults them on new entries for later annotation:
+
+| Field | Source | Default for new |
+|---|---|---|
+| `amenity_verified`, `amenity_status` | manual POI check | `false` / `配套待核验` |
+| `nearest_metro`, `nearest_mall`, `nearest_market` | manual POI check | `地铁待核验` / `商场待核验` / `""` |
+| `residential_priority` | manual judgment | `normal` |
+| `buildYears` (separate JSON object) | manual lookup | key added on demand |
+
+When you annotate a new listing, edit `zhangjiang_listings_15km.json` directly (the `listings` array entry and, for build year, the `buildYears` object keyed by `community`). The page picks up changes on next refresh.
+
 ## Quality Checks
 
 Before finalizing:
