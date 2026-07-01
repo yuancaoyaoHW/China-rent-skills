@@ -540,6 +540,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4637937880293383"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4638012891389954": {
+      "area_m2": "72.5",
+      "community": "康桥月苑(北区)",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 72,
+      "rent": 4000,
+      "title": "新上装修全配位置安静，有钥匙拎包即住，民用水电随时看房",
+      "updated_at": "2026-07-01T13:30:00+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4638012891389954"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4639577090022409": {
       "area_m2": "39",
       "community": "沪南路2500号楼",
@@ -853,6 +865,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:29:34+00:00",
+  "updated_at": "2026-07-01T13:30:00+00:00",
   "version": 1
 }
