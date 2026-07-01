@@ -288,6 +288,18 @@
       "updated_at": "2026-07-01T13:21:27+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4624795680037902"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4625082608477197": {
+      "area_m2": "74.7",
+      "community": "康桥宝邸",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 66,
+      "rent": 3500,
+      "title": "（二千八可租）新上 毛坯两房 我有钥匙 火速约",
+      "updated_at": "2026-07-01T13:28:18+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4625082608477197"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4625198670208012": {
       "area_m2": "41.2",
       "community": "京浦小区",
@@ -781,6 +793,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:28:15+00:00",
+  "updated_at": "2026-07-01T13:28:18+00:00",
   "version": 1
 }
