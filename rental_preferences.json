@@ -180,6 +180,18 @@
       "updated_at": "2026-07-01T13:21:27+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4624795680037902"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4625198670208012": {
+      "area_m2": "41.2",
+      "community": "京浦小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 48,
+      "rent": 3500,
+      "title": "房源采光好，南北通透，业主诚意出",
+      "updated_at": "2026-07-01T13:25:55+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4625198670208012"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4626699735919627": {
       "area_m2": "35",
       "community": "横沔江路86号楼",
@@ -565,6 +577,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:25:51+00:00",
+  "updated_at": "2026-07-01T13:25:55+00:00",
   "version": 1
 }
