@@ -120,6 +120,18 @@
       "updated_at": "2026-07-01T13:25:28+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4588121846440961"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4588391148119050": {
+      "area_m2": "73.7",
+      "community": "昱龙家园(南区)",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 61,
+      "rent": 3580,
+      "title": "昱龙家园，精装修2房，南北通透，近地铁16号线。",
+      "updated_at": "2026-07-01T13:27:44+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4588391148119050"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4588460997993486": {
       "area_m2": "56.8",
       "community": "汤巷馨村(南区)",
@@ -721,6 +733,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:27:41+00:00",
+  "updated_at": "2026-07-01T13:27:44+00:00",
   "version": 1
 }
