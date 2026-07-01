@@ -360,6 +360,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4637937880293383"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4639577090022409": {
+      "area_m2": "39",
+      "community": "沪南路2500号楼",
+      "layout": "1室0厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 51,
+      "rent": 2500,
+      "title": "御桥近地铁精装修 可办居住证压一付一 拎包入住",
+      "updated_at": "2026-07-01T13:26:12+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4639577090022409"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4639820402958336": {
       "area_m2": "39",
       "community": "川周公路2788弄小区",
@@ -601,6 +613,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:26:08+00:00",
+  "updated_at": "2026-07-01T13:26:12+00:00",
   "version": 1
 }
