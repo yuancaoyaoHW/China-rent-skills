@@ -266,6 +266,23 @@ function setSyncStatus(message) {
 function canUsePreferenceApi() {
   return location.protocol === 'http:' || location.protocol === 'https:';
 }
+function applyPreferenceData(data) {
+  Object.keys(data.preferences || {}).forEach(function(url) {
+    var pref = data.preferences[url] && data.preferences[url].pref;
+    if (pref === 'like' || pref === 'dislike') setUserPref(url, pref);
+  });
+}
+function entriesChangedFromServer(entries, serverPreferences) {
+  return entries.filter(function(entry) {
+    var saved = serverPreferences && serverPreferences[entry.url];
+    return !saved || saved.pref !== entry.pref;
+  });
+}
+async function fetchPreferenceJson(path) {
+  var response = await fetch(path, { cache: 'no-store' });
+  if (!response.ok) throw new Error(path + ' HTTP ' + response.status);
+  return response.json();
+}
 async function syncPreference(url, pref) {
   if (!canUsePreferenceApi()) {
     setSyncStatus('已保存在当前浏览器；file:// 模式不能同步到 git，请从本地服务地址打开。');
@@ -325,24 +342,29 @@ function togglePref(url, pref) {
   syncPreference(url, next);
 }
 async function loadServerPreferences() {
+  var localBeforeLoad = preferenceEntries();
   if (!canUsePreferenceApi()) {
     renderList();
+    setSyncStatus('当前不是 http(s) 页面，只显示浏览器本地标记；请通过本地服务打开以读取 git 保存结果。');
     return;
   }
   try {
-    var response = await fetch('/api/preferences');
-    if (!response.ok) throw new Error('HTTP ' + response.status);
-    var data = await response.json();
-    Object.keys(data.preferences || {}).forEach(function(url) {
-      var pref = data.preferences[url] && data.preferences[url].pref;
-      if (pref === 'like' || pref === 'dislike') setUserPref(url, pref);
-    });
+    var data = await fetchPreferenceJson('/api/preferences');
+    var pendingLocal = entriesChangedFromServer(localBeforeLoad, data.preferences || {});
+    applyPreferenceData(data);
     renderList();
-    if (preferenceEntries().length) await syncAllLocalPreferences();
+    if (pendingLocal.length) await postPreferencesBulk(pendingLocal, '正在同步当前浏览器中尚未进入 git 的标记...');
     else setSyncStatus('已读取 rental_preferences.json；之后点击会自动 commit 并 push。');
   } catch (error) {
-    renderList();
-    setSyncStatus('未连接到偏好同步服务；当前只会保存在浏览器：' + error.message);
+    try {
+      var staticData = await fetchPreferenceJson('rental_preferences.json');
+      applyPreferenceData(staticData);
+      renderList();
+      setSyncStatus('已从静态 rental_preferences.json 读取当前 git 保存结果；点击新标记需要启动同步服务。');
+    } catch (fallbackError) {
+      renderList();
+      setSyncStatus('未连接到偏好同步服务，也未能读取静态 rental_preferences.json；当前只会保存在浏览器：' + error.message);
+    }
   }
 }
 function exportPreferences() {
