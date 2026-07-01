@@ -204,6 +204,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4641987504513038"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643255232355332": {
+      "area_m2": "59.6",
+      "community": "汤巷雅苑",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 20,
+      "rent": 3600,
+      "title": "近智元科技 近商务绿洲 双朝南 卫生间干湿分离 直达徐家汇",
+      "updated_at": "2026-07-01T13:21:44+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643255232355332"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4644802221366286": {
       "area_m2": "31",
       "community": "川周公路2788弄小区",
@@ -229,6 +241,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:21:27+00:00",
+  "updated_at": "2026-07-01T13:21:44+00:00",
   "version": 1
 }
