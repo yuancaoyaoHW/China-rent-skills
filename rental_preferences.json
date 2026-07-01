@@ -132,6 +132,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4629550252682247"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4630751525121032": {
+      "area_m2": "40",
+      "community": "萃宸璟庭",
+      "layout": "1室0厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 34,
+      "rent": 2800,
+      "title": "1318莲溪路地铁站萃宸璟庭朝南燃气做饭干湿分离可办车位",
+      "updated_at": "2026-07-01T13:24:21+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4630751525121032"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4634839696647172": {
       "area_m2": "93.5",
       "community": "颐谷南苑",
@@ -397,6 +409,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4638331771019279"
     }
   },
-  "updated_at": "2026-07-01T13:24:18+00:00",
+  "updated_at": "2026-07-01T13:24:21+00:00",
   "version": 1
 }
