@@ -1,0 +1,14 @@
+community,address,build_year,confidence,primary_source,secondary_source,notes
+欧风家园南区,瑞意路399弄,2000-2013年,medium,https://m.ke.com/sh/xiaoqu/5011000014307,https://sh.esf.fang.com/loupan/1210765034.htm,贝壳/链家小区页显示2000-2013年；房天下欧风家园整体页显示2006年
+京浦小区82支弄,沪南路2441弄82支弄,1993-2004年,high,https://sh.lianjia.com/xiaoqu/50000000070154,https://m.58.com/sh/xq/yuanshenzhuyuan-l2f4p4/,链家小区页显示1993-2004年；58/房天下口径多按京浦小区整体显示2001年
+莲溪六村,莲溪路126弄,1994-1997年,high,https://sh.dushiquan.net/xiaoqu/37888/,https://m.ke.com/sh/xiaoqu/5011000014924/,都市圈与贝壳口径一致
+蓝城小区,柳埠路142号,1994年,medium,https://sh.dushiquan.net/xiaoqu/37779/,,原 geocode 风险提示匹配到柳埠小区，联系前需核验小区名和门牌
+园西小区,城南路497弄,1986-1991年,medium,https://sh.dushiquan.net/xiaoqu/35807/,https://sh.esf.fang.com/loupan/1210919246.htm,园西小区口径为1986-1991年；房天下“城南路497弄小区”显示1981年
+桃园新村(川沙),南桥路459弄,1984-2010年,medium,https://m.ke.com/sh/xiaoqu/5011000014666,https://sh.centanet.com/xiaoqu/xq-pebawewrbs/,贝壳小区页显示1984-2010年；中原小区页按桃园新村整体显示1984年
+绿地御桥苑,御山路390弄,2003-2004年,medium,https://sh.lianjia.com/xiaoqu/5011000003236/,https://m.lianjia.com/news/sh/xiaoqu/5011000003236.html,链家显示2003-2004年；链家新闻页写2003年建成，房天下/58也有2002/2003口径
+妙栏小区,妙栏路353弄/401弄,1993-1999年,high,https://sh.dushiquan.net/xiaoqu/36330/,,都市圈小区页含地址和建成年代
+博三小区,博兴路462弄,1994-1998年,high,https://sh.lianjia.com/xiaoqu/5011000010777/,https://mobile.anjuke.com/esf/sh-cm5454/,链家显示1994-1998年；安居客显示竣工年限1994年、1997年
+连波路66弄,芳华路66弄,1994年,high,https://msh.dushiquan.net/xiaoqu/35852/,,都市圈小区页含地址和建成年代
+鹏海西区,五星路231弄/151弄,1937-1997年,medium,https://sh.lianjia.com/xiaoqu/5011000014989/,https://sh.esf.fang.com/loupan/1210765878/strategy.htm,链家显示1937-1997年；房天下按小区概览显示建筑年代/竣工时间1997年
+展想悦廷,祖冲之路2288弄,2007年,low,https://sh.lianjia.com/xiaoqu/5011000005297/,https://m.focus.cn/sh/loupan/12659.html?anchor=xiangqing,链家小区页显示2007年；搜狐焦点新房页显示2013年开盘/交房，且该项目商住/酒店式公寓属性强
+桃园新城中虹佳园东区,瑞浦路287弄,2006年,high,https://m.ke.com/sh/xiaoqu/5011000011531,,贝壳小区页显示建成年代2006年

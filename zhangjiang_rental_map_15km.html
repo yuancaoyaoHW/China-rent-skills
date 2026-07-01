@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上海租房候选地图</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; }
+    #app { display: grid; grid-template-columns: 360px 1fr; height: 100vh; }
+    aside { overflow: auto; border-right: 1px solid #e5e7eb; background: #fafafa; padding: 14px; }
+    #map { min-width: 0; }
+    h1 { font-size: 18px; margin: 0 0 8px; }
+    .hint { font-size: 12px; color: #64748b; margin-bottom: 12px; line-height: 1.45; }
+    .keybox { display: none; margin: 10px 0 14px; padding: 10px; border: 1px solid #f59e0b; background: #fffbeb; border-radius: 8px; }
+    .keybox input { width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #d1d5db; border-radius: 6px; }
+    .item { border: 1px solid #e5e7eb; background: white; border-radius: 8px; padding: 10px; margin-bottom: 10px; cursor: pointer; }
+    .item:hover { border-color: #2563eb; }
+    .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+    .title { font-weight: 700; line-height: 1.25; }
+    .rent { color: #dc2626; font-weight: 700; white-space: nowrap; }
+    .meta, .risk { font-size: 12px; color: #475569; margin-top: 6px; line-height: 1.45; }
+    .risk { color: #b45309; }
+    .badge { display: inline-block; border-radius: 999px; padding: 2px 8px; font-size: 12px; margin-right: 4px; color: white; }
+    .contact { background: #16a34a; }
+    .watch { background: #2563eb; }
+    .skip { background: #64748b; }
+    @media (max-width: 760px) { #app { grid-template-columns: 1fr; grid-template-rows: 45vh 55vh; } aside { order: 2; border-right: 0; border-top: 1px solid #e5e7eb; } #map { order: 1; } }
+  </style>
+</head>
+<body>
+<div id="app">
+  <aside>
+    <h1>上海租房候选地图</h1>
+    <div class="hint">坐标来自高德 GCJ-02。subway_only / business_area / vague 表示位置只是近似点，联系前要核实小区和门牌。</div>
+    <div id="keybox" class="keybox">
+      需要高德 JS API key 才能渲染地图。输入后只在当前浏览器地址栏使用。
+      <input id="keyInput" placeholder="AMAP_JS_KEY">
+    </div>
+    <div id="list"></div>
+  </aside>
+  <div id="map"></div>
+</div>
+<script>
+const RENTAL_MARKERS = [{"rank": 1, "lng": 121.587666, "lat": 31.095666, "score": "141", "action": "contact", "platform": "贝壳", "title": "整租·欧风家园南区 2室1厅 南", "rent": "3000", "layout": "2室1厅", "area_m2": "80.26", "district": "浦东", "community": "欧风家园南区", "address": "瑞意路399弄", "subway": "沈梅路地铁站约843m", "commute": "距张江昆仑芯约9.62km; 生活配套强", "precision": "existing", "risks": "near_10km_limit", "url": "https://sh.zu.ke.com/zufang/SH2140311500101779456.html"}, {"rank": 2, "lng": 121.567239, "lat": 31.152726, "score": "139", "action": "contact", "platform": "贝壳", "title": "整租·京浦小区82支弄 2室1厅 南/北", "rent": "3900", "layout": "2室1厅", "area_m2": "52.00", "district": "浦东", "community": "京浦小区82支弄", "address": "沪南路2441弄82支弄", "subway": "御桥地铁站约696m", "commute": "距张江昆仑芯约4.84km; 北蔡御桥方向", "precision": "existing", "risks": "", "url": "https://sh.zu.ke.com/zufang/SH2179541143702732800.html"}, {"rank": 3, "lng": 121.559222, "lat": 31.187221, "score": "139", "action": "contact", "platform": "贝壳", "title": "整租·莲溪六村 2室1厅 南", "rent": "4500", "layout": "2室1厅", "area_m2": "60.00", "district": "浦东", "community": "莲溪六村", "address": "莲溪路126弄", "subway": "芳芯路地铁站约438m", "commute": "距张江昆仑芯约4.53km; 生活气息强", "precision": "existing", "risks": "at_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2137435393031667712.html"}, {"rank": 4, "lng": 121.580905, "lat": 31.262492, "score": "137", "action": "contact", "platform": "贝壳", "title": "整租·蓝城小区 2室1厅 南", "rent": "3600", "layout": "2室1厅", "area_m2": "44.00", "district": "浦东", "community": "蓝城小区", "address": "柳埠路142号", "subway": "博兴路地铁站约562m", "commute": "距张江昆仑芯约9.40km; 金桥生活配套成熟", "precision": "existing", "risks": "matched_place柳埠小区; near_10km_limit; small_area_for_2br", "url": "https://sh.zu.ke.com/zufang/SH1771128018257838080.html"}, {"rank": 5, "lng": 121.696932, "lat": 31.18988, "score": "137", "action": "contact", "platform": "贝壳", "title": "整租·园西小区 2室1厅 南", "rent": "3600", "layout": "2室1厅", "area_m2": "52.18", "district": "浦东", "community": "园西小区", "address": "城南路497弄", "subway": "川沙地铁站约370m", "commute": "距张江昆仑芯约8.69km; 川沙老社区生活便利", "precision": "existing", "risks": "", "url": "https://sh.zu.ke.com/zufang/SH2175149859932209152.html"}, {"rank": 6, "lng": 121.700778, "lat": 31.188484, "score": "137", "action": "contact", "platform": "贝壳", "title": "整租·桃园新村(川沙) 2室1厅 南", "rent": "3990", "layout": "2室1厅", "area_m2": "66.00", "district": "浦东", "community": "桃园新村(川沙)", "address": "南桥路459弄", "subway": "川沙地铁站约312m", "commute": "距张江昆仑芯约9.04km; 川沙老社区生活便利", "precision": "existing", "risks": "", "url": "https://sh.zu.ke.com/zufang/SH2002323363707486208.html"}, {"rank": 7, "lng": 121.567716, "lat": 31.154111, "score": "137", "action": "watch", "platform": "贝壳", "title": "整租·绿地御桥苑 1室1厅 南/北", "rent": "4200", "layout": "1室1厅", "area_m2": "49.04", "district": "浦东", "community": "绿地御桥苑", "address": "御山路390弄", "subway": "御桥地铁站约541m", "commute": "距张江昆仑芯约4.71km; 配套均衡", "precision": "existing", "risks": "near_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2105221739213488128.html"}, {"rank": 8, "lng": 121.689238, "lat": 31.185441, "score": "133", "action": "contact", "platform": "贝壳", "title": "整租·妙栏小区 2室1厅 南/北", "rent": "3675", "layout": "2室1厅", "area_m2": "58.23", "district": "浦东", "community": "妙栏小区", "address": "妙栏路353弄/401弄", "subway": "川沙地铁站约866m", "commute": "距张江昆仑芯约7.91km; 菜场极近", "precision": "existing", "risks": "subway_near_1km", "url": "https://sh.zu.ke.com/zufang/SH2045079181988986880.html"}, {"rank": 9, "lng": 121.581797, "lat": 31.265129, "score": "133", "action": "watch", "platform": "贝壳", "title": "整租·博三小区 2室1厅 南", "rent": "4410", "layout": "2室1厅", "area_m2": "62.15", "district": "浦东", "community": "博三小区", "address": "博兴路462弄", "subway": "博兴路地铁站约498m", "commute": "距张江昆仑芯约9.67km; 金桥成熟社区", "precision": "existing", "risks": "near_10km_limit; near_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2047635765592064000.html"}, {"rank": 10, "lng": 121.696932, "lat": 31.18988, "score": "131", "action": "watch", "platform": "贝壳", "title": "整租·园西小区 1室1厅 南", "rent": "3200", "layout": "1室1厅", "area_m2": "40.00", "district": "浦东", "community": "园西小区", "address": "城南路497弄", "subway": "川沙地铁站约370m", "commute": "距张江昆仑芯约8.69km; 川沙生活便利", "precision": "existing", "risks": "", "url": "https://sh.zu.ke.com/zufang/SH2166835237076598784.html"}, {"rank": 11, "lng": 121.581797, "lat": 31.265129, "score": "131", "action": "watch", "platform": "贝壳", "title": "整租·博三小区 1室1厅 南", "rent": "3300", "layout": "1室1厅", "area_m2": "40.18", "district": "浦东", "community": "博三小区", "address": "博兴路462弄", "subway": "博兴路地铁站约498m", "commute": "距张江昆仑芯约9.67km; 金桥成熟社区", "precision": "existing", "risks": "near_10km_limit", "url": "https://sh.zu.ke.com/zufang/SH2172620488981872640.html"}, {"rank": 12, "lng": 121.552038, "lat": 31.194537, "score": "131", "action": "watch", "platform": "贝壳", "title": "整租·连波路66弄 2室1厅 南/北", "rent": "4305", "layout": "2室1厅", "area_m2": "67.78", "district": "浦东", "community": "连波路66弄", "address": "芳华路66弄", "subway": "芳华路地铁站约242m", "commute": "距张江昆仑芯约5.38km; 离地铁近", "precision": "existing", "risks": "near_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2128871487036194816.html"}, {"rank": 13, "lng": 121.562319, "lat": 31.174792, "score": "131", "action": "watch", "platform": "贝壳", "title": "整租·鹏海西区 2室1厅 南", "rent": "4410", "layout": "2室1厅", "area_m2": "63.11", "district": "浦东", "community": "鹏海西区", "address": "五星路231弄/151弄", "subway": "陈春路地铁站约394m", "commute": "距张江昆仑芯约4.23km; 离工作地近", "precision": "existing", "risks": "near_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2074735272334983168.html"}, {"rank": 14, "lng": 121.626347, "lat": 31.210408, "score": "129", "action": "watch", "platform": "贝壳", "title": "整租·展想悦廷 1室1厅 西", "rent": "4200", "layout": "1室1厅", "area_m2": "52.82", "district": "浦东", "community": "展想悦廷", "address": "祖冲之路2288弄", "subway": "广兰路地铁站约507m", "commute": "距张江昆仑芯约3.81km; 最近但楼宇属性更强", "precision": "existing", "risks": "楼宇/商住; west_orientation; near_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2168949682699501568.html"}, {"rank": 15, "lng": 121.585681, "lat": 31.094923, "score": "127", "action": "watch", "platform": "贝壳", "title": "整租·桃园新城中虹佳园东区 1室1厅 南/北", "rent": "3200", "layout": "1室1厅", "area_m2": "53.00", "district": "浦东", "community": "桃园新城中虹佳园东区", "address": "瑞浦路287弄", "subway": "沈梅路地铁站约644m", "commute": "距张江昆仑芯约9.74km; 周浦居民区", "precision": "existing", "risks": "near_10km_limit", "url": "https://sh.zu.ke.com/zufang/SH2179897399713988608.html"}];
+const EMBEDDED_AMAP_KEY = "";
+const COLORS = { contact: "#16a34a", watch: "#2563eb", skip: "#64748b" };
+function esc(s) { return String(s || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function keyFromUrl() { return new URLSearchParams(location.search).get("key") || ""; }
+function renderList(focus) {
+  const list = document.getElementById("list");
+  list.innerHTML = RENTAL_MARKERS.map((m, i) => `
+    <div class="item" onclick="window.focusMarker && window.focusMarker(${i})">
+      <div class="top"><div class="title">#${m.rank} ${esc(m.title || m.community || "未命名房源")}</div><div class="rent">${esc(m.rent)} 元/月</div></div>
+      <div class="meta"><span class="badge ${esc(m.action)}">${esc(m.action)}</span> 分数 ${esc(m.score)} · ${esc(m.platform)} · ${esc(m.layout)} · ${esc(m.area_m2)}㎡</div>
+      <div class="meta">${esc([m.district, m.community, m.address].filter(Boolean).join(" · "))}</div>
+      <div class="meta">${esc([m.subway, m.commute, m.precision].filter(Boolean).join(" · "))}</div>
+      ${m.risks ? `<div class="risk">风险：${esc(m.risks)}</div>` : ""}
+    </div>`).join("");
+}
+function loadAmap(key) {
+  if (!key) {
+    document.getElementById("keybox").style.display = "block";
+    document.getElementById("keyInput").addEventListener("change", e => {
+      const url = new URL(location.href);
+      url.searchParams.set("key", e.target.value.trim());
+      location.href = url.toString();
+    });
+    renderList();
+    return;
+  }
+  const script = document.createElement("script");
+  script.src = "https://webapi.amap.com/maps?v=2.0&key=" + encodeURIComponent(key);
+  script.onload = initMap;
+  document.head.appendChild(script);
+}
+function initMap() {
+  renderList();
+  const center = RENTAL_MARKERS.length ? [RENTAL_MARKERS[0].lng, RENTAL_MARKERS[0].lat] : [121.587666, 31.095666];
+  const map = new AMap.Map("map", { zoom: 12, center });
+  const info = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -28) });
+  const markers = RENTAL_MARKERS.map((m, i) => {
+    const marker = new AMap.Marker({
+      position: [m.lng, m.lat],
+      title: m.title,
+      label: { content: String(m.rank), direction: "top" }
+    });
+    marker.setMap(map);
+    marker.on("click", () => {
+      const link = m.url ? `<p><a href="${esc(m.url)}" target="_blank">打开来源</a></p>` : "";
+      info.setContent(`<strong>#${m.rank} ${esc(m.title || m.community)}</strong>
+        <p>${esc(m.platform)} · ${esc(m.rent)} 元/月 · ${esc(m.layout)} · ${esc(m.area_m2)}㎡</p>
+        <p>${esc([m.district, m.community, m.address].filter(Boolean).join(" · "))}</p>
+        <p>${esc([m.subway, m.commute, m.precision].filter(Boolean).join(" · "))}</p>
+        <p>${esc(m.risks ? "风险：" + m.risks : "")}</p>${link}`);
+      info.open(map, marker.getPosition());
+    });
+    return marker;
+  });
+  if (markers.length > 1) map.setFitView(markers);
+  window.focusMarker = i => {
+    const marker = markers[i];
+    if (!marker) return;
+    map.setZoomAndCenter(15, marker.getPosition());
+    marker.emit("click", { target: marker });
+  };
+}
+loadAmap(EMBEDDED_AMAP_KEY || keyFromUrl());
+</script>
+</body>
+</html>

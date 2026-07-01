@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Captcha">
+    <link rel="icon" href="//s1.ljcdn.com/hip-static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//s1.ljcdn.com/hip-static/css/main.css">
+    <title>CAPTCHA</title>
+    <style>
+        #captcha {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+         
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);  
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);  
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 9999;
+            padding: 16px;  
+            overflow-y: auto;  
+        }
+
+         
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+         
+        .modal-box {
+            width: 100%;
+            max-width: 420px;  
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-20px) scale(0.95);  
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .modal-overlay.show .modal-box {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+         
+        .modal-header {
+            padding: 0 10px;  
+            background: linear-gradient(135deg, #fef0f0 0%, #fee2e2 100%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+         
+        .error-icon {
+            width: 28px;  
+            height: 28px;
+            background: #f56c6c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(245, 108, 108, 0.2);
+        }
+
+         
+        .modal-title {
+            font-size: 18px;  
+            color: #212529;
+            font-weight: 600;
+            letter-spacing: 0.1px;
+        }
+
+         
+        .modal-body {
+            padding: 20px;  
+            color: #495057;
+            font-size: 14px;  
+            line-height: 2;  
+            white-space: pre-line;
+        }
+
+         
+        .modal-footer {
+            padding: 12px 20px;  
+            text-align: right;
+            background: #f8f9fa;
+            border-top: 1px solid #f1f3f5;
+            display: flex;  
+            justify-content: flex-end;
+            gap: 8px;  
+        }
+
+         
+        .modal-btn {
+            padding: 10px 20px;  
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;  
+            font-weight: 500;
+            transition: all 0.3s ease;
+            letter-spacing: 0.2px;
+            min-width: 80px;  
+            margin-left: 0;  
+        }
+
+         
+        .confirm-btn {
+            background: linear-gradient(135deg, #f56c6c 0%, #f78989 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(245, 108, 108, 0.2);
+        }
+
+        .confirm-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 108, 108, 0.3);
+        }
+
+        .confirm-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(245, 108, 108, 0.2);
+        }
+
+         
+        .cancel-btn {
+            background: #f8f9fa;
+            color: #495057;
+            border: 1px solid #e9ecef;
+        }
+
+        .cancel-btn:hover {
+            background: #e9ecef;
+            border-color: #dee2e6;
+        }
+    </style>
+<style>.bk-captcha-btn {
+  width: 298px;
+  height: 42px;
+  line-height: 42px;
+  background-image: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  min-width: 160px;
+  cursor: pointer;
+  opacity: 1;
+  padding: 0 46px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: center;
+}
+
+.bk-captcha-holder {
+  position: fixed;
+  _position: absolute;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.5s;
+}
+.bk-captcha-holder.hide {
+  opacity: 0;
+  display: none;
+}
+
+.bk-captcha-holder .bk-captcha-ghost {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  _width: 2000px;
+  _height: 1000px;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.bk-captcha-holder .bk-captcha-box {
+  width: 80%;
+  min-width: 230px;
+  max-width: 278px;
+  margin: auto auto;
+  background: #FCFCFC;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #d1d1d1;
+}
+
+.bk-captcha-holder .bk-captcha-box .close-btn {
+  color: #cccccc;
+  margin: 9px;
+  line-height: 14px;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.bk-captcha-holder .bk-captcha-box .title {
+  font-family: PingFangSC-Medium;
+  font-size: 22px;
+  color: #222222;
+  letter-spacing: -0.53px;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 44px;
+}
+
+.bk-captcha-holder .bk-captcha-box .image-code-box {
+  width: 100%;
+  text-align: center;
+  margin-top: 23px;
+}
+
+.bk-captcha-holder .image-code-box .image-code {
+  width: 65%;
+  height: 60px;
+  cursor: pointer;
+}
+
+.bk-captcha-holder .image-code-box .tip {
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #999999;
+  letter-spacing: -0.07px;
+  line-height: 12px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.bk-captcha-holder .input-box {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.bk-captcha-holder .input-box .input {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  outline: none;
+  bottom: 0;
+  border: none;
+  padding: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.bk-captcha-holder .input-box div {
+  width: 44px;
+  height: 44px;
+  border-bottom: 2px solid #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.bk-captcha-holder .input-box div.on {
+  border-bottom: 2px solid #3072f6;
+}
+
+.bk-captcha-holder .input-box div.on::before {
+  float: right;
+  content: " ";
+  background-color: #3072f6;
+  letter-spacing: 0.88px;
+  width: 2px;
+  height: 26px;
+  animation: cursor-blinks 1.1s infinite steps(1, start);
+}
+
+@keyframes cursor-blinks {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  50% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+
+.bk-captcha-holder .input-box div:not(:last-child) {
+  margin-right: 15px;
+}
+
+.bk-captcha-holder .bk-captcha-toast {
+  color: #fff;
+  width: 146px;
+  height: 50px;
+  margin: auto auto;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  outline: none;
+  background: #222222;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.20);
+  text-align: center;
+  line-height: 50px;
+  transition: opacity 0.5s;
+  display: none;
+  opacity: 0;
+}
+</style><script src="https://s1.ljcdn.com/captcha-js-sdk-v2/gt4.js"></script><script charset="UTF-8" async="" src="https://gcaptcha4.geetest.com/load?callback=geetest_1782818806640&amp;captcha_id=8b417c4b2871c1335ea780f4b562fd64&amp;challenge=cd1fe065-bc3c-4cf8-9be3-7f6103e73c8c&amp;client_type=web&amp;lang=zh-cn"></script><script charset="UTF-8" async="" crossorigin="anonymous" src="https://static.geetest.com/v4/gct/gct4.5a2e755576738ba0499d714db4f1c9e0.js"></script><script charset="UTF-8" async="" crossorigin="anonymous" src="https://static.geetest.com/v4/static/v1.9.6-1adb4a/js/gcaptcha4.js"></script><style>.geetest_captcha.geetest_customTheme .geetest_status_bar,.geetest_captcha.geetest_customTheme .geetest_box_btn::before,.geetest_captcha.geetest_customTheme .geetest_box_btn::after,.geetest_captcha.geetest_customTheme .geetest_gradient_bar,.geetest_captcha.geetest_customTheme .geetest_bind_status_bar,.geetest_popup_wrap.geetest_customTheme .geetest_status_bar,.geetest_popup_wrap.geetest_customTheme .geetest_box_btn::before,.geetest_popup_wrap.geetest_customTheme .geetest_box_btn::after,.geetest_popup_wrap.geetest_customTheme .geetest_gradient_bar,.geetest_popup_wrap.geetest_customTheme .geetest_bind_status_bar{background-color:hsla(224,98%,66%,1)}.geetest_captcha.geetest_customTheme .geetest_svg_default,.geetest_popup_wrap.geetest_customTheme .geetest_svg_default{stroke:hsla(224,98%,66%,1)}.geetest_captcha.geetest_customTheme .geetest_slide .geetest_btn,.geetest_popup_wrap.geetest_customTheme .geetest_slide .geetest_btn{background-image:linear-gradient(180deg, hsla(224,98%,71%,1) 0%, hsla(224,98%,66%,1) 100%)}.geetest_captcha.geetest_customTheme .geetest_slide .geetest_btn:hover,.geetest_popup_wrap.geetest_customTheme .geetest_slide .geetest_btn:hover{background-image:linear-gradient(180deg, hsla(224,98%,66%,1) 0%, hsla(224,98%,71%,1) 100%)}.geetest_captcha.geetest_customTheme .geetest_click .geetest_big_mark,.geetest_captcha.geetest_customTheme .geetest_click .geetest_square_mark,.geetest_captcha.geetest_customTheme .geetest_click .geetest_circle_mark,.geetest_popup_wrap.geetest_customTheme .geetest_click .geetest_big_mark,.geetest_popup_wrap.geetest_customTheme .geetest_click .geetest_square_mark,.geetest_popup_wrap.geetest_customTheme .geetest_click .geetest_circle_mark{background-color:hsla(224,98%,66%,1)}.geetest_captcha.geetest_customTheme .geetest_click .geetest_submit,.geetest_popup_wrap.geetest_customTheme .geetest_click .geetest_submit{background-image:linear-gradient(180deg, hsla(224,98%,71%,1) 0%, hsla(224,98%,66%,1) 100%)}.geetest_captcha.geetest_customTheme .geetest_click .geetest_submit:hover,.geetest_popup_wrap.geetest_customTheme .geetest_click .geetest_submit:hover{background-image:linear-gradient(180deg, hsla(224,98%,66%,1) 0%, hsla(224,98%,71%,1) 100%)}.geetest_captcha.geetest_customTheme .geetest_box,.geetest_captcha.geetest_customTheme .geetest_window,.geetest_captcha.geetest_customTheme .geetest_submit,.geetest_captcha.geetest_customTheme .geetest_bind_box,.geetest_captcha.geetest_customTheme .geetest_nine,.geetest_captcha.geetest_customTheme .geetest_winlinze,.geetest_popup_wrap.geetest_customTheme .geetest_box,.geetest_popup_wrap.geetest_customTheme .geetest_window,.geetest_popup_wrap.geetest_customTheme .geetest_submit,.geetest_popup_wrap.geetest_customTheme .geetest_bind_box,.geetest_popup_wrap.geetest_customTheme .geetest_nine,.geetest_popup_wrap.geetest_customTheme .geetest_winlinze{border-radius:4px}.geetest_captcha.geetest_customTheme .geetest_btn_svg,.geetest_popup_wrap.geetest_customTheme .geetest_btn_svg{border-top-right-radius:calc(4px - 1px);border-bottom-right-radius:calc(4px - 1px)}.geetest_captcha.geetest_customTheme .geetest_holder,.geetest_popup_wrap.geetest_customTheme .geetest_holder{border-radius:4px}.geetest_captcha.geetest_customTheme .geetest_holder .geetest_content,.geetest_popup_wrap.geetest_customTheme .geetest_holder .geetest_content{border-top-right-radius:4px;border-bottom-right-radius:4px}.geetest_captcha.geetest_customTheme .geetest_holder .geetest_content .geetest_gradient_bar,.geetest_popup_wrap.geetest_customTheme .geetest_holder .geetest_content .geetest_gradient_bar{border-bottom-left-radius:calc(4px - 2px);border-top-left-radius:calc(4px - 2px)}.geetest_captcha.geetest_customTheme .geetest_mask,.geetest_popup_wrap.geetest_customTheme .geetest_mask{border-radius:4px !important}</style><link href="https://static.geetest.com/v4/static/v1.9.6-1adb4a/css/gcaptcha4.css" rel="stylesheet"><script crossorigin="anonymous" charset="UTF-8" src="https://static.geetest.com/v4/static/v1.9.6-1adb4a/i18n/zho.js"></script></head>
+<body>
+<div id="back-button">
+    <img class="back-icon" src="//s1.ljcdn.com/hip-static/img/back.svg">
+</div>
+
+<div id="main">
+    <div id="container">
+        <img class="bg" src="//s1.ljcdn.com/hip-static/img/captcha.svg" alt="CAPTCHA">
+        <div class="title">人机验证</div>
+        
+        <div id="captcha"><div class="geetest_captcha_915ea8ef geetest_captcha geetest_customTheme geetest_nextReady"><div class="geetest_holder_915ea8ef geetest_holder"><svg class="geetest_btn_svg_915ea8ef geetest_btn_svg"><path class="geetest_path_top_915ea8ef geetest_path_top geetest_svg_default geetest_svg_animate" d="M0,25 L0.0,4.0 Q0,0,4.0,0.0 L256.0,0.0 Q260,0,260.0,4.0 L260,25" stroke-dasharray="310, 310" stroke-dashoffset="310" stroke-width="0"></path><path class="geetest_path_bottom_915ea8ef geetest_path_bottom geetest_svg_default geetest_svg_animate" d="M0,25 L0.0,46.0 Q0,50,4.0,50.0 L256.0,50.0 Q260,50,260.0,46.0 L260,25" stroke-dasharray="310, 310" stroke-dashoffset="310" stroke-width="0"></path></svg><div class="geetest_btn_click_915ea8ef geetest_btn_click" aria-label="点击按钮开始验证" tabindex="0"></div><div class="geetest_mask_915ea8ef geetest_mask"><div class="geetest_mask_layer_915ea8ef geetest_mask_layer"></div></div><div class="geetest_content_915ea8ef geetest_content"><div class="geetest_gradient_bar_915ea8ef geetest_gradient_bar"></div><div class="geetest_tip_container_915ea8ef geetest_tip_container geetest_space_center"><div class="geetest_tips_wrap_915ea8ef geetest_tips_wrap"><div class="geetest_err_tips_915ea8ef geetest_err_tips"></div><div class="geetest_tip_915ea8ef geetest_tip">点击按钮开始验证</div></div><a class="geetest_logo_915ea8ef geetest_logo" style="display: none;"></a></div><div class="geetest_err_code_915ea8ef geetest_err_code"></div></div></div></div></div>
+    </div>
+    <footer id="site-footer">
+        <div class="footer-content">
+            <img class="picture" src="//s1.ljcdn.com/hip-static/img/logo.png">
+            <div class="copyright">
+                © 贝壳信息安全中心
+            </div>
+        </div>
+        <div class="footer-beian">
+            <a href="https://beian.miit.gov.cn/" rel="noreferrer" target="_blank">京ICP备16057509号-2</a>
+            <img class="picture" src="//s1.ljcdn.com/hip-static/img/beian.png">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802024019" rel="noreferrer" target="_blank">京公网安备 11010802024019号</a>
+        </div>
+    </footer>
+</div>
+
+<div class="modal-overlay" id="errorModal">
+    <div class="modal-box">
+        <div class="modal-header">
+            <div class="error-icon">✕</div>
+            <h3 class="modal-title">验证失败</h3>
+        </div>
+        <div class="modal-body" id="errorMessage"></div>
+        <div class="modal-footer">
+            <button class="modal-btn cancel-btn" id="cancelBtn">取消</button>
+            <button class="modal-btn confirm-btn" id="confirmBtn">重新验证</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://s1.ljcdn.com/captcha-js-sdk-v2/captcha-anti-spider.js"></script>
+<script>
+  window.captchaEndpoint = 'captcha.lianjia.com';
+  window.hipPrefix = 'hip';
+</script>
+<script src="https://s1.ljcdn.com/m-base/release/v04.4/asset/bridge_d0b9f70cd88e0a5q.js"></script>
+<script src="//s1.ljcdn.com/hip-static/js/validate.js"></script>
+
+<img src="https://dig.lianjia.com/c.gif?r=1782818806009&amp;d={&quot;action&quot;:{&quot;riskpoint_name&quot;:&quot;&quot;,&quot;business_type&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;scene&quot;:&quot;show_sucess&quot;},&quot;uicode&quot;:&quot;yanzhengma&quot;,&quot;evt&quot;:&quot;52175&quot;,&quot;pid&quot;:&quot;security_m_fengkong&quot;,&quot;uuid&quot;:&quot;3cf49966-c948-49de-9db3-aa10d851eb7c&quot;,&quot;event&quot;:&quot;Custom_Track&quot;,&quot;ssid&quot;:&quot;7a71aa20-bef0-4039-bf0f-d1a187335f1b&quot;}"><div class="geetest_popup_wrap_915ea8ef geetest_popup_wrap geetest_popup geetest_customTheme geetest_nextReady"><div class="geetest_popup_ghost_915ea8ef geetest_popup_ghost"></div><div class="geetest_box_wrap_915ea8ef geetest_box_wrap"><div class="geetest_box_915ea8ef geetest_box"><div class="geetest_header_915ea8ef geetest_header"><div class="geetest_title_915ea8ef geetest_title geetest_space_between"><div class="geetest_text_tips_915ea8ef geetest_text_tips geetest_font_12">请在下图依次点击</div><div class="geetest_ques_tips_915ea8ef geetest_ques_tips geetest_ques_back"><img src="https://static.geetest.com/nerualpic/original_word_pic/jiangchengzhengjunti/03ff3ce2498eaedcdfcefd9a27c99a76.png"><img src="https://static.geetest.com/nerualpic/original_word_pic/jiangchengzhengjunti/1ca69c4be0f905492520aeda8f5df847.png"><img src="https://static.geetest.com/nerualpic/original_word_pic/jiangchengzhengjunti/4227c372b0e17df08c9347c069e43073.png"></div></div><div class="geetest_status_bar_915ea8ef geetest_status_bar"></div></div><div class="geetest_container_915ea8ef geetest_container"><div class="geetest_wrap_915ea8ef geetest_wrap"><div class="geetest_subitem_915ea8ef geetest_subitem geetest_click"><div class="geetest_window_915ea8ef geetest_window"><div class="geetest_bg_915ea8ef geetest_bg" style="background-image: url(&quot;https://static.geetest.com/captcha_v4/policy/9c80b561d3/word/281338/2026-06-30T18/f9b6391e245c45d1b42b6eda2bedecbf.jpg&quot;);"></div><div class="geetest_result_tips_915ea8ef geetest_result_tips"></div></div><div class="geetest_submit_915ea8ef geetest_submit geetest_disable"><div class="geetest_submit_tips_915ea8ef geetest_submit_tips">确定</div></div></div></div></div><div class="geetest_footer_915ea8ef geetest_footer"><div class="geetest_footer_left_915ea8ef geetest_footer_left"><button class="geetest_close_915ea8ef geetest_close" aria-label="关闭验证" role="button" type="button" tabindex="0"><div class="geetest_close_tips_915ea8ef geetest_close_tips geetest_small_tip" tabindex="-1" aria-hidden="true">关闭验证</div></button><button class="geetest_refresh_915ea8ef geetest_refresh" aria-label="刷新验证" role="button" type="button" tabindex="0"><div class="geetest_refresh_tips_915ea8ef geetest_refresh_tips geetest_small_tip" tabindex="-1" aria-hidden="true">刷新验证</div></button><a class="geetest_feedback_915ea8ef geetest_feedback" aria-label="帮助反馈" role="button" tabindex="-1" style="display: none;"><div class="geetest_feedback_tips_915ea8ef geetest_feedback_tips geetest_small_tip" tabindex="-1" aria-hidden="true"></div></a><button class="geetest_voice_915ea8ef geetest_voice geetest_hide" aria-label="视觉障碍" role="button" type="button" tabindex="0"><div class="geetest_voice_icon_tips_915ea8ef geetest_voice_icon_tips geetest_small_tip" tabindex="-1" aria-hidden="true">视觉障碍</div></button><button class="geetest_back_915ea8ef geetest_back geetest_hide" aria-label="返回" role="button" type="button" tabindex="0"><div class="geetest_back_tips_915ea8ef geetest_back_tips geetest_small_tip" tabindex="-1" aria-hidden="true">返回</div></button></div><div class="geetest_footer_right_915ea8ef geetest_footer_right"><div class="geetest_progress_915ea8ef geetest_progress"></div><a class="geetest_box_logo_915ea8ef geetest_box_logo" style="display: none;"></a></div></div><div class="geetest_ai_detect_915ea8ef geetest_ai_detect"></div><div class="geetest_ai_grid_915ea8ef geetest_ai_grid"></div></div></div></div></body></html>

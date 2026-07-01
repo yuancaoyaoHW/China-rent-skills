@@ -1,0 +1,6 @@
+interface:
+  display_name: "国内租房研究"
+  short_description: "Collect and rank China rental listings"
+  default_prompt: "Use $china-rental-research to collect, normalize, deduplicate, and rank rental listings from Chinese rental platforms."
+policy:
+  allow_implicit_invocation: true

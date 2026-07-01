@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>张江租房候选 15km 版</title>
+  <style>
+    :root { --ink:#1f2933; --muted:#657083; --line:#d8e0e7; --bg:#f4f7f3; --contact:#177245; --watch:#2457b8; --skip:#64748b; --work:#d97706; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Microsoft YaHei","Noto Sans SC",sans-serif; color:var(--ink); background:linear-gradient(135deg,#f8f4ea,#edf6f5 48%,#f7fafc); }
+    main { min-height:100vh; display:grid; grid-template-columns:minmax(380px,44vw) 1fr; gap:18px; padding:18px; }
+    section, aside { background:rgba(255,255,255,.9); border:1px solid rgba(148,163,184,.32); border-radius:8px; box-shadow:0 18px 42px rgba(15,23,42,.08); }
+    section { padding:18px; overflow:hidden; }
+    aside { padding:14px; overflow:auto; max-height:calc(100vh - 36px); }
+    h1 { margin:0; font-size:24px; line-height:1.2; }
+    .sub { margin:8px 0 14px; color:var(--muted); font-size:13px; line-height:1.55; }
+    .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:12px; }
+    .metric { background:white; border:1px solid var(--line); border-radius:8px; padding:10px; }
+    .metric b { display:block; font-size:20px; } .metric span { color:var(--muted); font-size:12px; }
+    .map { position:relative; aspect-ratio:1/1; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#eef4f7; }
+    .map-status { position:absolute; z-index:8; left:12px; right:12px; top:12px; padding:10px 12px; border:1px solid #f59e0b; border-radius:8px; background:rgba(255,251,235,.95); color:#92400e; font-size:13px; line-height:1.5; }
+    .radius { position:absolute; border:1px dashed rgba(217,119,6,.75); border-radius:50%; transform:translate(-50%,-50%); width:92%; height:92%; pointer-events:none; }
+    .work { position:absolute; width:16px; height:16px; border-radius:50%; background:var(--work); border:3px solid white; box-shadow:0 2px 10px rgba(0,0,0,.25); transform:translate(-50%,-50%); }
+    .point { position:absolute; z-index:3; width:28px; height:28px; border-radius:50%; color:white; display:grid; place-items:center; font-size:12px; font-weight:800; border:2px solid white; box-shadow:0 8px 18px rgba(15,23,42,.2); transform:translate(-50%,-50%); text-decoration:none; }
+    .amenity { position:absolute; z-index:2; width:20px; height:20px; border-radius:999px; display:grid; place-items:center; color:white; font-size:11px; font-weight:900; border:2px solid white; box-shadow:0 5px 12px rgba(15,23,42,.18); transform:translate(-50%,-50%); }
+    .amenity.metro { background:#0f766e; } .amenity.mall { background:#c2410c; } .amenity.market { background:#7c3aed; }
+    .contact { background:var(--contact); } .watch { background:var(--watch); } .skip { background:var(--skip); }
+    .legend { position:absolute; z-index:7; left:12px; bottom:12px; max-width:78%; color:var(--muted); font-size:12px; line-height:1.45; background:rgba(255,255,255,.88); border:1px solid var(--line); border-radius:8px; padding:8px 10px; }
+    .marker-label { width:28px; height:28px; border-radius:999px; display:grid; place-items:center; color:white; font-size:12px; font-weight:900; border:2px solid white; box-shadow:0 6px 14px rgba(15,23,42,.22); }
+    .marker-label.work-marker { background:var(--work); width:18px; height:18px; font-size:0; }
+    .marker-label.amenity-marker { width:20px; height:20px; font-size:11px; }
+    .metro-marker { background:#0f766e; } .mall-marker { background:#c2410c; } .market-marker { background:#7c3aed; }
+    .card { border:1px solid var(--line); border-left:5px solid var(--watch); border-radius:8px; background:white; padding:12px; margin-bottom:10px; }
+    .card.contact { border-left-color:var(--contact); } .card.skip { border-left-color:var(--skip); }
+    .top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    .title { font-weight:800; line-height:1.35; } .rent { color:#b91c1c; font-weight:900; white-space:nowrap; }
+    .meta { margin-top:6px; color:var(--muted); font-size:12px; line-height:1.6; }
+    .badge { display:inline-block; color:white; border-radius:999px; padding:2px 8px; font-size:12px; margin-right:6px; }
+    a { color:#1459b8; text-decoration:none; } a:hover { text-decoration:underline; }
+    @media (max-width:880px) { main { grid-template-columns:1fr; padding:12px; } aside { max-height:none; } .metrics { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>张江昆仑芯租房候选 15km 版</h1>
+    <p class="sub">这版放宽到 15km，并把居民小区、生活气息、靠近地铁放到评分前面。地图使用高德 JSAPI，可缩放拖拽；配套点来自高德 Web Service POI 查询，联系前还要核验通勤路线。</p>
+    <div class="metrics"><div class="metric"><b>15</b><span>候选房源</span></div><div class="metric"><b>￥3000-4500</b><span>推荐区间</span></div><div class="metric"><b>居民小区优先</b><span>小区/新村/苑/家园</span></div></div>
+    <div class="map" id="map"><div class="map-status" id="mapStatus">正在加载高德地图...</div><div class="legend">绿色：优先联系；蓝色：备选；橙点：工作地。小圆点为高德 POI：地=地铁，商=商场，菜=菜场。</div></div>
+  </section>
+  <aside id="list"></aside>
+</main>
+<script>
+const work = { lon: 121.606222, lat: 31.180732 };
+const listings = [{"rank":1,"score":141,"action":"contact","title":"整租·欧风家园南区 2室1厅 南","rent":3000,"layout":"2室1厅","area_m2":"80.26","business_area":"周浦","community":"欧风家园南区","address":"瑞意路399弄","subway":"沈梅路地铁站约843m","commute":"距张江昆仑芯约9.62km; 生活配套强","work":"9.62km","longitude":121.587666,"latitude":31.095666,"tags":"3000内; 居民小区; 两室一厅; 菜场约205m; 商场约209m","risks":"near_10km_limit","url":"https://sh.zu.ke.com/zufang/SH2140311500101779456.html","market":"菜场约205m","mall":"商场约209m"},{"rank":2,"score":139,"action":"contact","title":"整租·京浦小区82支弄 2室1厅 南/北","rent":3900,"layout":"2室1厅","area_m2":"52.00","business_area":"御桥","community":"京浦小区82支弄","address":"沪南路2441弄82支弄","subway":"御桥地铁站约696m","commute":"距张江昆仑芯约4.84km; 北蔡御桥方向","work":"4.84km","longitude":121.567239,"latitude":31.152726,"tags":"居民小区; 两室一厅; 菜场约284m; 商场约666m","risks":"","url":"https://sh.zu.ke.com/zufang/SH2179541143702732800.html","market":"菜场约284m","mall":"商场约666m"},{"rank":3,"score":139,"action":"contact","title":"整租·莲溪六村 2室1厅 南","rent":4500,"layout":"2室1厅","area_m2":"60.00","business_area":"北蔡","community":"莲溪六村","address":"莲溪路126弄","subway":"芳芯路地铁站约438m","commute":"距张江昆仑芯约4.53km; 生活气息强","work":"4.53km","longitude":121.559222,"latitude":31.187221,"tags":"居民小区; 两室一厅; 菜场约144m; 商场约487m","risks":"at_budget_max","url":"https://sh.zu.ke.com/zufang/SH2137435393031667712.html","market":"菜场约144m","mall":"商场约487m"},{"rank":4,"score":137,"action":"contact","title":"整租·蓝城小区 2室1厅 南","rent":3600,"layout":"2室1厅","area_m2":"44.00","business_area":"金桥","community":"蓝城小区","address":"柳埠路142号","subway":"博兴路地铁站约562m","commute":"距张江昆仑芯约9.40km; 金桥生活配套成熟","work":"9.40km","longitude":121.580905,"latitude":31.262492,"tags":"居民小区; 两室一厅; 菜场约363m; 商场约386m","risks":"matched_place柳埠小区; near_10km_limit; small_area_for_2br","url":"https://sh.zu.ke.com/zufang/SH1771128018257838080.html","market":"菜场约363m","mall":"商场约386m"},{"rank":5,"score":137,"action":"contact","title":"整租·园西小区 2室1厅 南","rent":3600,"layout":"2室1厅","area_m2":"52.18","business_area":"川沙","community":"园西小区","address":"城南路497弄","subway":"川沙地铁站约370m","commute":"距张江昆仑芯约8.69km; 川沙老社区生活便利","work":"8.69km","longitude":121.696932,"latitude":31.18988,"tags":"居民小区; 两室一厅; 菜场约117m; 商场约398m","risks":"","url":"https://sh.zu.ke.com/zufang/SH2175149859932209152.html","market":"菜场约117m","mall":"商场约398m"},{"rank":6,"score":137,"action":"contact","title":"整租·桃园新村(川沙) 2室1厅 南","rent":3990,"layout":"2室1厅","area_m2":"66.00","business_area":"川沙","community":"桃园新村(川沙)","address":"南桥路459弄","subway":"川沙地铁站约312m","commute":"距张江昆仑芯约9.04km; 川沙老社区生活便利","work":"9.04km","longitude":121.700778,"latitude":31.188484,"tags":"居民小区; 两室一厅; 菜场约131m; 商场约191m","risks":"","url":"https://sh.zu.ke.com/zufang/SH2002323363707486208.html","market":"菜场约131m","mall":"商场约191m"},{"rank":7,"score":137,"action":"watch","title":"整租·绿地御桥苑 1室1厅 南/北","rent":4200,"layout":"1室1厅","area_m2":"49.04","business_area":"御桥","community":"绿地御桥苑","address":"御山路390弄","subway":"御桥地铁站约541m","commute":"距张江昆仑芯约4.71km; 配套均衡","work":"4.71km","longitude":121.567716,"latitude":31.154111,"tags":"居民小区; 一室一厅; 菜场约412m; 商场约547m","risks":"near_budget_max","url":"https://sh.zu.ke.com/zufang/SH2105221739213488128.html","market":"菜场约412m","mall":"商场约547m"},{"rank":8,"score":133,"action":"contact","title":"整租·妙栏小区 2室1厅 南/北","rent":3675,"layout":"2室1厅","area_m2":"58.23","business_area":"川沙","community":"妙栏小区","address":"妙栏路353弄/401弄","subway":"川沙地铁站约866m","commute":"距张江昆仑芯约7.91km; 菜场极近","work":"7.91km","longitude":121.689238,"latitude":31.185441,"tags":"居民小区; 两室一厅; 菜场约6m; 商场约504m","risks":"subway_near_1km","url":"https://sh.zu.ke.com/zufang/SH2045079181988986880.html","market":"菜场约6m","mall":"商场约504m"},{"rank":9,"score":133,"action":"watch","title":"整租·博三小区 2室1厅 南","rent":4410,"layout":"2室1厅","area_m2":"62.15","business_area":"金桥","community":"博三小区","address":"博兴路462弄","subway":"博兴路地铁站约498m","commute":"距张江昆仑芯约9.67km; 金桥成熟社区","work":"9.67km","longitude":121.581797,"latitude":31.265129,"tags":"居民小区; 两室一厅; 菜场约185m; 商场约260m","risks":"near_10km_limit; near_budget_max","url":"https://sh.zu.ke.com/zufang/SH2047635765592064000.html","market":"菜场约185m","mall":"商场约260m"},{"rank":10,"score":131,"action":"watch","title":"整租·园西小区 1室1厅 南","rent":3200,"layout":"1室1厅","area_m2":"40.00","business_area":"川沙","community":"园西小区","address":"城南路497弄","subway":"川沙地铁站约370m","commute":"距张江昆仑芯约8.69km; 川沙生活便利","work":"8.69km","longitude":121.696932,"latitude":31.18988,"tags":"居民小区; 一室一厅; 菜场约117m; 商场约398m","risks":"","url":"https://sh.zu.ke.com/zufang/SH2166835237076598784.html","market":"菜场约117m","mall":"商场约398m"},{"rank":11,"score":131,"action":"watch","title":"整租·博三小区 1室1厅 南","rent":3300,"layout":"1室1厅","area_m2":"40.18","business_area":"金桥","community":"博三小区","address":"博兴路462弄","subway":"博兴路地铁站约498m","commute":"距张江昆仑芯约9.67km; 金桥成熟社区","work":"9.67km","longitude":121.581797,"latitude":31.265129,"tags":"居民小区; 一室一厅; 菜场约185m; 商场约260m","risks":"near_10km_limit","url":"https://sh.zu.ke.com/zufang/SH2172620488981872640.html","market":"菜场约185m","mall":"商场约260m"},{"rank":12,"score":131,"action":"watch","title":"整租·连波路66弄 2室1厅 南/北","rent":4305,"layout":"2室1厅","area_m2":"67.78","business_area":"北蔡","community":"连波路66弄","address":"芳华路66弄","subway":"芳华路地铁站约242m","commute":"距张江昆仑芯约5.38km; 离地铁近","work":"5.38km","longitude":121.552038,"latitude":31.194537,"tags":"居民小区; 两室一厅; 菜场约504m; 商场约611m","risks":"near_budget_max","url":"https://sh.zu.ke.com/zufang/SH2128871487036194816.html","market":"菜场约504m","mall":"商场约611m"},{"rank":13,"score":131,"action":"watch","title":"整租·鹏海西区 2室1厅 南","rent":4410,"layout":"2室1厅","area_m2":"63.11","business_area":"北蔡","community":"鹏海西区","address":"五星路231弄/151弄","subway":"陈春路地铁站约394m","commute":"距张江昆仑芯约4.23km; 离工作地近","work":"4.23km","longitude":121.562319,"latitude":31.174792,"tags":"居民小区; 两室一厅; 菜场约140m; 商场约760m","risks":"near_budget_max","url":"https://sh.zu.ke.com/zufang/SH2074735272334983168.html","market":"菜场约140m","mall":"商场约760m"},{"rank":14,"score":129,"action":"watch","title":"整租·展想悦廷 1室1厅 西","rent":4200,"layout":"1室1厅","area_m2":"52.82","business_area":"张江","community":"展想悦廷","address":"祖冲之路2288弄","subway":"广兰路地铁站约507m","commute":"距张江昆仑芯约3.81km; 最近但楼宇属性更强","work":"3.81km","longitude":121.626347,"latitude":31.210408,"tags":"离工作地近; 一室一厅; 菜场约845m; 商场约65m","risks":"楼宇/商住; west_orientation; near_budget_max","url":"https://sh.zu.ke.com/zufang/SH2168949682699501568.html","market":"菜场约845m","mall":"商场约65m"},{"rank":15,"score":127,"action":"watch","title":"整租·桃园新城中虹佳园东区 1室1厅 南/北","rent":3200,"layout":"1室1厅","area_m2":"53.00","business_area":"周浦","community":"桃园新城中虹佳园东区","address":"瑞浦路287弄","subway":"沈梅路地铁站约644m","commute":"距张江昆仑芯约9.74km; 周浦居民区","work":"9.74km","longitude":121.585681,"latitude":31.094923,"tags":"居民小区; 一室一厅; 菜场约410m; 商场约413m","risks":"near_10km_limit","url":"https://sh.zu.ke.com/zufang/SH2179897399713988608.html","market":"菜场约410m","mall":"商场约413m"}];
+const buildYears = {
+  "欧风家园南区": { year: "2000-2013年", confidence: "medium" },
+  "京浦小区82支弄": { year: "1993-2004年", confidence: "high" },
+  "莲溪六村": { year: "1994-1997年", confidence: "high" },
+  "蓝城小区": { year: "1994年", confidence: "medium" },
+  "园西小区": { year: "1986-1991年", confidence: "medium" },
+  "桃园新村(川沙)": { year: "1984-2010年", confidence: "medium" },
+  "绿地御桥苑": { year: "2003-2004年", confidence: "medium" },
+  "妙栏小区": { year: "1993-1999年", confidence: "high" },
+  "博三小区": { year: "1994-1998年", confidence: "high" },
+  "连波路66弄": { year: "1994年", confidence: "high" },
+  "鹏海西区": { year: "1937-1997年", confidence: "medium" },
+  "展想悦廷": { year: "2007年", confidence: "low" },
+  "桃园新城中虹佳园东区": { year: "2006年", confidence: "high" }
+};
+const amenities = [{"community":"欧风家园南区","kind":"metro","label":"地","name":"沈梅路(地铁站)","longitude":121.580589,"latitude":31.091115,"distance_m":843,"address":"18号线","source":"amap_place_text"},{"community":"欧风家园南区","kind":"mall","label":"商","name":"浦商邻里荟-瑞园店","longitude":121.589825,"latitude":31.096025,"distance_m":209,"address":"瑞建路与周东南路交叉口西60米","source":"amap_place_around"},{"community":"欧风家园南区","kind":"market","label":"菜","name":"瑞园菜场(悦加天天购物中心店)","longitude":121.589754,"latitude":31.096122,"distance_m":205,"address":"瑞阳路331号悦加天天购物中心1层","source":"amap_place_around"},{"community":"京浦小区82支弄","kind":"metro","label":"地","name":"御桥(地铁站)","longitude":121.570914,"latitude":31.158131,"distance_m":696,"address":"11号线;18号线","source":"amap_place_text"},{"community":"京浦小区82支弄","kind":"mall","label":"商","name":"复地活力城","longitude":121.564732,"latitude":31.158316,"distance_m":666,"address":"沪南路2229号","source":"amap_place_around"},{"community":"京浦小区82支弄","kind":"market","label":"菜","name":"乐天鲜蔬(百舸馨苑店)","longitude":121.564984,"latitude":31.151051,"distance_m":284,"address":"康花路9号","source":"amap_place_around"},{"community":"莲溪六村","kind":"metro","label":"地","name":"芳芯路(地铁站)","longitude":121.559226,"latitude":31.191158,"distance_m":438,"address":"18号线","source":"amap_place_text"},{"community":"莲溪六村","kind":"mall","label":"商","name":"北蔡休闲广场","longitude":121.556013,"latitude":31.183807,"distance_m":487,"address":"北中路187弄15号","source":"amap_place_around"},{"community":"莲溪六村","kind":"market","label":"菜","name":"聚鲜汇特价生鲜(莲园路)","longitude":121.559223,"latitude":31.185927,"distance_m":144,"address":"莲园路545-549号(北中路地铁站1号口步行420米)","source":"amap_place_around"},{"community":"蓝城小区","kind":"metro","label":"地","name":"博兴路(地铁站)","longitude":121.586689,"latitude":31.26352,"distance_m":562,"address":"6号线","source":"amap_place_text"},{"community":"蓝城小区","kind":"mall","label":"商","name":"沪东百货","longitude":121.584366,"latitude":31.264316,"distance_m":386,"address":"博兴路500、580号(博兴路地铁站2号口步行390米)","source":"amap_place_around"},{"community":"蓝城小区","kind":"market","label":"菜","name":"上海成真农贸(沪东百货店)","longitude":121.584025,"latitude":31.264375,"distance_m":363,"address":"柳埠路227号(博兴路地铁站2号口步行400米)","source":"amap_place_around"},{"community":"园西小区","kind":"metro","label":"地","name":"川沙(地铁站)","longitude":121.69821,"latitude":31.186741,"distance_m":370,"address":"2号线","source":"amap_place_text"},{"community":"园西小区","kind":"mall","label":"商","name":"申城皮鞋商场","longitude":121.701102,"latitude":31.190184,"distance_m":398,"address":"南桥路451号","source":"amap_place_around"},{"community":"园西小区","kind":"market","label":"菜","name":"园西菜篮子·生鲜超市","longitude":121.69597,"latitude":31.190534,"distance_m":117,"address":"妙城公寓东区东南1门西90米","source":"amap_place_around"},{"community":"桃园新村(川沙)","kind":"metro","label":"地","name":"川沙(地铁站)","longitude":121.69821,"latitude":31.186741,"distance_m":312,"address":"2号线","source":"amap_place_text"},{"community":"桃园新村(川沙)","kind":"mall","label":"商","name":"申城皮鞋商场","longitude":121.701102,"latitude":31.190184,"distance_m":191,"address":"南桥路451号","source":"amap_place_around"},{"community":"桃园新村(川沙)","kind":"market","label":"菜","name":"鲜品汇生鲜超市(川环南路店)","longitude":121.701944,"latitude":31.18785,"distance_m":131,"address":"川沙镇川环南路580号(川沙地铁站1号口步行310米)","source":"amap_place_around"},{"community":"绿地御桥苑","kind":"metro","label":"地","name":"御桥(地铁站)","longitude":121.570914,"latitude":31.158131,"distance_m":541,"address":"11号线;18号线","source":"amap_place_text"},{"community":"绿地御桥苑","kind":"mall","label":"商","name":"复地活力城","longitude":121.564732,"latitude":31.158316,"distance_m":547,"address":"沪南路2229号","source":"amap_place_around"},{"community":"绿地御桥苑","kind":"market","label":"菜","name":"逸桥生鲜(民乐苑御青路228弄店)","longitude":121.568185,"latitude":31.157797,"distance_m":412,"address":"万科·海上传奇西南门东60米","source":"amap_place_around"},{"community":"妙栏小区","kind":"metro","label":"地","name":"川沙(地铁站)","longitude":121.69821,"latitude":31.186741,"distance_m":866,"address":"2号线","source":"amap_place_text"},{"community":"妙栏小区","kind":"mall","label":"商","name":"恒越生活广场","longitude":121.693724,"latitude":31.183032,"distance_m":504,"address":"妙境路1087号","source":"amap_place_around"},{"community":"妙栏小区","kind":"market","label":"菜","name":"小菜店真实惠","longitude":121.689229,"latitude":31.1855,"distance_m":6,"address":"妙栏小区妙栏路265弄东南门旁","source":"amap_place_around"},{"community":"博三小区","kind":"metro","label":"地","name":"博兴路(地铁站)","longitude":121.586689,"latitude":31.26352,"distance_m":498,"address":"6号线","source":"amap_place_text"},{"community":"博三小区","kind":"mall","label":"商","name":"沪东百货","longitude":121.584366,"latitude":31.264316,"distance_m":260,"address":"博兴路500、580号(博兴路地铁站2号口步行390米)","source":"amap_place_around"},{"community":"博三小区","kind":"market","label":"菜","name":"海洋生鲜超市(新沪东公寓店)","longitude":121.58374,"latitude":31.265046,"distance_m":185,"address":"沪东新村街道泸东街道博兴路490号海洋生鲜超市","source":"amap_place_around"},{"community":"连波路66弄","kind":"metro","label":"地","name":"芳华路(地铁站)","longitude":121.550115,"latitude":31.19311,"distance_m":242,"address":"7号线","source":"amap_place_text"},{"community":"连波路66弄","kind":"mall","label":"商","name":"培花商场","longitude":121.558427,"latitude":31.193952,"distance_m":611,"address":"白杨路芳草路377号(芳芯路地铁站1号口步行280米)","source":"amap_place_around"},{"community":"连波路66弄","kind":"market","label":"菜","name":"清美生鲜(龙汇路店)","longitude":121.549408,"latitude":31.198471,"distance_m":504,"address":"龙汇路55弄1-12号古北·御庭","source":"amap_place_around"},{"community":"鹏海西区","kind":"metro","label":"地","name":"陈春路(地铁站)","longitude":121.558194,"latitude":31.175095,"distance_m":394,"address":"13号线","source":"amap_place_text"},{"community":"鹏海西区","kind":"mall","label":"商","name":"唐人幸福里","longitude":121.554569,"latitude":31.173149,"distance_m":760,"address":"陈春路109号(陈春路地铁站2号口步行430米)","source":"amap_place_around"},{"community":"鹏海西区","kind":"market","label":"菜","name":"梓默生鲜(莲杨苑店)","longitude":121.562013,"latitude":31.176029,"distance_m":140,"address":"北蔡镇莲溪路800弄29号一层","source":"amap_place_around"},{"community":"展想悦廷","kind":"metro","label":"地","name":"广兰路(地铁站)","longitude":121.621072,"latitude":31.21105,"distance_m":507,"address":"(在建)21号线;2号线","source":"amap_place_text"},{"community":"展想悦廷","kind":"mall","label":"商","name":"鼎盛商业广场","longitude":121.626834,"latitude":31.209993,"distance_m":65,"address":"张江镇祖冲之路2288弄3号楼114室","source":"amap_place_around"},{"community":"展想悦廷","kind":"market","label":"菜","name":"叮咚买菜(广兰路店)","longitude":121.620083,"latitude":31.205025,"distance_m":845,"address":"广兰路与紫薇路交叉口南100米","source":"amap_place_around"},{"community":"桃园新城中虹佳园东区","kind":"metro","label":"地","name":"沈梅路(地铁站)","longitude":121.580589,"latitude":31.091115,"distance_m":644,"address":"18号线","source":"amap_place_text"},{"community":"桃园新城中虹佳园东区","kind":"mall","label":"商","name":"浦商邻里荟-瑞园店","longitude":121.589825,"latitude":31.096025,"distance_m":413,"address":"瑞建路与周东南路交叉口西60米","source":"amap_place_around"},{"community":"桃园新城中虹佳园东区","kind":"market","label":"菜","name":"瑞园菜场(悦加天天购物中心店)","longitude":121.589754,"latitude":31.096122,"distance_m":410,"address":"瑞阳路331号悦加天天购物中心1层","source":"amap_place_around"}];
+function esc(value) { return String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+function buildYearText(item) {
+  const info = buildYears[item.community];
+  if (!info) return "建成年代待查";
+  const suffix = info.confidence === "high" ? "" : "（待核验）";
+  return "建成年代 " + info.year + suffix;
+}
+const searchParams = new URLSearchParams(location.search);
+const AMAP_JS_KEY = searchParams.get('key') || localStorage.getItem('amap_js_key') || '';
+const AMAP_SECURITY_JS_CODE = searchParams.get('jscode') || localStorage.getItem('amap_security_js_code') || '';
+const markerColors = { contact: '#177245', watch: '#2457b8', skip: '#64748b' };
+const amenityClassNames = { metro: 'metro-marker', mall: 'mall-marker', market: 'market-marker' };
+function setMapStatus(message, type = 'info') {
+  const node = document.getElementById('mapStatus');
+  node.textContent = message;
+  node.style.display = message ? 'block' : 'none';
+  node.style.borderColor = type === 'error' ? '#ef4444' : '#f59e0b';
+  node.style.color = type === 'error' ? '#991b1b' : '#92400e';
+}
+function localHttpHint() {
+  if (location.protocol !== 'file:') return '';
+  return '当前是 file:// 打开，高德 JSAPI 可能因来源为 null 被安全校验拦截。建议在本目录运行 python -m http.server 8766，然后访问 http://127.0.0.1:8766/zhangjiang_shortlist_15km_preview.html。';
+}
+function markerContent(text, className, bgColor) {
+  const style = bgColor ? ' style="background:' + esc(bgColor) + '"' : '';
+  return '<div class="marker-label ' + esc(className) + '"' + style + '>' + esc(text) + '</div>';
+}
+function loadAmap() {
+  const protocolHint = localHttpHint();
+  if (!AMAP_JS_KEY) {
+    const key = prompt('请输入高德 JSAPI Key。Key 只会保存在当前浏览器 localStorage，不会写入 HTML 文件。');
+    if (!key) {
+      setMapStatus('未提供高德 JSAPI Key，无法加载完整高德地图。可在地址后追加 ?key=你的JSAPIKey 后刷新。' + (protocolHint ? ' ' + protocolHint : ''), 'error');
+      return;
+    }
+    localStorage.setItem('amap_js_key', key.trim());
+    const securityCode = prompt('如果你的高德 JSAPI Key 是 2021-12-02 以后申请的，请输入 securityJsCode；没有可以留空。');
+    if (securityCode) localStorage.setItem('amap_security_js_code', securityCode.trim());
+    location.reload();
+    return;
+  }
+  if (protocolHint) {
+    setMapStatus('正在尝试加载高德地图。' + protocolHint, 'info');
+  }
+  if (AMAP_SECURITY_JS_CODE) {
+    window._AMapSecurityConfig = { securityJsCode: AMAP_SECURITY_JS_CODE };
+  }
+  const script = document.createElement('script');
+  script.src = 'https://webapi.amap.com/maps?v=2.0&plugin=AMap.Scale,AMap.ToolBar&key=' + encodeURIComponent(AMAP_JS_KEY);
+  script.onload = initAmap;
+  script.onerror = () => setMapStatus('高德地图脚本加载失败，请检查 JSAPI Key、securityJsCode、网络或 Key 的域名白名单。' + (protocolHint ? ' ' + protocolHint : ''), 'error');
+  document.head.appendChild(script);
+}
+function initAmap() {
+  if (!window.AMap) {
+    setMapStatus('高德地图对象未初始化，请检查 JSAPI Key。', 'error');
+    return;
+  }
+  setMapStatus('');
+  const amap = new AMap.Map('map', {
+    zoom: 12,
+    center: [work.lon, work.lat],
+    resizeEnable: true,
+    viewMode: '2D'
+  });
+  amap.addControl(new AMap.Scale());
+  amap.addControl(new AMap.ToolBar({ position: { right: '16px', top: '16px' } }));
+  const infoWindow = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -28) });
+  const markers = [];
+  const workMarker = new AMap.Marker({
+    position: [work.lon, work.lat],
+    title: '张江昆仑芯',
+    content: markerContent('', 'work-marker', ''),
+    anchor: 'center'
+  });
+  workMarker.setMap(amap);
+  markers.push(workMarker);
+  const circle = new AMap.Circle({
+    center: [work.lon, work.lat],
+    radius: 15000,
+    strokeColor: '#d97706',
+    strokeOpacity: .9,
+    strokeWeight: 1,
+    strokeStyle: 'dashed',
+    fillColor: '#d97706',
+    fillOpacity: .05
+  });
+  circle.setMap(amap);
+  listings.forEach(item => {
+    const marker = new AMap.Marker({
+      position: [item.longitude, item.latitude],
+      title: item.title,
+      content: markerContent(item.rank, item.action, markerColors[item.action]),
+      anchor: 'center'
+    });
+    marker.on('click', () => {
+      infoWindow.setContent(
+        '<strong>#' + esc(item.rank) + ' ' + esc(item.title) + '</strong>' +
+        '<p>￥' + esc(item.rent) + '/月 · ' + esc(item.layout) + ' · ' + esc(item.area_m2) + '㎡ · ' + esc(buildYearText(item)) + '</p>' +
+        '<p>' + esc(item.community) + ' · ' + esc(item.address) + '</p>' +
+        '<p>' + esc(item.subway) + '；' + esc(item.market) + '；' + esc(item.mall) + '</p>' +
+        '<p>' + esc(item.commute) + '</p>' +
+        (item.risks ? '<p>风险：' + esc(item.risks) + '</p>' : '') +
+        '<p><a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">打开贝壳房源</a></p>'
+      );
+      infoWindow.open(amap, marker.getPosition());
+    });
+    marker.setMap(amap);
+    markers.push(marker);
+  });
+  amenities.forEach(amenity => {
+    const amenityMarker = new AMap.Marker({
+      position: [amenity.longitude, amenity.latitude],
+      title: amenity.community + ' | ' + amenity.name + ' | ' + amenity.distance_m + 'm',
+      content: markerContent(amenity.label, 'amenity-marker ' + amenityClassNames[amenity.kind], ''),
+      anchor: 'center'
+    });
+    amenityMarker.on('click', () => {
+      infoWindow.setContent(
+        '<strong>' + esc(amenity.label) + ' ' + esc(amenity.name) + '</strong>' +
+        '<p>关联小区：' + esc(amenity.community) + '</p>' +
+        '<p>距离约 ' + esc(amenity.distance_m) + 'm · ' + esc(amenity.address) + '</p>' +
+        '<p>来源：高德 POI ' + esc(amenity.source) + '</p>'
+      );
+      infoWindow.open(amap, amenityMarker.getPosition());
+    });
+    amenityMarker.setMap(amap);
+    markers.push(amenityMarker);
+  });
+  window.focusMarker = rank => {
+    const item = listings.find(x => Number(x.rank) === Number(rank));
+    if (!item) return;
+    amap.setZoomAndCenter(15, [item.longitude, item.latitude]);
+  };
+  amap.setFitView(markers, false, [60, 60, 60, 60]);
+}
+
+document.getElementById('list').innerHTML = listings.map(item =>
+    '<article class="card ' + esc(item.action) + '" onclick="window.focusMarker && window.focusMarker(' + esc(item.rank) + ')">' +
+    '<div class="top">' +
+      '<div class="title">#' + esc(item.rank) + ' ' + esc(item.title) + '</div>' +
+      '<div class="rent">￥' + esc(item.rent) + '/月</div>' +
+    '</div>' +
+    '<div class="meta"><span class="badge ' + esc(item.action) + '">' + esc(item.action) + '</span>' +
+      '评分 ' + esc(item.score) + ' / ' + esc(item.business_area) + ' / ' + esc(item.layout) + ' / ' + esc(item.area_m2) + '㎡ / ' + esc(item.work) + ' / ' + esc(buildYearText(item)) +
+    '</div>' +
+    '<div class="meta">' + esc(item.community) + '；' + esc(item.address) + '；' + esc(item.subway) + '</div>' +
+    '<div class="meta">' + esc(item.market) + '；' + esc(item.mall) + '；' + esc(item.commute) + '</div>' +
+    '<div class="meta">' + esc(item.tags) + (item.risks ? '；风险：' + esc(item.risks) : '') + '</div>' +
+    '<div class="meta"><a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">打开贝壳房源</a></div>' +
+  '</article>'
+).join('');
+loadAmap();
+</script>
+</body>
+</html>

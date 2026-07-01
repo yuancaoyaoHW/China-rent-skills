@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上海租房候选地图</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; }
+    #app { display: grid; grid-template-columns: 360px 1fr; height: 100vh; }
+    aside { overflow: auto; border-right: 1px solid #e5e7eb; background: #fafafa; padding: 14px; }
+    #map { min-width: 0; }
+    h1 { font-size: 18px; margin: 0 0 8px; }
+    .hint { font-size: 12px; color: #64748b; margin-bottom: 12px; line-height: 1.45; }
+    .keybox { display: none; margin: 10px 0 14px; padding: 10px; border: 1px solid #f59e0b; background: #fffbeb; border-radius: 8px; }
+    .keybox input { width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #d1d5db; border-radius: 6px; }
+    .item { border: 1px solid #e5e7eb; background: white; border-radius: 8px; padding: 10px; margin-bottom: 10px; cursor: pointer; }
+    .item:hover { border-color: #2563eb; }
+    .top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+    .title { font-weight: 700; line-height: 1.25; }
+    .rent { color: #dc2626; font-weight: 700; white-space: nowrap; }
+    .meta, .risk { font-size: 12px; color: #475569; margin-top: 6px; line-height: 1.45; }
+    .risk { color: #b45309; }
+    .badge { display: inline-block; border-radius: 999px; padding: 2px 8px; font-size: 12px; margin-right: 4px; color: white; }
+    .contact { background: #16a34a; }
+    .watch { background: #2563eb; }
+    .skip { background: #64748b; }
+    @media (max-width: 760px) { #app { grid-template-columns: 1fr; grid-template-rows: 45vh 55vh; } aside { order: 2; border-right: 0; border-top: 1px solid #e5e7eb; } #map { order: 1; } }
+  </style>
+</head>
+<body>
+<div id="app">
+  <aside>
+    <h1>上海租房候选地图</h1>
+    <div class="hint">坐标来自高德 GCJ-02。subway_only / business_area / vague 表示位置只是近似点，联系前要核实小区和门牌。</div>
+    <div id="keybox" class="keybox">
+      需要高德 JS API key 才能渲染地图。输入后只在当前浏览器地址栏使用。
+      <input id="keyInput" placeholder="AMAP_JS_KEY">
+    </div>
+    <div id="list"></div>
+  </aside>
+  <div id="map"></div>
+</div>
+<script>
+const RENTAL_MARKERS = [{"rank": 1, "lng": 121.587666, "lat": 31.095666, "score": "105", "action": "contact", "platform": "贝壳", "title": "整租·欧风家园南区 2室1厅 南", "rent": "3000", "layout": "2室1厅", "area_m2": "80.26", "district": "浦东", "community": "欧风家园南区", "address": "", "subway": "沈梅路地铁站2号口约721m", "commute": "距张江昆仑芯约9.62km; 需确认实际通勤路线", "precision": "existing", "risks": "", "url": "https://sh.zu.ke.com/zufang/SH2140311500101779456.html"}, {"rank": 2, "lng": 121.576405, "lat": 31.118336, "score": "105", "action": "contact", "platform": "贝壳", "title": "整租·加盟圣蓝 2室1厅 南", "rent": "3500", "layout": "2室1厅", "area_m2": "56.75", "district": "浦东", "community": "加盟圣蓝苑", "address": "", "subway": "周浦地铁站约959m", "commute": "距张江昆仑芯约7.50km; 需确认实际通勤路线", "precision": "existing", "risks": "subway_near_1km", "url": "https://sh.zu.ke.com/zufang/SH2177097603655663616.html"}, {"rank": 3, "lng": 121.569542, "lat": 31.114507, "score": "100", "action": "contact", "platform": "贝壳", "title": "整租·万达广场(周浦) 1室1厅 北", "rent": "2500", "layout": "1室1厅", "area_m2": "43.00", "district": "浦东", "community": "万达广场(周浦)", "address": "", "subway": "周浦地铁站出入口约132m", "commute": "距张江昆仑芯约8.15km; 需确认实际通勤路线", "precision": "existing", "risks": "north_orientation", "url": "https://sh.zu.ke.com/zufang/SH2019060897451868160.html"}, {"rank": 4, "lng": 121.569542, "lat": 31.114507, "score": "100", "action": "watch", "platform": "贝壳", "title": "整租·万达广场(周浦) 1室1厅 南", "rent": "3000", "layout": "1室1厅", "area_m2": "56.00", "district": "浦东", "community": "万达广场(周浦)", "address": "", "subway": "周浦地铁站出入口约132m", "commute": "距张江昆仑芯约8.15km; 需确认实际通勤路线", "precision": "existing", "risks": "", "url": "https://sh.zu.ke.com/zufang/SH2164969065972498432.html"}, {"rank": 5, "lng": 121.543782, "lat": 31.173805, "score": "100", "action": "watch", "platform": "贝壳", "title": "整租·南新四村 1室1厅 东南/南", "rent": "3450", "layout": "1室1厅", "area_m2": "41.01", "district": "浦东", "community": "南新四村", "address": "", "subway": "下南路地铁站2号口约653m", "commute": "距张江昆仑芯约5.99km; 需确认实际通勤路线", "precision": "existing", "risks": "geocode_approx", "url": "https://sh.zu.ke.com/zufang/SH2063967899252424704.html"}, {"rank": 6, "lng": 121.534434, "lat": 31.184315, "score": "100", "action": "watch", "platform": "贝壳", "title": "整租·金旋小区 1室1厅 南", "rent": "3600", "layout": "1室1厅", "area_m2": "37.23", "district": "浦东", "community": "金旋小区", "address": "", "subway": "锦绣路地铁站约646m", "commute": "距张江昆仑芯约6.84km; 需确认实际通勤路线", "precision": "existing", "risks": "small_area", "url": "https://sh.zu.ke.com/zufang/SH2181325785581748224.html"}, {"rank": 7, "lng": 121.625953, "lat": 31.210278, "score": "100", "action": "contact", "platform": "贝壳", "title": "整租·展想悦廷 1室1厅 西", "rent": "4200", "layout": "1室1厅", "area_m2": "52.82", "district": "浦东", "community": "展想悦廷", "address": "", "subway": "广兰路地铁站2号口约386m", "commute": "距张江昆仑芯约3.78km; 需确认实际通勤路线", "precision": "existing", "risks": "west_orientation; near_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2168949682699501568.html"}, {"rank": 8, "lng": 121.65326, "lat": 31.210759, "score": "97", "action": "watch", "platform": "贝壳", "title": "整租·星纪元 2室1厅 东/南", "rent": "4500", "layout": "2室1厅", "area_m2": "48.00", "district": "浦东", "community": "星纪元", "address": "", "subway": "唐镇地铁站3号口约431m", "commute": "距张江昆仑芯约5.58km; 需确认实际通勤路线", "precision": "existing", "risks": "at_budget_max", "url": "https://sh.zu.ke.com/zufang/SH2161011751296958464.html"}, {"rank": 9, "lng": 121.581431, "lat": 31.26234, "score": "95", "action": "watch", "platform": "贝壳", "title": "整租·蓝城小区 2室1厅 南", "rent": "3600", "layout": "2室1厅", "area_m2": "44.00", "district": "浦东", "community": "蓝城小区", "address": "", "subway": "博兴路地铁站2号口约515m", "commute": "距张江昆仑芯约9.38km; 需确认实际通勤路线", "precision": "existing", "risks": "near_10km_limit; small_area_for_2br", "url": "https://sh.zu.ke.com/zufang/SH1771128018257838080.html"}, {"rank": 10, "lng": 121.664642, "lat": 31.209349, "score": "92", "action": "watch", "platform": "贝壳", "title": "整租·绿波城 1室1厅 南", "rent": "4305", "layout": "1室1厅", "area_m2": "59.00", "district": "浦东", "community": "绿波城", "address": "", "subway": "唐镇地铁站1号口约933m", "commute": "距张江昆仑芯约6.40km; 需确认实际通勤路线", "precision": "existing", "risks": "near_budget_max; subway_near_1km", "url": "https://sh.zu.ke.com/zufang/SH1880141035875598336.html"}, {"rank": 11, "lng": 121.581797, "lat": 31.265129, "score": "90", "action": "watch", "platform": "贝壳", "title": "整租·博三小区 1室1厅 南", "rent": "3300", "layout": "1室1厅", "area_m2": "40.18", "district": "浦东", "community": "博三小区", "address": "", "subway": "博兴路地铁站2号口约465m", "commute": "距张江昆仑芯约9.67km; 需确认实际通勤路线", "precision": "existing", "risks": "near_10km_limit", "url": "https://sh.zu.ke.com/zufang/SH2172620488981872640.html"}, {"rank": 12, "lng": 121.583564, "lat": 31.089303, "score": "70", "action": "skip", "platform": "贝壳", "title": "整租·汇枫公寓 1室1厅 南", "rent": "2500", "layout": "1室1厅", "area_m2": "55.00", "district": "浦东", "community": "汇枫公寓", "address": "", "subway": "沈梅路地铁站2号口约224m", "commute": "距张江昆仑芯约10.39km; 超过10km初筛线", "precision": "existing", "risks": "over_10km", "url": "https://sh.zu.ke.com/zufang/SH2161438061861273600.html"}];
+const EMBEDDED_AMAP_KEY = "";
+const COLORS = { contact: "#16a34a", watch: "#2563eb", skip: "#64748b" };
+function esc(s) { return String(s || "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function keyFromUrl() { return new URLSearchParams(location.search).get("key") || ""; }
+function renderList(focus) {
+  const list = document.getElementById("list");
+  list.innerHTML = RENTAL_MARKERS.map((m, i) => `
+    <div class="item" onclick="window.focusMarker && window.focusMarker(${i})">
+      <div class="top"><div class="title">#${m.rank} ${esc(m.title || m.community || "未命名房源")}</div><div class="rent">${esc(m.rent)} 元/月</div></div>
+      <div class="meta"><span class="badge ${esc(m.action)}">${esc(m.action)}</span> 分数 ${esc(m.score)} · ${esc(m.platform)} · ${esc(m.layout)} · ${esc(m.area_m2)}㎡</div>
+      <div class="meta">${esc([m.district, m.community, m.address].filter(Boolean).join(" · "))}</div>
+      <div class="meta">${esc([m.subway, m.commute, m.precision].filter(Boolean).join(" · "))}</div>
+      ${m.risks ? `<div class="risk">风险：${esc(m.risks)}</div>` : ""}
+    </div>`).join("");
+}
+function loadAmap(key) {
+  if (!key) {
+    document.getElementById("keybox").style.display = "block";
+    document.getElementById("keyInput").addEventListener("change", e => {
+      const url = new URL(location.href);
+      url.searchParams.set("key", e.target.value.trim());
+      location.href = url.toString();
+    });
+    renderList();
+    return;
+  }
+  const script = document.createElement("script");
+  script.src = "https://webapi.amap.com/maps?v=2.0&key=" + encodeURIComponent(key);
+  script.onload = initMap;
+  document.head.appendChild(script);
+}
+function initMap() {
+  renderList();
+  const center = RENTAL_MARKERS.length ? [RENTAL_MARKERS[0].lng, RENTAL_MARKERS[0].lat] : [121.587666, 31.095666];
+  const map = new AMap.Map("map", { zoom: 12, center });
+  const info = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -28) });
+  const markers = RENTAL_MARKERS.map((m, i) => {
+    const marker = new AMap.Marker({
+      position: [m.lng, m.lat],
+      title: m.title,
+      label: { content: String(m.rank), direction: "top" }
+    });
+    marker.setMap(map);
+    marker.on("click", () => {
+      const link = m.url ? `<p><a href="${esc(m.url)}" target="_blank">打开来源</a></p>` : "";
+      info.setContent(`<strong>#${m.rank} ${esc(m.title || m.community)}</strong>
+        <p>${esc(m.platform)} · ${esc(m.rent)} 元/月 · ${esc(m.layout)} · ${esc(m.area_m2)}㎡</p>
+        <p>${esc([m.district, m.community, m.address].filter(Boolean).join(" · "))}</p>
+        <p>${esc([m.subway, m.commute, m.precision].filter(Boolean).join(" · "))}</p>
+        <p>${esc(m.risks ? "风险：" + m.risks : "")}</p>${link}`);
+      info.open(map, marker.getPosition());
+    });
+    return marker;
+  });
+  if (markers.length > 1) map.setFitView(markers);
+  window.focusMarker = i => {
+    const marker = markers[i];
+    if (!marker) return;
+    map.setZoomAndCenter(15, marker.getPosition());
+    marker.emit("click", { target: marker });
+  };
+}
+loadAmap(EMBEDDED_AMAP_KEY || keyFromUrl());
+</script>
+</body>
+</html>
