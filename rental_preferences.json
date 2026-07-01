@@ -600,6 +600,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4639820402958336"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640468655692812": {
+      "area_m2": "54.9",
+      "community": "秀康新城达城家园",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 76,
+      "rent": 3300,
+      "title": "新上~16号周浦东 简装电梯一房 可办居住可长租",
+      "updated_at": "2026-07-01T13:31:26+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640468655692812"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4640478004125703": {
       "area_m2": "38",
       "community": "沪南路2500号楼",
@@ -901,6 +913,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:31:18+00:00",
+  "updated_at": "2026-07-01T13:31:26+00:00",
   "version": 1
 }
