@@ -336,6 +336,18 @@
       "updated_at": "2026-07-01T13:31:36+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4623654347858948"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4623832913337350": {
+      "area_m2": "48.8",
+      "community": "培育苑",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 78,
+      "rent": 3900,
+      "title": "近龙阳路 新上精装一房带客厅 民水电宠物友好 关键",
+      "updated_at": "2026-07-01T13:31:49+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4623832913337350"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4624795680037902": {
       "area_m2": "60.1",
       "community": "汤巷雅苑",
@@ -925,6 +937,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:31:36+00:00",
+  "updated_at": "2026-07-01T13:31:49+00:00",
   "version": 1
 }
