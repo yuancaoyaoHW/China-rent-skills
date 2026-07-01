@@ -228,6 +228,18 @@
       "updated_at": "2026-07-01T13:26:25+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4593918975646731"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4600976447462403": {
+      "area_m2": "59.4",
+      "community": "仁怡苑",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 74,
+      "rent": 4000,
+      "title": "电梯朝南小两房I适合同事闺蜜合租或三口小家庭I经济实惠",
+      "updated_at": "2026-07-01T13:31:10+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4600976447462403"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4603627989015566": {
       "area_m2": "78.7",
       "community": "康桥月苑(北区)",
@@ -877,6 +889,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:30:49+00:00",
+  "updated_at": "2026-07-01T13:31:10+00:00",
   "version": 1
 }
