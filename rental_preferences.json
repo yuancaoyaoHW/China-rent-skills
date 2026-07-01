@@ -48,6 +48,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4569840130989058"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4571326658567178": {
+      "area_m2": "75.6",
+      "community": "海尚康庭",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 36,
+      "rent": 3800,
+      "title": "海尚康庭 2室1厅1卫 拎包入住 南北通透，近地铁11号线",
+      "updated_at": "2026-07-01T13:24:42+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4571326658567178"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4586711030717450": {
       "area_m2": "30",
       "community": "港城中环汇领寓",
@@ -421,6 +433,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4638331771019279"
     }
   },
-  "updated_at": "2026-07-01T13:24:30+00:00",
+  "updated_at": "2026-07-01T13:24:42+00:00",
   "version": 1
 }
