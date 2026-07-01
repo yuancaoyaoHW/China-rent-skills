@@ -576,6 +576,18 @@
       "updated_at": "2026-07-01T13:24:18+00:00",
       "url": "https://sh.zu.anjuke.com/gfangyuan/4638331771019279"
     },
+    "https://sh.zu.anjuke.com/gfangyuan/4643636909629440": {
+      "area_m2": "40",
+      "community": "川杨新苑(三期)",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 50,
+      "rent": 3200,
+      "title": "川杨新苑(三期) 1室1厅1卫",
+      "updated_at": "2026-07-01T13:26:08+00:00",
+      "url": "https://sh.zu.anjuke.com/gfangyuan/4643636909629440"
+    },
     "https://sh.zu.anjuke.com/gfangyuan/4644023032306695": {
       "area_m2": "40",
       "community": "申城佳苑一期A块",
@@ -589,6 +601,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:26:03+00:00",
+  "updated_at": "2026-07-01T13:26:08+00:00",
   "version": 1
 }
