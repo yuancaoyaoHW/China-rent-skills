@@ -216,6 +216,18 @@
       "updated_at": "2026-07-01T13:21:44+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4643255232355332"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643362535644166": {
+      "area_m2": "35",
+      "community": "关岳路8弄5-6号小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 21,
+      "rent": 2500,
+      "title": "沪上优选近商圈地铁整租一房 南北通透 民水民电 拎包即住",
+      "updated_at": "2026-07-01T13:22:05+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643362535644166"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4644802221366286": {
       "area_m2": "31",
       "community": "川周公路2788弄小区",
@@ -241,6 +253,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:21:44+00:00",
+  "updated_at": "2026-07-01T13:22:05+00:00",
   "version": 1
 }
