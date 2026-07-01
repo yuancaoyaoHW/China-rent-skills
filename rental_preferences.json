@@ -276,6 +276,18 @@
       "updated_at": "2026-07-01T13:22:21+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4640808596267017"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640950734216198": {
+      "area_m2": "60",
+      "community": "沪南路2500号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 31,
+      "rent": 3000,
+      "title": "急租管家 | 民用水电 | 带阳台 | 欢迎来电",
+      "updated_at": "2026-07-01T13:24:10+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640950734216198"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4641978409165829": {
       "area_m2": "35",
       "community": "川周公路2788弄小区",
@@ -361,6 +373,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:24:07+00:00",
+  "updated_at": "2026-07-01T13:24:10+00:00",
   "version": 1
 }
