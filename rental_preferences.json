@@ -804,6 +804,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     },
+    "https://sh.zu.anjuke.com/gfangyuan/4331745100655626": {
+      "area_m2": "42",
+      "community": "明珠小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 73,
+      "rent": 2580,
+      "title": "明珠小区 1室1厅1卫",
+      "updated_at": "2026-07-01T13:30:49+00:00",
+      "url": "https://sh.zu.anjuke.com/gfangyuan/4331745100655626"
+    },
     "https://sh.zu.anjuke.com/gfangyuan/4598080193223681": {
       "area_m2": "50",
       "community": "兰沁苑",
@@ -865,6 +877,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:30:00+00:00",
+  "updated_at": "2026-07-01T13:30:49+00:00",
   "version": 1
 }
