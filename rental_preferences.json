@@ -1247,8 +1247,20 @@
       "title": "整租·瑞浦嘉苑 1室1厅 南",
       "updated_at": "2026-07-01T13:37:18+00:00",
       "url": "https://sh.zu.ke.com/zufang/SH2179860674669182976.html"
+    },
+    "https://sh.zu.ke.com/zufang/SH2181664263360217088.html": {
+      "area_m2": "56.00",
+      "community": "欧风家园南区",
+      "layout": "1室1厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 105,
+      "rent": 3500,
+      "title": "整租·欧风家园南区 1室1厅 南",
+      "updated_at": "2026-07-01T13:40:55+00:00",
+      "url": "https://sh.zu.ke.com/zufang/SH2181664263360217088.html"
     }
   },
-  "updated_at": "2026-07-01T13:40:50+00:00",
+  "updated_at": "2026-07-01T13:40:55+00:00",
   "version": 1
 }
