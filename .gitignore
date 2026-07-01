@@ -1,0 +1,32 @@
+# Python virtual environments
+bu_env/
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Browser profiles (contains cookies, history, credentials)
+bu_profile/
+chrome_profile/
+edge_profile/
+
+# API keys / secrets
+.env
+*.key
+secrets.json
+
+# Temporary collection artifacts (regenerable, large)
+_collect_config.json
+_extract_b64.txt
+_save_page2.py
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
