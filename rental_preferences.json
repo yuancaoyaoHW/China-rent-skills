@@ -204,6 +204,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4606745891658753"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4622600105667595": {
+      "area_m2": "40",
+      "community": "唐龙路1169号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 59,
+      "rent": 2650,
+      "title": "唐镇中心近张江 双阳台大平层小区安静采光佳",
+      "updated_at": "2026-07-01T13:27:37+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4622600105667595"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4624795680037902": {
       "area_m2": "60.1",
       "community": "汤巷雅苑",
@@ -697,6 +709,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:27:23+00:00",
+  "updated_at": "2026-07-01T13:27:37+00:00",
   "version": 1
 }
