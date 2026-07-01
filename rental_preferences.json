@@ -372,6 +372,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4637047447413774"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4637728050160642": {
+      "area_m2": "91.4",
+      "community": "康花新村",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 56,
+      "rent": 4000,
+      "title": "浦三路 超大整租大一房大阳台 民水民电 随时看房 当天住",
+      "updated_at": "2026-07-01T13:26:49+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4637728050160642"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4637937880293383": {
       "area_m2": "45",
       "community": "川周公路2788弄小区",
@@ -661,6 +673,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:26:42+00:00",
+  "updated_at": "2026-07-01T13:26:49+00:00",
   "version": 1
 }
