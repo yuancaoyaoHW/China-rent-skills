@@ -12,6 +12,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4528846731090951"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4535115755400200": {
+      "area_m2": "39",
+      "community": "沪南路2420号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 26,
+      "rent": 2500,
+      "title": "首月5折 直达东体地铁口 民用水电精装修24小时安保随时住",
+      "updated_at": "2026-07-01T13:23:40+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4535115755400200"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4569840130989058": {
       "area_m2": "57.2",
       "community": "川杨新苑(三期)",
@@ -301,6 +313,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:23:34+00:00",
+  "updated_at": "2026-07-01T13:23:40+00:00",
   "version": 1
 }
