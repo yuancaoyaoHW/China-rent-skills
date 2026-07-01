@@ -444,6 +444,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     },
+    "https://sh.zu.anjuke.com/gfangyuan/4600580585708556": {
+      "area_m2": "30",
+      "community": "莲文苑",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 39,
+      "rent": 2650,
+      "title": "莲文苑 1室1厅1卫",
+      "updated_at": "2026-07-01T13:25:01+00:00",
+      "url": "https://sh.zu.anjuke.com/gfangyuan/4600580585708556"
+    },
     "https://sh.zu.anjuke.com/gfangyuan/4638331771019279": {
       "area_m2": "57",
       "community": "由由四村",
@@ -457,6 +469,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4638331771019279"
     }
   },
-  "updated_at": "2026-07-01T13:24:55+00:00",
+  "updated_at": "2026-07-01T13:25:01+00:00",
   "version": 1
 }
