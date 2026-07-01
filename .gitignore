@@ -20,6 +20,9 @@ secrets.json
 _collect_config.json
 _extract_b64.txt
 _save_page2.py
+http-server-*.log
+http-server-*.err.log
+rental-pref-service-*.log
 
 # OS junk
 Thumbs.db

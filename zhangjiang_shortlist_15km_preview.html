@@ -41,6 +41,11 @@
     .pref-btn:hover { border-color:#999; }
     .pref-btn.active.like { background:#dcfce7; border-color:#16a34a; color:#16a34a; }
     .pref-btn.active.dislike { background:#fee2e2; border-color:#dc2626; color:#dc2626; }
+    .pref-toolbar { position:sticky; top:0; z-index:9; background:rgba(255,255,255,.96); border:1px solid var(--line); border-radius:8px; padding:10px; margin-bottom:10px; box-shadow:0 8px 18px rgba(15,23,42,.08); }
+    .pref-summary { font-size:13px; color:var(--ink); line-height:1.5; margin-bottom:8px; }
+    .sync-status { color:var(--muted); font-size:12px; line-height:1.45; }
+    .toolbar-btn { cursor:pointer; border:1px solid var(--line); border-radius:6px; padding:4px 9px; font-size:12px; margin:0 5px 6px 0; background:white; color:var(--ink); }
+    .toolbar-btn:hover { border-color:#94a3b8; background:#f8fafc; }
     .card.dislike-card { opacity:.45; border-left-color:var(--skip) !important; }
     .card.dislike-card .title { text-decoration:line-through; }
     @media (max-width:880px) { main { grid-template-columns:1fr; padding:12px; } aside { max-height:none; } .metrics { grid-template-columns:1fr; } }
@@ -54,7 +59,17 @@
     <div class="metrics"><div class="metric"><b>106</b><span>候选房源</span></div><div class="metric"><b>￥2000-4000</b><span>推荐区间</span></div><div class="metric"><b>居民小区优先</b><span>小区/新村/苑/家园</span></div></div>
     <div class="map" id="map"><div class="map-status" id="mapStatus">正在加载高德地图...</div><div class="legend">绿色：优先联系；蓝色：备选；橙点：工作地。小圆点为高德 POI：地=地铁，商=商场，菜=菜场。</div></div>
   </section>
-  <aside id="list"></aside>
+  <aside>
+    <div class="pref-toolbar">
+      <div class="pref-summary" id="prefSummary">偏好：正在读取...</div>
+      <button class="toolbar-btn" type="button" onclick="exportPreferences()">导出结果</button>
+      <button class="toolbar-btn" type="button" onclick="document.getElementById('prefImport').click()">导入结果</button>
+      <button class="toolbar-btn" type="button" onclick="clearPreferences()">清空标记</button>
+      <input id="prefImport" type="file" accept="application/json" hidden onchange="importPreferences(event)">
+      <div class="sync-status" id="syncStatus">本地浏览器会立即保存；启动同步服务后会自动 commit 并 push。</div>
+    </div>
+    <div id="list"></div>
+  </aside>
 </main>
 <script>
 const work = { lon: 121.606222, lat: 31.180732 };
@@ -198,16 +213,182 @@ function initAmap() {
   amap.setFitView(markers, false, [60, 60, 60, 60]);
 }
 
-function getUserPref(url) { return localStorage.getItem('rental_pref_' + url) || ''; }
+const PREF_STORAGE_PREFIX = 'rental_pref_';
+function getUserPref(url) { return localStorage.getItem(PREF_STORAGE_PREFIX + url) || ''; }
 function setUserPref(url, pref) {
-  if (pref) localStorage.setItem('rental_pref_' + url, pref);
-  else localStorage.removeItem('rental_pref_' + url);
+  if (pref) localStorage.setItem(PREF_STORAGE_PREFIX + url, pref);
+  else localStorage.removeItem(PREF_STORAGE_PREFIX + url);
+}
+function findListingByUrl(url) {
+  return listings.find(function(item) { return item.url === url; }) || {};
+}
+function preferencePayload(url, pref) {
+  var item = findListingByUrl(url);
+  return {
+    url: url,
+    pref: pref,
+    listing: {
+      rank: item.rank,
+      title: item.title,
+      community: item.community,
+      rent: item.rent,
+      layout: item.layout,
+      area_m2: item.area_m2,
+      platform: item.platform
+    }
+  };
+}
+function preferenceEntries() {
+  return listings.map(function(item) {
+    return Object.assign({}, preferencePayload(item.url, getUserPref(item.url)).listing, {
+      url: item.url,
+      pref: getUserPref(item.url),
+      updated_at: new Date().toISOString()
+    });
+  }).filter(function(entry) { return entry.pref; });
+}
+function preferenceCounts() {
+  return listings.reduce(function(counts, item) {
+    var pref = getUserPref(item.url);
+    if (pref === 'like') counts.like += 1;
+    if (pref === 'dislike') counts.dislike += 1;
+    return counts;
+  }, { like: 0, dislike: 0 });
+}
+function updatePreferenceSummary() {
+  var counts = preferenceCounts();
+  document.getElementById('prefSummary').textContent = '偏好：感兴趣 ' + counts.like + ' / 不感兴趣 ' + counts.dislike + ' / 共 ' + listings.length + ' 套';
+}
+function setSyncStatus(message) {
+  var node = document.getElementById('syncStatus');
+  if (node) node.textContent = message;
+}
+function canUsePreferenceApi() {
+  return location.protocol === 'http:' || location.protocol === 'https:';
+}
+async function syncPreference(url, pref) {
+  if (!canUsePreferenceApi()) {
+    setSyncStatus('已保存在当前浏览器；file:// 模式不能同步到 git，请从本地服务地址打开。');
+    return;
+  }
+  setSyncStatus('正在写入 rental_preferences.json，并提交/推送到 GitHub...');
+  try {
+    var response = await fetch('/api/preferences', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(preferencePayload(url, pref))
+    });
+    var result = await response.json();
+    if (!response.ok || !result.ok) throw new Error(result.error || '同步失败');
+    var git = result.git || {};
+    if (git.status === 'pushed') setSyncStatus('已保存，并 push 到 origin/' + git.branch + '。');
+    else if (git.status === 'committed') setSyncStatus('已保存并 commit；当前服务未开启自动 push。');
+    else setSyncStatus('已保存；git 中没有新的偏好变更。');
+  } catch (error) {
+    setSyncStatus('已保存在当前浏览器，但 git 同步失败：' + error.message);
+  }
+}
+function syncStatusFromGit(git) {
+  if (git.status === 'pushed') return '已保存，并 push 到 origin/' + git.branch + '。';
+  if (git.status === 'committed') return '已保存并 commit；当前服务未开启自动 push。';
+  return '已保存；git 中没有新的偏好变更。';
+}
+async function postPreferencesBulk(entries, busyMessage) {
+  if (!canUsePreferenceApi()) {
+    setSyncStatus('已保存在当前浏览器；file:// 模式不能同步到 git，请从本地服务地址打开。');
+    return;
+  }
+  setSyncStatus(busyMessage || '正在批量同步偏好到 GitHub...');
+  try {
+    var response = await fetch('/api/preferences/bulk', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ preferences: entries })
+    });
+    var result = await response.json();
+    if (!response.ok || !result.ok) throw new Error(result.error || '同步失败');
+    setSyncStatus(syncStatusFromGit(result.git || {}));
+  } catch (error) {
+    setSyncStatus('已保存在当前浏览器，但 git 同步失败：' + error.message);
+  }
+}
+async function syncAllLocalPreferences() {
+  var entries = preferenceEntries();
+  if (!entries.length) return;
+  await postPreferencesBulk(entries, '正在同步当前浏览器已有标记到 rental_preferences.json 和 GitHub...');
 }
 function togglePref(url, pref) {
   var cur = getUserPref(url);
-  if (cur === pref) setUserPref(url, '');
-  else setUserPref(url, pref);
+  var next = cur === pref ? '' : pref;
+  setUserPref(url, next);
   renderList();
+  syncPreference(url, next);
+}
+async function loadServerPreferences() {
+  if (!canUsePreferenceApi()) {
+    renderList();
+    return;
+  }
+  try {
+    var response = await fetch('/api/preferences');
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    var data = await response.json();
+    Object.keys(data.preferences || {}).forEach(function(url) {
+      var pref = data.preferences[url] && data.preferences[url].pref;
+      if (pref === 'like' || pref === 'dislike') setUserPref(url, pref);
+    });
+    renderList();
+    if (preferenceEntries().length) await syncAllLocalPreferences();
+    else setSyncStatus('已读取 rental_preferences.json；之后点击会自动 commit 并 push。');
+  } catch (error) {
+    renderList();
+    setSyncStatus('未连接到偏好同步服务；当前只会保存在浏览器：' + error.message);
+  }
+}
+function exportPreferences() {
+  var payload = {
+    version: 1,
+    exported_at: new Date().toISOString(),
+    preferences: preferenceEntries()
+  };
+  var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('a');
+  link.href = url;
+  link.download = 'rental-preferences-' + new Date().toISOString().slice(0, 10) + '.json';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+async function importPreferences(event) {
+  var file = event.target.files && event.target.files[0];
+  event.target.value = '';
+  if (!file) return;
+  try {
+    var data = JSON.parse(await file.text());
+    var entries = Array.isArray(data.preferences) ? data.preferences : Object.values(data.preferences || {});
+    for (var i = 0; i < entries.length; i += 1) {
+      var entry = entries[i];
+      if (!entry || !entry.url) continue;
+      if (entry.pref === 'like' || entry.pref === 'dislike') {
+        setUserPref(entry.url, entry.pref);
+      }
+    }
+    renderList();
+    await syncAllLocalPreferences();
+  } catch (error) {
+    setSyncStatus('导入失败：' + error.message);
+  }
+}
+async function clearPreferences() {
+  if (!confirm('确定清空当前页面所有感兴趣/不感兴趣标记吗？')) return;
+  var existing = preferenceEntries();
+  listings.forEach(function(item) { setUserPref(item.url, ''); });
+  renderList();
+  await postPreferencesBulk(existing.map(function(entry) {
+    return Object.assign({}, entry, { pref: '' });
+  }), '正在清空 rental_preferences.json 中的页面标记，并同步到 GitHub...');
 }
 function renderList() {
   var sorted = listings.slice().sort(function(a, b) {
@@ -241,8 +422,9 @@ function renderList() {
       '</div>' +
     '</article>';
   }).join('');
+  updatePreferenceSummary();
 }
-renderList();
+loadServerPreferences();
 loadAmap();
 </script>
 </body>
