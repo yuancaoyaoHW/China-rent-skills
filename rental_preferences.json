@@ -324,6 +324,18 @@
       "updated_at": "2026-07-01T13:27:37+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4622600105667595"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4623654347858948": {
+      "area_m2": "55.9",
+      "community": "培元新苑",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 77,
+      "rent": 4000,
+      "title": "2号线创新中路 近印象汇 盒马 民用水电 好停车 整租一房",
+      "updated_at": "2026-07-01T13:31:36+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4623654347858948"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4624795680037902": {
       "area_m2": "60.1",
       "community": "汤巷雅苑",
@@ -913,6 +925,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:31:26+00:00",
+  "updated_at": "2026-07-01T13:31:36+00:00",
   "version": 1
 }
