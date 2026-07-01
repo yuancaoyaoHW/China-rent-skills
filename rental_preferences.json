@@ -72,6 +72,18 @@
       "updated_at": "2026-07-01T13:27:05+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4544767744828426"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4545837784210435": {
+      "area_m2": "81.6",
+      "community": "海尚康庭",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 67,
+      "rent": 4000,
+      "title": "新出电梯精装两房 景观楼层 可长租 办理居住证 看房随时",
+      "updated_at": "2026-07-01T13:28:31+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4545837784210435"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4546287338155014": {
       "area_m2": "72.3",
       "community": "康桥月苑(南区)",
@@ -793,6 +805,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:28:18+00:00",
+  "updated_at": "2026-07-01T13:28:31+00:00",
   "version": 1
 }
