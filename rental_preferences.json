@@ -408,6 +408,18 @@
       "updated_at": "2026-07-01T13:25:42+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4635078292430852"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4635179353022468": {
+      "area_m2": "76",
+      "community": "汇福家园平安里(北区)",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 70,
+      "rent": 3700,
+      "title": "小两房出租，靠近16号线，靠近儿童医院肿瘤医院，靠近医谷园区",
+      "updated_at": "2026-07-01T13:29:06+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4635179353022468"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4635219580510220": {
       "area_m2": "60",
       "community": "东康名苑",
@@ -829,6 +841,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:28:52+00:00",
+  "updated_at": "2026-07-01T13:29:06+00:00",
   "version": 1
 }
