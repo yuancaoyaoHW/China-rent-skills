@@ -216,6 +216,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4639820402958336"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640712888034313": {
+      "area_m2": "45",
+      "community": "沪南路2420号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 27,
+      "rent": 2500,
+      "title": "御桥前台管家在线出租，24小时服务及维修。安全省心",
+      "updated_at": "2026-07-01T13:23:44+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640712888034313"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4640808596267017": {
       "area_m2": "29.6",
       "community": "港城中环汇领寓",
@@ -313,6 +325,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:23:40+00:00",
+  "updated_at": "2026-07-01T13:23:44+00:00",
   "version": 1
 }
