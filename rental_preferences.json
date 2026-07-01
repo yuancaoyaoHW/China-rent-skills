@@ -948,6 +948,18 @@
       "updated_at": "2026-07-01T13:27:23+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4643595814329352"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643674139860997": {
+      "area_m2": "58",
+      "community": "百林苑",
+      "layout": "1室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 91,
+      "rent": 3500,
+      "title": "周浦万达旁18号线周浦地铁口，次新小区，停车方便",
+      "updated_at": "2026-07-01T13:35:22+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643674139860997"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643771125392390": {
       "area_m2": "75",
       "community": "城南路497弄小区",
@@ -1081,6 +1093,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:34:36+00:00",
+  "updated_at": "2026-07-01T13:35:22+00:00",
   "version": 1
 }
