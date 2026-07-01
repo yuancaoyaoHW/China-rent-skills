@@ -576,6 +576,18 @@
       "updated_at": "2026-07-01T13:22:05+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4643362535644166"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643444184719375": {
+      "area_m2": "52.1",
+      "community": "公元新村",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 60,
+      "rent": 3100,
+      "title": "近小上海步行街 近万达 2房 采光好 可办居住证",
+      "updated_at": "2026-07-01T13:27:41+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643444184719375"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643577281273867": {
       "area_m2": "35",
       "community": "沪南路2500号楼",
@@ -709,6 +721,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:27:37+00:00",
+  "updated_at": "2026-07-01T13:27:41+00:00",
   "version": 1
 }
