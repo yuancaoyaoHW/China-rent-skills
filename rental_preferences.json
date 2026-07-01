@@ -240,6 +240,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4639820402958336"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640545125571596": {
+      "area_m2": "29",
+      "community": "芳华路63号小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 30,
+      "rent": 2800,
+      "title": "夏日实惠一居室，长租月付，如果你是毕业生一定要看我",
+      "updated_at": "2026-07-01T13:24:07+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640545125571596"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4640712888034313": {
       "area_m2": "45",
       "community": "沪南路2420号楼",
@@ -349,6 +361,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:23:57+00:00",
+  "updated_at": "2026-07-01T13:24:07+00:00",
   "version": 1
 }
