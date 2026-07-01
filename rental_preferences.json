@@ -828,6 +828,18 @@
       "updated_at": "2026-07-01T13:21:44+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4643255232355332"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643333243576326": {
+      "area_m2": "35",
+      "community": "康威路1500号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 84,
+      "rent": 2600,
+      "title": "长租短租 实习生友好 包含水电 押一付一",
+      "updated_at": "2026-07-01T13:33:29+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643333243576326"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643362535644166": {
       "area_m2": "35",
       "community": "关岳路8弄5-6号小区",
@@ -997,6 +1009,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:33:14+00:00",
+  "updated_at": "2026-07-01T13:33:29+00:00",
   "version": 1
 }
