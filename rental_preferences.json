@@ -912,6 +912,18 @@
       "updated_at": "2026-07-01T13:24:15+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4643771125392390"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4644069543502853": {
+      "area_m2": "41",
+      "community": "康浦路51弄19号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 86,
+      "rent": 2700,
+      "title": "16号线周浦东 采光通风好 家电齐全 押一付一 拎包入住",
+      "updated_at": "2026-07-01T13:33:55+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4644069543502853"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4644711370923021": {
       "area_m2": "77.1",
       "community": "汇福家园兴盛里(北区)",
@@ -1021,6 +1033,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:33:35+00:00",
+  "updated_at": "2026-07-01T13:33:55+00:00",
   "version": 1
 }
