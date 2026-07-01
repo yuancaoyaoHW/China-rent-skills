@@ -48,6 +48,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4603902265549834"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4605431038155781": {
+      "area_m2": "90.6",
+      "community": "汇腾东苑",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 25,
+      "rent": 3500,
+      "title": "汇腾东苑精装全配拎包入住两房两厅一卫 沈梅路站旁",
+      "updated_at": "2026-07-01T13:23:34+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4605431038155781"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4606745891658753": {
       "area_m2": "118",
       "community": "古桐四村",
@@ -289,6 +301,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:22:30+00:00",
+  "updated_at": "2026-07-01T13:23:34+00:00",
   "version": 1
 }
