@@ -204,6 +204,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4641987504513038"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4642262079546373": {
+      "area_m2": "31.3",
+      "community": "港城中环汇领寓",
+      "layout": "1室0厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 22,
+      "rent": 2770,
+      "title": "上海梅雨季优先锁定 朝南独立阳台房",
+      "updated_at": "2026-07-01T13:22:13+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4642262079546373"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643255232355332": {
       "area_m2": "59.6",
       "community": "汤巷雅苑",
@@ -253,6 +265,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:22:05+00:00",
+  "updated_at": "2026-07-01T13:22:13+00:00",
   "version": 1
 }
