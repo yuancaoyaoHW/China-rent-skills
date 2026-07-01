@@ -120,6 +120,18 @@
       "updated_at": "2026-07-01T13:26:03+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4588460997993486"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4593918975646731": {
+      "area_m2": "28",
+      "community": "沪南路2420号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 52,
+      "rent": 2500,
+      "title": "浦东新区御桥地铁11和18号线一室一厅一卫一厨全明28平方米",
+      "updated_at": "2026-07-01T13:26:25+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4593918975646731"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4603627989015566": {
       "area_m2": "78.7",
       "community": "康桥月苑(北区)",
@@ -613,6 +625,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:26:12+00:00",
+  "updated_at": "2026-07-01T13:26:25+00:00",
   "version": 1
 }
