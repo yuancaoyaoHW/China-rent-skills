@@ -132,6 +132,18 @@
       "updated_at": "2026-07-01T13:28:04+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4557263578196995"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4569646761614339": {
+      "area_m2": "84.7",
+      "community": "汇福家园安康里(西区)",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 92,
+      "rent": 3800,
+      "title": "近医学园区 儿童医院 肿瘤医院 好停车出行方便 随便看房",
+      "updated_at": "2026-07-01T13:35:31+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4569646761614339"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4569698610766851": {
       "area_m2": "78.3",
       "community": "海尚康庭",
@@ -1093,6 +1105,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:35:22+00:00",
+  "updated_at": "2026-07-01T13:35:31+00:00",
   "version": 1
 }
