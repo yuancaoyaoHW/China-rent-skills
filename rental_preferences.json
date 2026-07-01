@@ -720,6 +720,18 @@
       "updated_at": "2026-07-01T13:22:21+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4640808596267017"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4640811006337024": {
+      "area_m2": "36.8",
+      "community": "金旋小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 82,
+      "rent": 3800,
+      "title": "新出 金旋低楼层大平台居家装修一房 租金回到解放前 必看好房",
+      "updated_at": "2026-07-01T13:32:57+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4640811006337024"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4640950734216198": {
       "area_m2": "60",
       "community": "沪南路2500号楼",
@@ -973,6 +985,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:32:49+00:00",
+  "updated_at": "2026-07-01T13:32:57+00:00",
   "version": 1
 }
