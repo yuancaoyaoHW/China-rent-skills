@@ -168,6 +168,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4636620263022595"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4636630898564109": {
+      "area_m2": "25",
+      "community": "芳华路63号小区",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 29,
+      "rent": 2800,
+      "title": "拎包即住精装整租一居 独立厨卫 近地铁商超 民水民电可月",
+      "updated_at": "2026-07-01T13:23:57+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4636630898564109"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4636637714015242": {
       "area_m2": "32",
       "community": "川周公路2788弄小区",
@@ -337,6 +349,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/3830005373100040"
     }
   },
-  "updated_at": "2026-07-01T13:23:49+00:00",
+  "updated_at": "2026-07-01T13:23:57+00:00",
   "version": 1
 }
