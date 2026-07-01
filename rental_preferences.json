@@ -300,6 +300,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4606745891658753"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4618535797793800": {
+      "area_m2": "37",
+      "community": "唐陆公路3898号宿舍楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 75,
+      "rent": 3000,
+      "title": "2号线塘镇 大平层带阳台 河景房 家电齐全 押一付一没中介费",
+      "updated_at": "2026-07-01T13:31:18+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4618535797793800"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4622600105667595": {
       "area_m2": "40",
       "community": "唐龙路1169号楼",
@@ -889,6 +901,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:31:10+00:00",
+  "updated_at": "2026-07-01T13:31:18+00:00",
   "version": 1
 }
