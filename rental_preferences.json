@@ -1151,8 +1151,20 @@
       "title": "申城佳苑一期A块 1室1厅1卫",
       "updated_at": "2026-07-01T13:25:05+00:00",
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
+    },
+    "https://sh.zu.ke.com/zufang/SH2179860674669182976.html": {
+      "area_m2": "63.53",
+      "community": "瑞浦嘉苑",
+      "layout": "1室1厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 97,
+      "rent": 3500,
+      "title": "整租·瑞浦嘉苑 1室1厅 南",
+      "updated_at": "2026-07-01T13:37:18+00:00",
+      "url": "https://sh.zu.ke.com/zufang/SH2179860674669182976.html"
     }
   },
-  "updated_at": "2026-07-01T13:36:17+00:00",
+  "updated_at": "2026-07-01T13:37:18+00:00",
   "version": 1
 }
