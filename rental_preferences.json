@@ -60,6 +60,18 @@
       "updated_at": "2026-07-01T13:24:30+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4546287338155014"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4552999970874378": {
+      "area_m2": "72.3",
+      "community": "康桥月苑(南区)",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 62,
+      "rent": 4000,
+      "title": "近11号线秀沿路 72平 业主自住 干湿分离 可办证",
+      "updated_at": "2026-07-01T13:27:50+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4552999970874378"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4569840130989058": {
       "area_m2": "57.2",
       "community": "川杨新苑(三期)",
@@ -733,6 +745,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:27:44+00:00",
+  "updated_at": "2026-07-01T13:27:50+00:00",
   "version": 1
 }
