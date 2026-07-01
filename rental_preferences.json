@@ -816,6 +816,18 @@
       "updated_at": "2026-07-01T13:22:13+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4642262079546373"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643251537290241": {
+      "area_m2": "40",
+      "community": "公元新村",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 85,
+      "rent": 3050,
+      "title": "一楼带天井 近步行街 整租一室一厅 可办居住证",
+      "updated_at": "2026-07-01T13:33:35+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643251537290241"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643255232355332": {
       "area_m2": "59.6",
       "community": "汤巷雅苑",
@@ -1009,6 +1021,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:33:29+00:00",
+  "updated_at": "2026-07-01T13:33:35+00:00",
   "version": 1
 }
