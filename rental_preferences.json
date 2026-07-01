@@ -576,6 +576,18 @@
       "updated_at": "2026-07-01T13:29:34+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4635292159269899"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4635408522649605": {
+      "area_m2": "79.9",
+      "community": "颐谷南苑",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 94,
+      "rent": 4000,
+      "title": "新上 近16号线周浦东 肿瘤医院 健康医学院 拎包入住",
+      "updated_at": "2026-07-01T13:35:51+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4635408522649605"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4636507042290695": {
       "area_m2": "50",
       "community": "芳华路63号小区",
@@ -1117,6 +1129,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:35:40+00:00",
+  "updated_at": "2026-07-01T13:35:51+00:00",
   "version": 1
 }
