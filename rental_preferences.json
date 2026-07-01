@@ -1200,6 +1200,18 @@
       "updated_at": "2026-07-01T13:25:05+00:00",
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     },
+    "https://sh.zu.ke.com/zufang/SH2174877940561477632.html": {
+      "area_m2": "70.91",
+      "community": "欧风家园南区",
+      "layout": "2室2厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 104,
+      "rent": 4000,
+      "title": "整租·欧风家园南区 2室2厅 南",
+      "updated_at": "2026-07-01T13:40:50+00:00",
+      "url": "https://sh.zu.ke.com/zufang/SH2174877940561477632.html"
+    },
     "https://sh.zu.ke.com/zufang/SH2177431171216965632.html": {
       "area_m2": "52.49",
       "community": "京浦小区82支弄",
@@ -1237,6 +1249,6 @@
       "url": "https://sh.zu.ke.com/zufang/SH2179860674669182976.html"
     }
   },
-  "updated_at": "2026-07-01T13:40:44+00:00",
+  "updated_at": "2026-07-01T13:40:50+00:00",
   "version": 1
 }
