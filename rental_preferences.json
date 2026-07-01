@@ -420,6 +420,18 @@
       "updated_at": "2026-07-01T13:20:49+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4626699735919627"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4629533117750279": {
+      "area_m2": "63",
+      "community": "寿一小区",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 88,
+      "rent": 3800,
+      "title": "实拍居家两房一厅 看房随时有钥匙 近六号线 有电梯",
+      "updated_at": "2026-07-01T13:34:14+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4629533117750279"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4629550252682247": {
       "area_m2": "112.5",
       "community": "宁怡苑",
@@ -1045,6 +1057,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:34:05+00:00",
+  "updated_at": "2026-07-01T13:34:14+00:00",
   "version": 1
 }
