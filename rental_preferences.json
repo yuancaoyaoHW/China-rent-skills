@@ -36,6 +36,18 @@
       "updated_at": "2026-07-01T13:23:40+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4535115755400200"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4544767744828426": {
+      "area_m2": "31",
+      "community": "港城中环汇领寓",
+      "layout": "1室0厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 57,
+      "rent": 2190,
+      "title": "御桥 整租一室户 民用水电 签12送一 精装修",
+      "updated_at": "2026-07-01T13:27:05+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4544767744828426"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4546287338155014": {
       "area_m2": "72.3",
       "community": "康桥月苑(南区)",
@@ -673,6 +685,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:26:49+00:00",
+  "updated_at": "2026-07-01T13:27:05+00:00",
   "version": 1
 }
