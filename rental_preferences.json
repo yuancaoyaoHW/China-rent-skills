@@ -228,6 +228,18 @@
       "updated_at": "2026-07-01T13:22:30+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4634839696647172"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4635078292430852": {
+      "area_m2": "32",
+      "community": "沪南路2500号楼",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 45,
+      "rent": 2400,
+      "title": "御桥 复地活力城帮转租32平一室一厅",
+      "updated_at": "2026-07-01T13:25:42+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4635078292430852"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4635219580510220": {
       "area_m2": "60",
       "community": "东康名苑",
@@ -529,6 +541,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:25:36+00:00",
+  "updated_at": "2026-07-01T13:25:42+00:00",
   "version": 1
 }
