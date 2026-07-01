@@ -24,6 +24,18 @@
       "updated_at": "2026-07-01T13:23:40+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4535115755400200"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4546287338155014": {
+      "area_m2": "72.3",
+      "community": "康桥月苑(南区)",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 35,
+      "rent": 3700,
+      "title": "原业主出租，南北通透。有钥匙",
+      "updated_at": "2026-07-01T13:24:30+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4546287338155014"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4569840130989058": {
       "area_m2": "57.2",
       "community": "川杨新苑(三期)",
@@ -409,6 +421,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4638331771019279"
     }
   },
-  "updated_at": "2026-07-01T13:24:21+00:00",
+  "updated_at": "2026-07-01T13:24:30+00:00",
   "version": 1
 }
