@@ -1,5 +1,17 @@
 {
   "preferences": {
+    "https://sh.zu.anjuke.com/fangyuan/4412886984614924": {
+      "area_m2": "53.4",
+      "community": "汤巷馨村(南区)",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 90,
+      "rent": 3800,
+      "title": "11号秀沿路，汤巷馨村南区，双南两房，主卧带飘窗，直达徐家汇",
+      "updated_at": "2026-07-01T13:34:36+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4412886984614924"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4524217359129609": {
       "area_m2": "73.7",
       "community": "昱龙家园(南区)",
@@ -1069,6 +1081,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:34:27+00:00",
+  "updated_at": "2026-07-01T13:34:36+00:00",
   "version": 1
 }
