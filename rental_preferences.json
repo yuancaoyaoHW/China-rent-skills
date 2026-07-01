@@ -120,6 +120,18 @@
       "updated_at": "2026-07-01T13:28:04+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4557263578196995"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4569698610766851": {
+      "area_m2": "78.3",
+      "community": "海尚康庭",
+      "layout": "2室2厅",
+      "platform": "安居客",
+      "pref": "like",
+      "rank": 68,
+      "rent": 4000,
+      "title": "海尚康庭 家电齐全 2室2厅1卫 南北通透",
+      "updated_at": "2026-07-01T13:28:44+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4569698610766851"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4569840130989058": {
       "area_m2": "57.2",
       "community": "川杨新苑(三期)",
@@ -805,6 +817,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:28:31+00:00",
+  "updated_at": "2026-07-01T13:28:44+00:00",
   "version": 1
 }
