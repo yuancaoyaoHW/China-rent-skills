@@ -108,6 +108,18 @@
       "updated_at": "2026-07-01T13:25:28+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4588121846440961"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4588460997993486": {
+      "area_m2": "56.8",
+      "community": "汤巷馨村(南区)",
+      "layout": "2室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 49,
+      "rent": 3200,
+      "title": "11秀沿路地铁口 整租两房出租 一手 近尚德学校 漕河泾",
+      "updated_at": "2026-07-01T13:26:03+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4588460997993486"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4603627989015566": {
       "area_m2": "78.7",
       "community": "康桥月苑(北区)",
@@ -577,6 +589,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:25:55+00:00",
+  "updated_at": "2026-07-01T13:26:03+00:00",
   "version": 1
 }
