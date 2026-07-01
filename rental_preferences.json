@@ -576,6 +576,18 @@
       "updated_at": "2026-07-01T13:25:46+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4643577281273867"
     },
+    "https://sh.zu.anjuke.com/fangyuan/4643595814329352": {
+      "area_m2": "45",
+      "community": "康茂嘉苑",
+      "layout": "1室1厅",
+      "platform": "安居客",
+      "pref": "dislike",
+      "rank": 58,
+      "rent": 3300,
+      "title": "张江整租一室一厅 实体墙隔音 民用水电带燃气 宠物友好",
+      "updated_at": "2026-07-01T13:27:23+00:00",
+      "url": "https://sh.zu.anjuke.com/fangyuan/4643595814329352"
+    },
     "https://sh.zu.anjuke.com/fangyuan/4643771125392390": {
       "area_m2": "75",
       "community": "城南路497弄小区",
@@ -685,6 +697,6 @@
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     }
   },
-  "updated_at": "2026-07-01T13:27:05+00:00",
+  "updated_at": "2026-07-01T13:27:23+00:00",
   "version": 1
 }
