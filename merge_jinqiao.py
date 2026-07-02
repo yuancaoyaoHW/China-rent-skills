@@ -132,12 +132,7 @@ def main():
     for r in rows:
         if not isinstance(r.get('longitude'), (int, float)):
             continue
-        source_url = str(r.get('url', '')).strip()
-        if not source_url:
-            raise ValueError(f'Missing source url for {r["community"]} {r["rent"]} {r["area_m2"]}')
-        if 'fang.com/chuzu/' not in source_url:
-            raise ValueError(f'Unexpected fang source url: {source_url}')
-        r['url'] = source_url
+        r['url'] = f'https://sh.zu.ke.com/zufang/rs{urllib.parse.quote(r["community"])}/'
         dedupe = f'fp:{r["community"].lower()}|{r["rent"]}|{r["area_m2"]}'
         if dedupe in existing_keys:
             continue

@@ -4,7 +4,7 @@ import parse_fang_html
 
 
 class FangHtmlParserTests(unittest.TestCase):
-    def test_parse_block_extracts_absolute_listing_url(self):
+    def test_parse_block_uses_beike_community_search_url(self):
         block = """
         <p class="title" id="rentid_D09_01_02">
           <a href="/chuzu/3_432573337_1.htm" target="_blank"
@@ -20,7 +20,10 @@ class FangHtmlParserTests(unittest.TestCase):
 
         rec = parse_fang_html._parse_block(block)
 
-        self.assertEqual(rec["url"], "https://sh.zu.fang.com/chuzu/3_432573337_1.htm")
+        self.assertEqual(
+            rec["url"],
+            "https://sh.zu.ke.com/zufang/rs%E7%8E%89%E5%85%B0%E9%A6%99%E8%8B%91%E4%B8%89%E6%9C%9F/",
+        )
 
 
 if __name__ == "__main__":

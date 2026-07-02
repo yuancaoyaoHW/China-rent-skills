@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Fix the 19 new fang.com listings: add work field and buildYears.
+"""Fix the 19 new fang.com listings: add work field, Beike search URL, and buildYears.
 
 - work: extract from commute string (e.g. "距张江昆仑芯约3.76km" -> "3.76km")
+- url: build a Beike community search URL by community name
 - buildYears: query AMap POI text search for each community, extract build year
   from the address or name if available; fall back to '待查' with low confidence
 """
 import json
 import re
 import time
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -69,6 +71,7 @@ def main():
     print(f"Fang listings to fix: {len(targets)}")
 
     fixed_work = 0
+    fixed_url = 0
     fixed_year = 0
 
     for i, item in enumerate(targets):
@@ -82,11 +85,10 @@ def main():
                 item['work'] = m.group(1) + 'km'
                 fixed_work += 1
 
-        source_url = str(item.get('url', '')).strip()
-        if not source_url:
-            raise ValueError(f"Missing source url for {comm}")
-        if 'fang.com/chuzu/' not in source_url:
-            raise ValueError(f"Unexpected fang source url: {source_url}")
+        search_url = f"https://sh.zu.ke.com/zufang/rs{urllib.parse.quote(comm)}/"
+        if item.get('url') != search_url:
+            item['url'] = search_url
+            fixed_url += 1
 
         # 3. Fix buildYears
         if comm not in build_years and key:
@@ -123,7 +125,7 @@ def main():
     data['buildYears'] = build_years
 
     JSON_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f"\nFixed: work={fixed_work}, buildYears={fixed_year}")
+    print(f"\nFixed: work={fixed_work}, url={fixed_url}, buildYears={fixed_year}")
     print(f"buildYears total: {len(build_years)} communities")
     print(f"Wrote {JSON_FILE}")
 
