@@ -221,9 +221,11 @@ function initAmap() {
 
 const PREF_STORAGE_PREFIX = 'rental_pref_';
 function listingKey(item) { return item.url || ('rank:' + item.rank); }
+function isBeikeSearchUrl(url) { return /^https:\/\/sh\.zu\.ke\.com\/zufang\/rs/.test(String(url || '')); }
 function sourceLinkHtml(item) {
   if (!item.url) return '<span class="muted">房源链接待核验</span>';
-  return '<a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">打开房源</a>';
+  const label = isBeikeSearchUrl(item.url) ? '打开贝壳搜索' : '打开房源';
+  return '<a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">' + label + '</a>';
 }
 function getUserPref(key) { return localStorage.getItem(PREF_STORAGE_PREFIX + key) || ''; }
 function setUserPref(key, pref) {
