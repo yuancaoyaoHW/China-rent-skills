@@ -181,15 +181,16 @@ function initAmap() {
         '<p>' + esc(item.amenity_status) + '；' + esc(item.nearest_metro) + '；' + esc(item.nearest_mall) + '</p>' +
         '<p>' + esc(item.commute) + '</p>' +
         (item.risks ? '<p>风险：' + esc(item.risks) + '</p>' : '') +
-        '<p><a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">打开房源</a></p>'
+        '<p>' + sourceLinkHtml(item) + '</p>'
       );
       infoWindow.open(amap, marker.getPosition());
     });
-    if (getUserPref(item.url) !== 'dislike') {
+    var key = listingKey(item);
+    if (getUserPref(key) !== 'dislike') {
       marker.setMap(amap);
       markers.push(marker);
     }
-    window.listingMarkers[item.url] = marker;
+    window.listingMarkers[key] = marker;
   });
   amenities.forEach(amenity => {
     const amenityMarker = new AMap.Marker({
@@ -219,18 +220,23 @@ function initAmap() {
 }
 
 const PREF_STORAGE_PREFIX = 'rental_pref_';
-function getUserPref(url) { return localStorage.getItem(PREF_STORAGE_PREFIX + url) || ''; }
-function setUserPref(url, pref) {
-  if (pref) localStorage.setItem(PREF_STORAGE_PREFIX + url, pref);
-  else localStorage.removeItem(PREF_STORAGE_PREFIX + url);
+function listingKey(item) { return item.url || ('rank:' + item.rank); }
+function sourceLinkHtml(item) {
+  if (!item.url) return '<span class="muted">房源链接待核验</span>';
+  return '<a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">打开房源</a>';
 }
-function findListingByUrl(url) {
-  return listings.find(function(item) { return item.url === url; }) || {};
+function getUserPref(key) { return localStorage.getItem(PREF_STORAGE_PREFIX + key) || ''; }
+function setUserPref(key, pref) {
+  if (pref) localStorage.setItem(PREF_STORAGE_PREFIX + key, pref);
+  else localStorage.removeItem(PREF_STORAGE_PREFIX + key);
 }
-function preferencePayload(url, pref) {
-  var item = findListingByUrl(url);
+function findListingByKey(key) {
+  return listings.find(function(item) { return listingKey(item) === key; }) || {};
+}
+function preferencePayload(key, pref) {
+  var item = findListingByKey(key);
   return {
-    url: url,
+    url: key,
     pref: pref,
     listing: {
       rank: item.rank,
@@ -245,16 +251,17 @@ function preferencePayload(url, pref) {
 }
 function preferenceEntries() {
   return listings.map(function(item) {
-    return Object.assign({}, preferencePayload(item.url, getUserPref(item.url)).listing, {
-      url: item.url,
-      pref: getUserPref(item.url),
+    var key = listingKey(item);
+    return Object.assign({}, preferencePayload(key, getUserPref(key)).listing, {
+      url: key,
+      pref: getUserPref(key),
       updated_at: new Date().toISOString()
     });
   }).filter(function(entry) { return entry.pref; });
 }
 function preferenceCounts() {
   return listings.reduce(function(counts, item) {
-    var pref = getUserPref(item.url);
+    var pref = getUserPref(listingKey(item));
     if (pref === 'like') counts.like += 1;
     if (pref === 'dislike') counts.dislike += 1;
     return counts;
@@ -344,20 +351,21 @@ function applyMapVisibility() {
   var store = window.listingMarkers;
   if (!map || !store) return;
   listings.forEach(function(item) {
-    var marker = store[item.url];
+    var key = listingKey(item);
+    var marker = store[key];
     if (!marker) return;
-    var isDislike = getUserPref(item.url) === 'dislike';
+    var isDislike = getUserPref(key) === 'dislike';
     if (isDislike) marker.setMap(null);
     else marker.setMap(map);
   });
 }
-function togglePref(url, pref) {
-  var cur = getUserPref(url);
+function togglePref(key, pref) {
+  var cur = getUserPref(key);
   var next = cur === pref ? '' : pref;
-  setUserPref(url, next);
+  setUserPref(key, next);
   renderList();
   applyMapVisibility();
-  syncPreference(url, next);
+  syncPreference(key, next);
 }
 async function loadServerPreferences() {
   var localBeforeLoad = preferenceEntries();
@@ -429,7 +437,7 @@ async function importPreferences(event) {
 async function clearPreferences() {
   if (!confirm('确定清空当前页面所有感兴趣/不感兴趣标记吗？')) return;
   var existing = preferenceEntries();
-  listings.forEach(function(item) { setUserPref(item.url, ''); });
+  listings.forEach(function(item) { setUserPref(listingKey(item), ''); });
   renderList();
   applyMapVisibility();
   await postPreferencesBulk(existing.map(function(entry) {
@@ -447,7 +455,7 @@ function updateMetrics() {
 }
 function renderList() {
   var sorted = listings.slice().sort(function(a, b) {
-    var pa = getUserPref(a.url), pb = getUserPref(b.url);
+    var pa = getUserPref(listingKey(a)), pb = getUserPref(listingKey(b));
     if (pa === 'dislike' && pb !== 'dislike') return 1;
     if (pb === 'dislike' && pa !== 'dislike') return -1;
     if (pa === 'like' && pb !== 'like') return -1;
@@ -455,7 +463,8 @@ function renderList() {
     return (b.score || 0) - (a.score || 0);
   });
   document.getElementById('list').innerHTML = sorted.map(function(item) {
-    var pref = getUserPref(item.url);
+    var key = listingKey(item);
+    var pref = getUserPref(key);
     var dislikeCls = pref === 'dislike' ? ' dislike-card' : '';
     var likeActive = pref === 'like' ? ' active like' : '';
     var dislikeActive = pref === 'dislike' ? ' active dislike' : '';
@@ -472,9 +481,9 @@ function renderList() {
       '<div class="meta">' + esc(item.commute) + '</div>' +
       '<div class="meta">' + esc(item.tags) + (item.risks ? '；风险：' + esc(item.risks) : '') + '</div>' +
       '<div class="meta">' +
-        '<span class="pref-btn' + likeActive + '" onclick="event.stopPropagation();togglePref(\'' + esc(item.url) + '\',\'like\')">👍 感兴趣</span>' +
-        '<span class="pref-btn' + dislikeActive + '" onclick="event.stopPropagation();togglePref(\'' + esc(item.url) + '\',\'dislike\')">👎 不感兴趣</span>' +
-        '<a href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">打开房源</a>' +
+        '<span class="pref-btn' + likeActive + '" onclick="event.stopPropagation();togglePref(\'' + esc(key) + '\',\'like\')">👍 感兴趣</span>' +
+        '<span class="pref-btn' + dislikeActive + '" onclick="event.stopPropagation();togglePref(\'' + esc(key) + '\',\'dislike\')">👎 不感兴趣</span>' +
+        sourceLinkHtml(item) +
       '</div>' +
     '</article>';
   }).join('');

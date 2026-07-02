@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
-"""Fix the 19 new fang.com listings: add work field, url, and buildYears.
+"""Fix the 19 new fang.com listings: add work field and buildYears.
 
 - work: extract from commute string (e.g. "距张江昆仑芯约3.76km" -> "3.76km")
-- url: build a lianjia search URL by community name (not a direct listing URL,
-  but clicking "打开房源" will land on the community's rental search results)
 - buildYears: query AMap POI text search for each community, extract build year
   from the address or name if available; fall back to '待查' with low confidence
 """
 import json
 import re
 import time
-import urllib.parse
 import urllib.request
 from pathlib import Path
 
-REPO = Path(r'C:\Users\27493\Downloads\China-rent-skills')
+REPO = Path(__file__).resolve().parent
 JSON_FILE = REPO / 'zhangjiang_listings_15km.json'
 KEY_FILE = REPO / 'amap_key.txt'
 
@@ -68,12 +65,10 @@ def main():
     listings = data['listings']
     build_years = data.get('buildYears', {})
 
-    # Target: listings without url (the 19 new ones)
-    targets = [x for x in listings if not str(x.get('url', '')).strip()]
-    print(f"Listings to fix (no url): {len(targets)}")
+    targets = [x for x in listings if x.get('platform') == '房天下']
+    print(f"Fang listings to fix: {len(targets)}")
 
     fixed_work = 0
-    fixed_url = 0
     fixed_year = 0
 
     for i, item in enumerate(targets):
@@ -87,12 +82,11 @@ def main():
                 item['work'] = m.group(1) + 'km'
                 fixed_work += 1
 
-        # 2. Fix url: lianjia community search
-        if not item.get('url'):
-            # 链家 URL: https://sh.zu.ke.com/zufang/rs{小区名}/
-            search_url = f"https://sh.zu.ke.com/zufang/rs{urllib.parse.quote(comm)}/"
-            item['url'] = search_url
-            fixed_url += 1
+        source_url = str(item.get('url', '')).strip()
+        if not source_url:
+            raise ValueError(f"Missing source url for {comm}")
+        if 'fang.com/chuzu/' not in source_url:
+            raise ValueError(f"Unexpected fang source url: {source_url}")
 
         # 3. Fix buildYears
         if comm not in build_years and key:
@@ -129,7 +123,7 @@ def main():
     data['buildYears'] = build_years
 
     JSON_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f"\nFixed: work={fixed_work}, url={fixed_url}, buildYears={fixed_year}")
+    print(f"\nFixed: work={fixed_work}, buildYears={fixed_year}")
     print(f"buildYears total: {len(build_years)} communities")
     print(f"Wrote {JSON_FILE}")
 

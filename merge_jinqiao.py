@@ -8,7 +8,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-REPO = Path(r'C:\Users\27493\Downloads\China-rent-skills')
+REPO = Path(__file__).resolve().parent
 INPUT_CSV = REPO / 'fang_jinqiao_parsed.csv'
 JSON_FILE = REPO / 'zhangjiang_listings_15km.json'
 KEY_FILE = REPO / 'amap_key.txt'
@@ -132,8 +132,12 @@ def main():
     for r in rows:
         if not isinstance(r.get('longitude'), (int, float)):
             continue
-        # Build url (lianjia search)
-        r['url'] = f'https://sh.zu.ke.com/zufang/rs{urllib.parse.quote(r["community"])}/'
+        source_url = str(r.get('url', '')).strip()
+        if not source_url:
+            raise ValueError(f'Missing source url for {r["community"]} {r["rent"]} {r["area_m2"]}')
+        if 'fang.com/chuzu/' not in source_url:
+            raise ValueError(f'Unexpected fang source url: {source_url}')
+        r['url'] = source_url
         dedupe = f'fp:{r["community"].lower()}|{r["rent"]}|{r["area_m2"]}'
         if dedupe in existing_keys:
             continue
