@@ -1200,6 +1200,18 @@
       "updated_at": "2026-07-01T13:25:05+00:00",
       "url": "https://sh.zu.anjuke.com/gfangyuan/4644023032306695"
     },
+    "https://sh.zu.ke.com/zufang/SH2012064451095691264.html": {
+      "area_m2": "70.0",
+      "community": "中虹家园",
+      "layout": "2室1厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 98,
+      "rent": 3300,
+      "title": "中虹家园 2室1厅",
+      "updated_at": "2026-07-03T02:57:28+00:00",
+      "url": "https://sh.zu.ke.com/zufang/SH2012064451095691264.html"
+    },
     "https://sh.zu.ke.com/zufang/SH2053422561097678848.html": {
       "area_m2": "55",
       "community": "金桥新村四街坊",
@@ -1453,6 +1465,6 @@
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
     }
   },
-  "updated_at": "2026-07-03T02:23:51+00:00",
+  "updated_at": "2026-07-03T02:57:28+00:00",
   "version": 1
 }
