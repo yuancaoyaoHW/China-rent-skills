@@ -1560,33 +1560,45 @@
       "updated_at": "2026-07-03T02:19:11+00:00",
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
     },
-    "https://www.douban.com/group/topic/492656726/": {
-      "platform": "豆瓣",
-      "title": "金科路地铁口！汤臣豪园二期 2800元精装一室户",
-      "url": "https://www.douban.com/group/topic/492656726/",
-      "rent": 2800,
-      "rent_int": 2800,
+    "https://www.douban.com/group/topic/492643771/": {
       "area_m2": 0,
+      "community": "尚桂苑",
       "layout": "1室1厅",
-      "community": "汤臣豪园二期",
+      "platform": "豆瓣",
       "pref": "like",
       "rank": 0,
-      "updated_at": "2026-07-03T12:00:00+00:00"
-    },
-    "https://www.douban.com/group/topic/492643771/": {
-      "platform": "豆瓣",
-      "title": "三林地铁口！尚桂苑 2000元一室户",
-      "url": "https://www.douban.com/group/topic/492643771/",
       "rent": 2000,
       "rent_int": 2000,
+      "title": "三林地铁口！尚桂苑 2000元一室户",
+      "updated_at": "2026-07-03T12:00:00+00:00",
+      "url": "https://www.douban.com/group/topic/492643771/"
+    },
+    "https://www.douban.com/group/topic/492656726/": {
       "area_m2": 0,
+      "community": "汤臣豪园二期",
       "layout": "1室1厅",
-      "community": "尚桂苑",
+      "platform": "豆瓣",
       "pref": "like",
       "rank": 0,
-      "updated_at": "2026-07-03T12:00:00+00:00"
+      "rent": 2800,
+      "rent_int": 2800,
+      "title": "金科路地铁口！汤臣豪园二期 2800元精装一室户",
+      "updated_at": "2026-07-03T12:00:00+00:00",
+      "url": "https://www.douban.com/group/topic/492656726/"
+    },
+    "https://www.douban.com/group/topic/492664789/": {
+      "area_m2": null,
+      "community": "东城新村(锦安东路419弄)",
+      "layout": "2室1厅(次卧)",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 115,
+      "rent": 0,
+      "title": "龙阳路附近次卧出租 限男生(东城新村)",
+      "updated_at": "2026-07-03T07:03:59+00:00",
+      "url": "https://www.douban.com/group/topic/492664789/"
     }
   },
-  "updated_at": "2026-07-03T12:00:00+00:00",
+  "updated_at": "2026-07-03T07:03:59+00:00",
   "version": 1
 }
