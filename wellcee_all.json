@@ -1,0 +1,1350 @@
+[
+  {
+    "id": "1783048015981619",
+    "rent_int": 4300,
+    "address": "Putuo 上海大都会海逸酒店",
+    "district": "Putuo",
+    "lng": 121.41459,
+    "lat": 31.259041,
+    "tags": [
+      "Amenities Nearby",
+      "Sublet",
+      "Metro Nearby",
+      "Mall Nearby",
+      "Quietude"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1783048015981619",
+    "platform": "Wellcee",
+    "dist_km": 20.196245903324034,
+    "community": "上海大都会海逸酒店"
+  },
+  {
+    "id": "1780725305398684",
+    "rent_int": 2800,
+    "address": "Putuo 李子园大厦",
+    "district": "Putuo",
+    "lng": 121.39724914109,
+    "lat": 31.273938198387,
+    "tags": [
+      "Concierge",
+      "Balcony",
+      "Smart Lock",
+      "Low-rate utilities",
+      "Amenities Nearby",
+      "Metro Nearby",
+      "LGBTQ Friendly",
+      "Pet Friendly",
+      "Zen",
+      "Local Vibe",
+      "Artsy Hub"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1780725305398684",
+    "platform": "Wellcee",
+    "dist_km": 22.410597535227005,
+    "community": "李子园大厦"
+  },
+  {
+    "id": "1779335369215564",
+    "rent_int": 3550,
+    "address": "Minhang 虹桥乐贤居·城家公寓",
+    "district": "Minhang",
+    "lng": 121.33995521566213,
+    "lat": 31.236484972536466,
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle",
+      "“Friends”",
+      "Chilled",
+      "LGBTQ Friendly",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1779335369215564",
+    "platform": "Wellcee",
+    "dist_km": 26.07071731038041,
+    "community": "虹桥乐贤居·城家公寓"
+  },
+  {
+    "id": "1778737980357827",
+    "rent_int": 2600,
+    "address": "Pudong 森晟世洋国际大厦",
+    "district": "Pudong",
+    "lng": 121.603581,
+    "lat": 31.256375,
+    "tags": [
+      "押一付一",
+      "Pet Friendly",
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1778737980357827",
+    "platform": "Wellcee",
+    "dist_km": 8.414866339807247,
+    "community": "森晟世洋国际大厦"
+  },
+  {
+    "id": "1693849204060023",
+    "rent_int": 15800,
+    "address": "Xuhui 华绮公寓(高安路30号)",
+    "district": "Xuhui",
+    "lng": 121.45157030499784,
+    "lat": 31.209846039326706,
+    "tags": [
+      "Clean&Comfy",
+      "Cozy Home",
+      "No Gender Limit"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1693849204060023",
+    "platform": "Wellcee",
+    "dist_km": 15.062008239542733,
+    "community": "华绮公寓(高安路30号)"
+  },
+  {
+    "id": "1750212417978225",
+    "rent_int": 3500,
+    "address": "Pudong 浦东大道2511弄小区",
+    "district": "Pudong",
+    "lng": 121.566406,
+    "lat": 31.265127,
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "“Friends”",
+      "LGBTQ Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1750212417978225",
+    "platform": "Wellcee",
+    "dist_km": 10.119254546467207,
+    "community": "浦东大道2511弄小区"
+  },
+  {
+    "id": "1783049134775609",
+    "rent_int": 4500,
+    "address": "Baoshan 共和二村",
+    "district": "Baoshan",
+    "lng": 121.467766,
+    "lat": 31.327976,
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1783049134775609",
+    "platform": "Wellcee",
+    "dist_km": 21.006835488349488,
+    "community": "共和二村"
+  },
+  {
+    "id": "1779882889606939",
+    "rent_int": 1980,
+    "address": "Putuo 芝巷小区",
+    "district": "Putuo",
+    "lng": 121.40048304092,
+    "lat": 31.242474792116,
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1779882889606939",
+    "platform": "Wellcee",
+    "dist_km": 20.735435052223227,
+    "community": "芝巷小区"
+  },
+  {
+    "id": "1783048396656461",
+    "rent_int": 3600,
+    "address": "Baoshan 馨佳园-五街坊",
+    "district": "Baoshan",
+    "lng": 121.378585,
+    "lat": 31.369425,
+    "tags": [
+      "Amenities Nearby"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1783048396656461",
+    "platform": "Wellcee",
+    "dist_km": 30.1372563477543,
+    "community": "馨佳园-五街坊"
+  },
+  {
+    "id": "1761718380823229",
+    "rent_int": 3480,
+    "address": "Pudong 优美居公寓(浦东御桥店)",
+    "district": "Pudong",
+    "lng": 121.570572,
+    "lat": 31.158203,
+    "tags": [
+      "Pet Friendly",
+      "LGBTQ Friendly",
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle",
+      "“Friends”",
+      "18号线🚇御桥",
+      "11号线🚇御桥"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1761718380823229",
+    "platform": "Wellcee",
+    "dist_km": 4.216654367400612,
+    "community": "优美居公寓(浦东御桥店)"
+  },
+  {
+    "id": "1776158745671302",
+    "rent_int": 6500,
+    "address": "Jing‘An 常德路958弄小区",
+    "district": "Jing‘An",
+    "lng": 121.447778,
+    "lat": 31.242495,
+    "tags": [
+      "Metro Nearby",
+      "Amenities Nearby",
+      "Low-rate utilities",
+      "Cross Ventilation",
+      "带地暖",
+      "Quietude",
+      "Serenity",
+      "Dopamine",
+      "温馨小窝",
+      "干净治愈",
+      "不限性别",
+      "市井烟火气",
+      "老友记",
+      "慢时光"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1776158745671302",
+    "platform": "Wellcee",
+    "dist_km": 16.55938869065827,
+    "community": "常德路958弄小区"
+  },
+  {
+    "id": "1780118847408746",
+    "rent_int": 4450,
+    "address": "Songjiang 九亭家园1期-25号楼",
+    "district": "Songjiang",
+    "lng": 121.34410538711822,
+    "lat": 31.116948160163364,
+    "tags": [
+      "温馨小窝",
+      "干净治愈",
+      "不限性别",
+      "市井烟火气",
+      "慢时光",
+      "LGBTQ友好"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1780118847408746",
+    "platform": "Wellcee",
+    "dist_km": 25.932661537475703,
+    "community": "九亭家园1期-25号楼"
+  },
+  {
+    "id": "1783047746726385",
+    "rent_int": 2600,
+    "address": "Minhang 新明星花园-北区",
+    "district": "Minhang",
+    "lng": 121.361158,
+    "lat": 31.182627,
+    "tags": [
+      "Amenities Nearby",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1783047746726385",
+    "platform": "Wellcee",
+    "dist_km": 23.31402786715037,
+    "community": "新明星花园-北区"
+  },
+  {
+    "id": "1781249407518262",
+    "rent_int": 1000,
+    "address": "Qingpu 时代嘉苑-9号楼",
+    "district": "Qingpu",
+    "lng": 121.13856410338018,
+    "lat": 31.28562719865338,
+    "tags": [
+      "Leafy"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781249407518262",
+    "platform": "Wellcee",
+    "dist_km": 45.96867116956552,
+    "community": "时代嘉苑-9号楼"
+  },
+  {
+    "id": "1759319400295903",
+    "rent_int": 4300,
+    "address": "Xuhui 园南三村社区",
+    "district": "Xuhui",
+    "lng": 121.450691,
+    "lat": 31.148191,
+    "tags": [
+      "不限性别",
+      "慢时光",
+      "温馨小窝"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1759319400295903",
+    "platform": "Wellcee",
+    "dist_km": 15.234391443235952,
+    "community": "园南三村社区"
+  },
+  {
+    "id": "1776781131652030",
+    "rent_int": 7100,
+    "address": "Huangpu 一诺民宿(外滩南京路步行街店)",
+    "district": "Huangpu",
+    "lng": 121.48851,
+    "lat": 31.24407,
+    "tags": [
+      "Local Vibe",
+      "Metro Nearby",
+      "Amenities Nearby",
+      "Near Schools",
+      "Sun-Filled",
+      "Cooking Allowed",
+      "LGBTQ Friendly",
+      "Pet Friendly",
+      "Artsy Hub",
+      "溫馨小窩",
+      "乾淨治愈",
+      "慢時光"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1776781131652030",
+    "platform": "Wellcee",
+    "dist_km": 13.225579045002698,
+    "community": "一诺民宿(外滩南京路步行街店)"
+  },
+  {
+    "id": "1781503372474841",
+    "rent_int": 4800,
+    "address": "Qingpu 璟云里",
+    "district": "Qingpu",
+    "lng": 121.03229456155,
+    "lat": 31.115997496471,
+    "tags": [
+      "Quietude",
+      "Dappled Light"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781503372474841",
+    "platform": "Wellcee",
+    "dist_km": 55.089475623019524,
+    "community": "璟云里"
+  },
+  {
+    "id": "1780144942083165",
+    "rent_int": 1500,
+    "address": "Jiading 德华一村",
+    "district": "Jiading",
+    "lng": 121.31987808751,
+    "lat": 31.301835067026,
+    "tags": [
+      "Cozy Home"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1780144942083165",
+    "platform": "Wellcee",
+    "dist_km": 30.371361615825833,
+    "community": "德华一村"
+  },
+  {
+    "id": "1721368303214919",
+    "rent_int": 2250,
+    "address": "Pudong 锦三角花园-28号",
+    "district": "Pudong",
+    "lng": 121.54950779282,
+    "lat": 31.193401473028,
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle",
+      "“Friends”",
+      "Chilled",
+      "LGBTQ Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1721368303214919",
+    "platform": "Wellcee",
+    "dist_km": 5.575852525411081,
+    "community": "锦三角花园-28号"
+  },
+  {
+    "id": "1782815426373795",
+    "rent_int": 4000,
+    "address": "Jiading 金地格林云尚-3幢",
+    "district": "Jiading",
+    "lng": 121.172684,
+    "lat": 31.325149,
+    "tags": [
+      "Mall Nearby",
+      "Low-rate utilities",
+      "Private Bathroom",
+      "Balcony",
+      "Full-height windows",
+      "三室一厅",
+      "Local Vibe",
+      "Slow Living"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782815426373795",
+    "platform": "Wellcee",
+    "dist_km": 44.22973140881872,
+    "community": "金地格林云尚-3幢"
+  },
+  {
+    "id": "1765315701474413",
+    "rent_int": 1700,
+    "address": "Minhang 贵峰苑",
+    "district": "Minhang",
+    "lng": 121.40491168709,
+    "lat": 31.087728249456,
+    "tags": [
+      "温馨小窝",
+      "干净治愈",
+      "不限性别",
+      "市井烟火气"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1765315701474413",
+    "platform": "Wellcee",
+    "dist_km": 21.77307086827749,
+    "community": "贵峰苑"
+  },
+  {
+    "id": "1782826170542255",
+    "rent_int": 2200,
+    "address": "Minhang 万科城市花园",
+    "district": "Minhang",
+    "lng": 121.34603674396,
+    "lat": 31.163171267928,
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "Hustle & Bustle",
+      "“Friends”",
+      "Chilled",
+      "LGBTQ Friendly",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782826170542255",
+    "platform": "Wellcee",
+    "dist_km": 24.831007223126278,
+    "community": "万科城市花园"
+  },
+  {
+    "id": "1675066618635626",
+    "rent_int": 2700,
+    "address": "Changning 虹古路380弄",
+    "district": "Changning",
+    "lng": 121.39620410664,
+    "lat": 31.209772099959,
+    "tags": [
+      "女生友好",
+      "Dryer",
+      "Smart Lock",
+      "Amenities Nearby",
+      "Metro Nearby",
+      "Scandi",
+      "Dopamine",
+      "Minimalism",
+      "宠物友好",
+      "带地暖",
+      "干净治愈",
+      "温馨小窝"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675066618635626",
+    "platform": "Wellcee",
+    "dist_km": 20.23556167116133,
+    "community": "虹古路380弄"
+  },
+  {
+    "id": "1776163067420912",
+    "rent_int": 1800,
+    "address": "Putuo 真情公寓-33号",
+    "district": "Putuo",
+    "lng": 121.390755,
+    "lat": 31.261311,
+    "tags": [
+      "不限性别",
+      "宠物友好",
+      "市井烟火气",
+      "干净治愈",
+      "慢时光",
+      "温馨小窝"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1776163067420912",
+    "platform": "Wellcee",
+    "dist_km": 22.36244875410563,
+    "community": "真情公寓-33号"
+  },
+  {
+    "id": "1711352160046892",
+    "rent_int": 2000,
+    "address": "Putuo 中环锦园",
+    "district": "Putuo",
+    "lng": 121.418613,
+    "lat": 31.275251,
+    "tags": [
+      "干净治愈",
+      "温馨小窝"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1711352160046892",
+    "platform": "Wellcee",
+    "dist_km": 20.704512021853944,
+    "community": "中环锦园"
+  },
+  {
+    "id": "1728487373766490",
+    "rent_int": 5000,
+    "address": "Pudong 丰舍东苑",
+    "district": "Pudong",
+    "lng": 121.674485,
+    "lat": 31.281002,
+    "tags": [
+      "温馨小窝"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1728487373766490",
+    "platform": "Wellcee",
+    "dist_km": 12.901106540391542,
+    "community": "丰舍东苑"
+  },
+  {
+    "id": "1782794585238403",
+    "rent_int": 2000,
+    "address": "Minhang 沁春园-三村",
+    "district": "Minhang",
+    "lng": 121.381464,
+    "lat": 31.101853,
+    "tags": [
+      "Elevator",
+      "South-Facing"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782794585238403",
+    "platform": "Wellcee",
+    "dist_km": 23.118857262257798,
+    "community": "沁春园-三村"
+  },
+  {
+    "id": "1781577275232166",
+    "rent_int": 4500,
+    "address": "Putuo 中山北路2185弄小区-16号楼",
+    "district": "Putuo",
+    "lng": 121.434316,
+    "lat": 31.253426,
+    "tags": [
+      "Metro Nearby"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781577275232166",
+    "platform": "Wellcee",
+    "dist_km": 18.236653546299305,
+    "community": "中山北路2185弄小区-16号楼"
+  },
+  {
+    "id": "1782547672251437",
+    "rent_int": 5600,
+    "address": "Xuhui 凯旋小区",
+    "district": "Xuhui",
+    "lng": 121.430599,
+    "lat": 31.199278,
+    "tags": [
+      "Metro Nearby",
+      "Sublet"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782547672251437",
+    "platform": "Wellcee",
+    "dist_km": 16.832450263475845,
+    "community": "凯旋小区"
+  },
+  {
+    "id": "1685437337897885",
+    "rent_int": 7000,
+    "address": "Pudong 张杨路310弄",
+    "district": "Pudong",
+    "lng": 121.519972,
+    "lat": 31.230551,
+    "tags": [
+      "房东整租"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1685437337897885",
+    "platform": "Wellcee",
+    "dist_km": 9.898258555913918,
+    "community": "张杨路310弄"
+  },
+  {
+    "id": "1782970871357871",
+    "rent_int": 2500,
+    "address": "Pudong 禹洲金桥国际",
+    "district": "Pudong",
+    "lng": 121.619849,
+    "lat": 31.260758,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782970871357871",
+    "platform": "Wellcee",
+    "dist_km": 8.99233894805211,
+    "community": "禹洲金桥国际"
+  },
+  {
+    "id": "1779077636201987",
+    "rent_int": 4200,
+    "address": "Yangpu 国华中心",
+    "district": "Yangpu",
+    "lng": 121.51738,
+    "lat": 31.317762,
+    "tags": [
+      "Elevator",
+      "Metro Nearby"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1779077636201987",
+    "platform": "Wellcee",
+    "dist_km": 17.421099519592982,
+    "community": "国华中心"
+  },
+  {
+    "id": "1781740072811225",
+    "rent_int": 2000,
+    "address": "Minhang 爱博五村社区",
+    "district": "Minhang",
+    "lng": 121.313706,
+    "lat": 31.222911,
+    "tags": [
+      "Sublet",
+      "押一付一",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781740072811225",
+    "platform": "Wellcee",
+    "dist_km": 28.213841761830324,
+    "community": "爱博五村社区"
+  },
+  {
+    "id": "1782475383006660",
+    "rent_int": 1500,
+    "address": "Jiading 上海弘洲食品市场-90号楼",
+    "district": "Jiading",
+    "lng": 121.279077,
+    "lat": 31.328914,
+    "tags": [
+      "Metro Nearby",
+      "Short Lease"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782475383006660",
+    "platform": "Wellcee",
+    "dist_km": 35.19293037471796,
+    "community": "上海弘洲食品市场-90号楼"
+  },
+  {
+    "id": "1782103104243613",
+    "rent_int": 4904,
+    "address": "Changning 城家高级公寓",
+    "district": "Changning",
+    "lng": 121.419626,
+    "lat": 31.22064,
+    "tags": [
+      "Metro Nearby",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782103104243613",
+    "platform": "Wellcee",
+    "dist_km": 18.293792803433686,
+    "community": "城家高级公寓"
+  },
+  {
+    "id": "1735951110142771",
+    "rent_int": 5600,
+    "address": "Pudong 上钢五村",
+    "district": "Pudong",
+    "lng": 121.496561,
+    "lat": 31.179715,
+    "tags": [
+      "Cozy Home"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1735951110142771",
+    "platform": "Wellcee",
+    "dist_km": 10.432887406426541,
+    "community": "上钢五村"
+  },
+  {
+    "id": "1781018073620781",
+    "rent_int": 4500,
+    "address": "Xuhui 南溪公寓",
+    "district": "Xuhui",
+    "lng": 121.445273,
+    "lat": 31.194275,
+    "tags": [
+      "Metro Nearby",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781018073620781",
+    "platform": "Wellcee",
+    "dist_km": 15.38411076246783,
+    "community": "南溪公寓"
+  },
+  {
+    "id": "1774774650699126",
+    "rent_int": 6000,
+    "address": "Songjiang 星辰园-44号楼",
+    "district": "Songjiang",
+    "lng": 121.236704,
+    "lat": 31.056241,
+    "tags": [
+      "Urban Escape"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1774774650699126",
+    "platform": "Wellcee",
+    "dist_km": 37.80164333227352,
+    "community": "星辰园-44号楼"
+  },
+  {
+    "id": "1771949840169981",
+    "rent_int": 3900,
+    "address": "Xuhui 汇阳广场写字楼",
+    "district": "Xuhui",
+    "lng": 121.439704,
+    "lat": 31.180593,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1771949840169981",
+    "platform": "Wellcee",
+    "dist_km": 15.841130078937116,
+    "community": "汇阳广场写字楼"
+  },
+  {
+    "id": "1782893177046950",
+    "rent_int": 2500,
+    "address": "Minhang 西郊英园",
+    "district": "Minhang",
+    "lng": 121.356985,
+    "lat": 31.166685,
+    "tags": [
+      "Elevator",
+      "Sublet",
+      "Cooking Allowed"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782893177046950",
+    "platform": "Wellcee",
+    "dist_km": 23.763439863232616,
+    "community": "西郊英园"
+  },
+  {
+    "id": "1782450613965560",
+    "rent_int": 4200,
+    "address": "Pudong 崂五小区-524号楼",
+    "district": "Pudong",
+    "lng": 121.524291,
+    "lat": 31.243615,
+    "tags": [
+      "1BR + Living",
+      "Sublet",
+      "Metro Nearby",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782450613965560",
+    "platform": "Wellcee",
+    "dist_km": 10.469066877356815,
+    "community": "崂五小区-524号楼"
+  },
+  {
+    "id": "1760413358693171",
+    "rent_int": 1199,
+    "address": "Minhang 金塔二村",
+    "district": "Minhang",
+    "lng": 121.41451,
+    "lat": 31.046608,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1760413358693171",
+    "platform": "Wellcee",
+    "dist_km": 23.569356555156748,
+    "community": "金塔二村"
+  },
+  {
+    "id": "1747456474527179",
+    "rent_int": 1000,
+    "address": "Pudong 中建玖海云天科宸云筑",
+    "district": "Pudong",
+    "lng": 121.924644,
+    "lat": 30.883017,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1747456474527179",
+    "platform": "Wellcee",
+    "dist_km": 44.90413397398164,
+    "community": "中建玖海云天科宸云筑"
+  },
+  {
+    "id": "1780370101319557",
+    "rent_int": 3600,
+    "address": "Xuhui 上海新邨",
+    "district": "Xuhui",
+    "lng": 121.453146,
+    "lat": 31.214705,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1780370101319557",
+    "platform": "Wellcee",
+    "dist_km": 15.041823855683091,
+    "community": "上海新邨"
+  },
+  {
+    "id": "1747137957345473",
+    "rent_int": 20000,
+    "address": "Xuhui 鼎园-北区",
+    "district": "Xuhui",
+    "lng": 121.472755,
+    "lat": 31.209396,
+    "tags": [
+      "两室一厅"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1747137957345473",
+    "platform": "Wellcee",
+    "dist_km": 13.088994137631342,
+    "community": "鼎园-北区"
+  },
+  {
+    "id": "16356615046511304",
+    "rent_int": 5500,
+    "address": "Putuo 礼尚路700弄",
+    "district": "Putuo",
+    "lng": 121.414725,
+    "lat": 31.260308,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/16356615046511304",
+    "platform": "Wellcee",
+    "dist_km": 20.245729441588832,
+    "community": "礼尚路700弄"
+  },
+  {
+    "id": "1729828509384054",
+    "rent_int": 2900,
+    "address": "Xuhui 正南花苑",
+    "district": "Xuhui",
+    "lng": 121.436656,
+    "lat": 31.156211,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1729828509384054",
+    "platform": "Wellcee",
+    "dist_km": 16.361945444890434,
+    "community": "正南花苑"
+  },
+  {
+    "id": "1747137166774859",
+    "rent_int": 25000,
+    "address": "Xuhui 汇峰鼎园",
+    "district": "Xuhui",
+    "lng": 121.473022,
+    "lat": 31.208611,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1747137166774859",
+    "platform": "Wellcee",
+    "dist_km": 13.04339403525587,
+    "community": "汇峰鼎园"
+  },
+  {
+    "id": "1778977765942730",
+    "rent_int": 1800,
+    "address": "Pudong 东南一村-1号",
+    "district": "Pudong",
+    "lng": 121.588974,
+    "lat": 31.119027,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1778977765942730",
+    "platform": "Wellcee",
+    "dist_km": 7.0548760454406025,
+    "community": "东南一村-1号"
+  },
+  {
+    "id": "1782959449542205",
+    "rent_int": 6800,
+    "address": "Pudong 博学家园",
+    "district": "Pudong",
+    "lng": 121.525349,
+    "lat": 31.162765,
+    "tags": [
+      "Metro Nearby",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782959449542205",
+    "platform": "Wellcee",
+    "dist_km": 7.94944309173569,
+    "community": "博学家园"
+  },
+  {
+    "id": "1723704353054277",
+    "rent_int": 3900,
+    "address": "Putuo 泰山三村",
+    "district": "Putuo",
+    "lng": 121.454114,
+    "lat": 31.264812,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1723704353054277",
+    "platform": "Wellcee",
+    "dist_km": 17.222407908627527,
+    "community": "泰山三村"
+  },
+  {
+    "id": "1688399162881058",
+    "rent_int": 3500,
+    "address": "Changning 紫虹大厦",
+    "district": "Changning",
+    "lng": 121.416305,
+    "lat": 31.211959,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1688399162881058",
+    "platform": "Wellcee",
+    "dist_km": 18.39480657892496,
+    "community": "紫虹大厦"
+  },
+  {
+    "id": "1765616240178653",
+    "rent_int": 1100,
+    "address": "Pudong 张江汤臣豪园二期-27号楼",
+    "district": "Pudong",
+    "lng": 121.605857,
+    "lat": 31.207934,
+    "tags": [
+      "民水民电",
+      "限男生"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1765616240178653",
+    "platform": "Wellcee",
+    "dist_km": 3.024923636071822,
+    "community": "张江汤臣豪园二期-27号楼"
+  },
+  {
+    "id": "1781429517625902",
+    "rent_int": 3650,
+    "address": "Minhang 华一新城",
+    "district": "Minhang",
+    "lng": 121.405125,
+    "lat": 31.16383,
+    "tags": [
+      "Sublet",
+      "Metro Nearby",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781429517625902",
+    "platform": "Wellcee",
+    "dist_km": 19.22445834706325,
+    "community": "华一新城"
+  },
+  {
+    "id": "1781667883364085",
+    "rent_int": 3300,
+    "address": "JingAn 延长路265弄小区",
+    "district": "JingAn",
+    "lng": 121.462864,
+    "lat": 31.278548,
+    "tags": [
+      "Metro Nearby",
+      "民水民电"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781667883364085",
+    "platform": "Wellcee",
+    "dist_km": 17.43847448970903,
+    "community": "延长路265弄小区"
+  },
+  {
+    "id": "1677921472375161",
+    "rent_int": 3500,
+    "address": "Changning 上海荟聚-C座",
+    "district": "Changning",
+    "lng": 121.364075,
+    "lat": 31.226913,
+    "tags": [
+      "Pet Friendly",
+      "2号线"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1677921472375161",
+    "platform": "Wellcee",
+    "dist_km": 23.595736756245532,
+    "community": "上海荟聚-C座"
+  },
+  {
+    "id": "1723791953745599",
+    "rent_int": 4500,
+    "address": "Pudong 贵龙园",
+    "district": "Pudong",
+    "lng": 121.53289,
+    "lat": 31.212006,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1723791953745599",
+    "platform": "Wellcee",
+    "dist_km": 7.793853887951622,
+    "community": "贵龙园"
+  },
+  {
+    "id": "1782719307460020",
+    "rent_int": 3800,
+    "address": "Baoshan 丰宝苑",
+    "district": "Baoshan",
+    "lng": 121.380226,
+    "lat": 31.322004,
+    "tags": [
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782719307460020",
+    "platform": "Wellcee",
+    "dist_km": 26.613817108587508,
+    "community": "丰宝苑"
+  },
+  {
+    "id": "1780918527571007",
+    "rent_int": 1400,
+    "address": "Minhang 申莘一村",
+    "district": "Minhang",
+    "lng": 121.391123,
+    "lat": 31.095962,
+    "tags": [
+      "Metro Nearby",
+      "Cooking Allowed",
+      "Short Lease"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1780918527571007",
+    "platform": "Wellcee",
+    "dist_km": 22.537653128863287,
+    "community": "申莘一村"
+  },
+  {
+    "id": "1782119800238381",
+    "rent_int": 3700,
+    "address": "Songjiang 三湘四季花城-紫薇苑",
+    "district": "Songjiang",
+    "lng": 121.234308,
+    "lat": 31.061863,
+    "tags": [
+      "Metro Nearby",
+      "1BR + Living"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782119800238381",
+    "platform": "Wellcee",
+    "dist_km": 37.789836775836676,
+    "community": "三湘四季花城-紫薇苑"
+  },
+  {
+    "id": "1781743774937616",
+    "rent_int": 2450,
+    "address": "Baoshan 心悦居",
+    "district": "Baoshan",
+    "lng": 121.444185,
+    "lat": 31.371748,
+    "tags": [
+      "Sublet",
+      "Pet Friendly"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1781743774937616",
+    "platform": "Wellcee",
+    "dist_km": 26.234988682282587,
+    "community": "心悦居"
+  },
+  {
+    "id": "1675594869048544",
+    "rent_int": 2900,
+    "address": "Pudong 阳光花城-168号楼",
+    "district": "Pudong",
+    "lng": 121.630054,
+    "lat": 31.215247,
+    "tags": [
+      "Pet Friendly",
+      "押一付一"
+    ],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544",
+    "platform": "Wellcee",
+    "dist_km": 4.45731178656137,
+    "community": "阳光花城-168号楼"
+  },
+  {
+    "id": "1758131286500966",
+    "rent_int": 5500,
+    "address": "Pudong 恒大小区-608弄80支弄1号",
+    "district": "Pudong",
+    "lng": 121.516176,
+    "lat": 31.177392,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1758131286500966",
+    "platform": "Wellcee",
+    "dist_km": 8.574411732519536,
+    "community": "恒大小区-608弄80支弄1号"
+  },
+  {
+    "id": "1778988077940673",
+    "rent_int": 2100,
+    "address": "Minhang 源梦苑社区",
+    "district": "Minhang",
+    "lng": 121.428685,
+    "lat": 31.121013,
+    "tags": [],
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1778988077940673",
+    "platform": "Wellcee",
+    "dist_km": 18.152852184720924,
+    "community": "源梦苑社区"
+  },
+  {
+    "id": "1783050607245210",
+    "imgs": [
+      "https://hp.wellcee.com/20260703/51c185c4ca9f19d12b54f81ca1d393ff.jpg?e=1783054098&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:70zJIt7D6WFqTQpRQVOjrTdBmA4=",
+      "https://hp.wellcee.com/20260703/701cfe109d48275c8ecfd9c3d014b96e.jpg?e=1783054098&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:Mp2yc1JiiBbNhHORTrw0gJjK8l4=",
+      "https://hp.wellcee.com/20260703/8268cdb68e7d7405193c218880abdae7.jpg?e=1783054098&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:5121ixEkSdYqVSDnuINTJ313PU4=",
+      "https://hp.wellcee.com/20260703/29b0a2d0ede7f327245edfc347b19dc7.jpg?e=1783054098&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:Zq8cRnqGcP7lBjehGRf0CugM8LQ=",
+      "https://hp.wellcee.com/20260703/ccb6c2a60d11224b60f49c0211018665.jpg?e=1783054098&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:H1Xy-oDTkH58ZdTI6uIgdgynxMY=",
+      "https://hp.wellcee.com/20260703/945b333f7133aac15fa218e9ef9c8adb.jpg?e=1783054098&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:AERasLXyGCHYtIym1l8Z4WQ8I0g="
+    ],
+    "tags": [
+      "LGBTQ Friendly",
+      "Pet Friendly",
+      "Wabi-Sabi",
+      "Leafy",
+      "Serenity",
+      "可外籍",
+      "民用水电"
+    ],
+    "typeTags": [
+      "NEW",
+      "Service Apt"
+    ],
+    "rent": "7500 RMB/M",
+    "video": "https://hv.wellcee.com/20260703/0c594dee4f89936d2ab96fcd9573777b.mp4?e=1783054133&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:wvDCjfXuuyOotNFRcKZQHZrqO7g=",
+    "address": "Putuo 中骏天悦",
+    "district": "Putuo",
+    "longitude": 121.40895406188,
+    "latitude": 31.260627159485,
+    "collectCount": 0,
+    "isCollect": false,
+    "userInfo": {
+      "id": "1695892816704899",
+      "name": "迁云弄巧",
+      "gender": 1,
+      "avatar": "https://upp.wellcee.com/20260412/6f7f6d9f3e1f98bb0caa82c439e515fc.jpg?e=1775982215&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:LUJee2fNZL0ZTHxlskeEvIkO4DM=",
+      "languages": [
+        "Chinese",
+        "English",
+        "French",
+        "Russian",
+        "Japanese"
+      ],
+      "loginTime": "2026-07-03",
+      "tenantStatus": 0,
+      "landlordStatus": 0,
+      "occupation": "自由人"
+    },
+    "loginTime": 1783050810,
+    "cityName": "Shanghai",
+    "dailyRent": "",
+    "rent_int": 7500
+  },
+  {
+    "id": "16183662261774577",
+    "imgs": [
+      "https://qnimg1.wellcee.com/data/2023/04/12/16812925954084620",
+      "https://qnimg1.wellcee.com/1-MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:EOBqlAnNdnytFZu8p6dW8Jdj6R4=:eyJzYXZlS2V5IjoiZGF0YVwvJCh5ZWFyKVwvJChtb24pXC8kKGRheSlcLzE2NTgzNzE5MzQxNzc5NTMzIiwiY2FsbGJhY2tVcmwiOiJodHRwczpcL1wvd3d3LndlbGxjZWUuY29tXC9pbmRleC5waHBcL2FwaVwvdG9vbHNcL3Fpbml1Q2FsbGJhY2siLCJjYWxsYmFja0JvZHkiOiJmbmFtZT0kKGtleSkiLCJzY29wZSI6IndlbGxjZWUiLCJkZWFkbGluZSI6MTY1ODM3NTUzNH0=",
+      "https://qnimg1.wellcee.com/2-MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:ltC4dptsiTIIElRbHnpsL9REVSw=:eyJzYXZlS2V5IjoiZGF0YVwvJCh5ZWFyKVwvJChtb24pXC8kKGRheSlcLzE2NTgzNzE5MzQxNzc5ODIyIiwiY2FsbGJhY2tVcmwiOiJodHRwczpcL1wvd3d3LndlbGxjZWUuY29tXC9pbmRleC5waHBcL2FwaVwvdG9vbHNcL3Fpbml1Q2FsbGJhY2siLCJjYWxsYmFja0JvZHkiOiJmbmFtZT0kKGtleSkiLCJzY29wZSI6IndlbGxjZWUiLCJkZWFkbGluZSI6MTY1ODM3NTUzNH0=",
+      "https://qnimg1.wellcee.com/data/2023/04/12/1681292587836080",
+      "https://qnimg1.wellcee.com/data/2023/04/12/16812926020196143",
+      "https://image3.wellcee.com/20241207/5c203e4d1112fdfed4f417b5d65f50cd.jpg",
+      "https://hp.wellcee.com/20260125/2c762a9c55de568b5f6ffa33815e6204.jpg?e=1769336299&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:0qJbdKeS2ew6ufFI7aN9eeE2zXk=",
+      "https://hp.wellcee.com/20260125/30ee3065d5660afaa1aa943383cfb3e9.jpg?e=1769336299&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:JXYXiA0IbnR2j6EjqNeDT-qunrk="
+    ],
+    "tags": [
+      "Cozy Home",
+      "Clean&Comfy",
+      "No Gender Limit",
+      "“Friends”",
+      "Chilled"
+    ],
+    "typeTags": [],
+    "rent": "2300 RMB/M",
+    "video": "",
+    "address": "Changning 凯旋路88弄笠园凯旋坊",
+    "district": "Changning",
+    "longitude": 121.4802002223,
+    "latitude": 31.236459511975,
+    "collectCount": 375,
+    "isCollect": false,
+    "userInfo": {
+      "id": "Uf3e44fd61a51efa7f153e86cb5098231",
+      "name": "mac",
+      "gender": 1,
+      "avatar": "https://qnimg1.wellcee.com/eb0ae56a175a3ee1491da5b3cd5bb700",
+      "languages": [
+        "Chinese",
+        "English"
+      ],
+      "loginTime": "2026-07-01",
+      "tenantStatus": 0,
+      "landlordStatus": 0,
+      "occupation": "工程师"
+    },
+    "loginTime": 1783050790,
+    "cityName": "Shanghai",
+    "dailyRent": "",
+    "rent_int": 2300
+  },
+  {
+    "id": "1782284283173389",
+    "imgs": [
+      "https://hp.wellcee.com/20260624/9daf6219d14f5ec97ac836cd6baa53b2.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:7thegdX-mjKhjgF0CFwvkJohnuM=",
+      "https://hp.wellcee.com/20260624/2e18e06fe8291913e18cd6ed7cfbb5d5.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:MatvM3L_uJkvtB9RIbSwAW52N_s=",
+      "https://hp.wellcee.com/20260624/01cb8e1c98812602107bb5ce7fb171c9.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:68y2Egwn-cPiEAmoRJZrV6cITmQ=",
+      "https://hp.wellcee.com/20260624/3fef25d6aa3cc7ced0d8e9edd28e2b6d.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:y7XwD22ZYvy0bpJeg0gBC45YNFI=",
+      "https://hp.wellcee.com/20260624/951801f754bf97caeefaa68d6b6d178b.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:idjD7jKPHIAslsHHzP1njW4Ivg0=",
+      "https://hp.wellcee.com/20260624/9f2cf521259adfca03ce575bf608c6ed.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:NRzdnItB0XsC2QFfwuh7WBS0ojQ=",
+      "https://hp.wellcee.com/20260624/85e1e22970f08379ba7c3812a6fd0b4d.jpg?e=1782287562&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:4ygYSQ_zoZF5J9qAFbC4lJ0H6T4="
+    ],
+    "tags": [
+      "LGBTQ Friendly",
+      "Pet Friendly",
+      "两室一厅",
+      "免租20天",
+      "民用水电"
+    ],
+    "typeTags": [
+      "Service Apt"
+    ],
+    "rent": "6680 RMB/M",
+    "video": "",
+    "address": "Changning 协和家园",
+    "district": "Changning",
+    "longitude": 121.36210742953818,
+    "latitude": 31.21758673964479,
+    "collectCount": 2,
+    "isCollect": false,
+    "userInfo": {
+      "id": "U527e07d26bf1d208e8682243a7d01810",
+      "name": "火锅爱好者",
+      "gender": 2,
+      "avatar": "https://upp.wellcee.com/20260328/4d0791d73f792b0d5270644e9486d545.jpg?e=1774698108&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:40GWwpW9OqDqqqYj_Qaxt1zrC3Q=",
+      "languages": [
+        "中文",
+        "English",
+        "French",
+        "Russian",
+        "Japanese"
+      ],
+      "loginTime": "2026-07-02",
+      "tenantStatus": 0,
+      "landlordStatus": 0,
+      "occupation": "沪漂打工人"
+    },
+    "loginTime": 1783050953,
+    "cityName": "Shanghai",
+    "dailyRent": "",
+    "rent_int": 6680
+  },
+  {
+    "id": "1737112249820189",
+    "imgs": [
+      "https://hp.wellcee.com/20250723/523a0d1fc88e7f217a8164ad14ac5d32.jpg?e=1753283854&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:NcdBMP0b5McMyzefnGVioLt5nlk=",
+      "https://hp.wellcee.com/20250723/951adbf6df44e4e534f4544e33262eb6.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:bFrb-68hWwI9nd-RNKKryiusnB0=",
+      "https://hp.wellcee.com/20250723/da5f37e8c4ecad20371f8e8a5b51b832.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:-noh9CJyB7y2u2G9TA5JSpG5b3o=",
+      "https://hp.wellcee.com/20250723/a0c11f9b81cb8bb1d5a735abf9b8e2df.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:t8n5ECDpRq9RrHjy0TDS4j3i0p0=",
+      "https://hp.wellcee.com/20250723/47be139d67257c3930a56424670a5694.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:cPTX7-YUIPcukel_q0qo1l_dOZ8=",
+      "https://hp.wellcee.com/20250723/c623735f884aee8d2e28c9b857676f0c.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:yZpljWmXq2I5MkT0Jm6bdT4WcTw=",
+      "https://hp.wellcee.com/20250723/e5582cbe026d4afd8ee37d217b930d25.jpg?e=1753283854&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:AOyooj1TaLikyygJqzERDx8cxxk=",
+      "https://hp.wellcee.com/20250723/22421f818b4c93e9815349c907a27feb.jpg?e=1753283854&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:i1q0-OCOOd0W8X7iMLnXaNeHQm8=",
+      "https://hp.wellcee.com/20250723/bd1d8720a9b96095c7b29140b07158b3.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:TdMb44UKp5N5PPJjkkV8aphvhs0=",
+      "https://hp.wellcee.com/20250723/f60d2fce68084ff348a2ef2e27c2e962.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:FJuw6wrtq-DJWNxt8BGznLgxnT4=",
+      "https://hp.wellcee.com/20250723/9612bf7967a9985340ef33dc377d7700.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:nRAd5VgxiHUSl2ZhKKhOpDJQrAw=",
+      "https://hp.wellcee.com/20250723/e57de40abc679fcdbce869928337af75.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:4XHBVgoQftKnKKTRi8z90ZI6rl8=",
+      "https://hp.wellcee.com/20250723/6efbefe28b60b8a31faf822e8593a612.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:YzgczoAIeg87KIfckE4CUePjz-I=",
+      "https://hp.wellcee.com/20250723/316d5716dd41074cde4140897cd37bdb.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:PVnDXxDlf09jwk4uPk916rr6c3s=",
+      "https://hp.wellcee.com/20250723/695934cd00eae3ddef8b588397ae08f6.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:FdLiSVX1yJd7oxPyTtQv7DQeuNM=",
+      "https://hp.wellcee.com/20250723/8ad9e47dd2834d1fdc3ab03f64c703b8.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:mhgb4dTb2Fa3S-797RdV-W6OhAE=",
+      "https://hp.wellcee.com/20250723/120fbb788ddf40f7ac8d3382986e6571.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:RNvhn8Mw-KsXH3_2QClEIj1PAzk=",
+      "https://hp.wellcee.com/20250723/c2787ce0eddea0b5565c28fcaddb78ab.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:WnK5y92H3Q6Z9CggVjcjePQljhE=",
+      "https://hp.wellcee.com/20250723/d61f066dfb534770d1200a9911860569.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:Rq-3gbhBsWnpeqhdcGmLLBRmezQ=",
+      "https://hp.wellcee.com/20250723/25b816da101fb12607eaef9b08bcc680.jpg?e=1753283853&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:HoP93-t1Rg4Bm8JiZ608zNB6HtQ="
+    ],
+    "tags": [
+      "LGBTQ友好",
+      "不限性别",
+      "宠物友好",
+      "市井烟火气",
+      "干净治愈",
+      "慢时光",
+      "温馨小窝",
+      "老友记"
+    ],
+    "typeTags": [
+      "Renew",
+      "Service Apt"
+    ],
+    "rent": "3600 RMB/M",
+    "video": "https://hv.wellcee.com/20250725/1afdf4ac7db52b1c07071165fa066dbf.mp4?e=1753385359&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:DecLW2e9ywzIYp-0q34Fbl4HRRk=",
+    "address": "Minhang 前滩国际广场",
+    "district": "Minhang",
+    "longitude": 121.489281,
+    "latitude": 31.162097,
+    "collectCount": 768,
+    "isCollect": false,
+    "userInfo": {
+      "id": "1694658672153944",
+      "name": "Belief",
+      "gender": 1,
+      "avatar": "https://image3.wellcee.com/20230924/9f31ac6e783ddff19a758284dc5f152e.jpg",
+      "languages": [
+        "Chinese",
+        "English",
+        "French",
+        "Swahili",
+        "Russian",
+        "Spanish",
+        "Japanese"
+      ],
+      "loginTime": "2026-07-03",
+      "tenantStatus": 0,
+      "landlordStatus": 0,
+      "occupation": "房子管家"
+    },
+    "loginTime": 1783050860,
+    "cityName": "Shanghai",
+    "dailyRent": "",
+    "rent_int": 3600
+  },
+  {
+    "id": "1782996318677429",
+    "imgs": [
+      "https://hp.wellcee.com/20260702/705c78978138f4fbee2ee67a0214f8b3.jpg?e=1782999775&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:TjMZLxucpc6RjtA-YwWraKpQmPQ=",
+      "https://hp.wellcee.com/20260702/d5242d9a14b7bfeee9afdb7d20253f1f.jpg?e=1782999775&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:V6BDt8tZPpMjR_dCdlL3-7Xf4W0=",
+      "https://hp.wellcee.com/20260702/135b044af0e3e97b2373595895105064.jpg?e=1782999775&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:2fwTabJ3X0X2V3ezQomyTJoJ1S4="
+    ],
+    "tags": [
+      "Amenities Nearby",
+      "Sublet"
+    ],
+    "typeTags": [
+      "NEW"
+    ],
+    "rent": "1200 RMB/M",
+    "video": "",
+    "address": "Pudong 凤家码头",
+    "district": "Pudong",
+    "longitude": 121.722753,
+    "latitude": 31.240085,
+    "collectCount": 3,
+    "isCollect": false,
+    "userInfo": {
+      "id": "1782995533060451",
+      "name": "ㅤㅤㅤ",
+      "gender": 1,
+      "avatar": "https://upp.wellcee.com/20260702/43f4391287f0d98fce452d76d6822c81.jpg?e=1782999840&token=MsEXTYfBHjEXU9iB8C1gQn1B46pJlqKhmuJ0UbS-:_m79L1kcVAYpXdP2WoagUSnL3yM=",
+      "languages": [
+        "Chinese"
+      ],
+      "loginTime": "2026-07-02",
+      "tenantStatus": 0,
+      "landlordStatus": 0,
+      "occupation": "厨师"
+    },
+    "loginTime": 1783050868,
+    "cityName": "Shanghai",
+    "dailyRent": "",
+    "rent_int": 1200
+  }
+]

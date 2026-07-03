@@ -1,0 +1,212 @@
+[
+  {
+    "platform": "Wellcee",
+    "id": "1769759279799049",
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1769759279799049",
+    "community": "优美居公寓(浦东御桥店)",
+    "rent_int": 2000,
+    "area_m2": 25.0,
+    "bedroom": 1,
+    "bathroom": 1,
+    "floor": "18",
+    "deposit": 2000,
+    "rentType": "Whole apartment",
+    "timeType": "Long term",
+    "district": "Minhang",
+    "address": "邻里苑",
+    "lng": 121.38042446523953,
+    "lat": 31.102295261063627,
+    "desc": "房子是由阁楼改造的两室户。视野很好，带露台。 离地铁站约1km。\n电梯房 有独卫 车位🉑谈～\n\nPS：是温馨的阳光房～",
+    "dist_km": 4.2,
+    "tags": [
+      {
+        "isUserAdd": 0,
+        "name": "Cozy Home",
+        "id": "16861253225776736",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Clean&Comfy",
+        "id": "16861253506365744",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "No Gender Limit",
+        "id": "16861253702041383",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "LGBTQ Friendly",
+        "id": "15215327880373971",
+        "type": "custom_tag"
+      }
+    ],
+    "layout": "1室1卫",
+    "unit_price": 80.0
+  },
+  {
+    "platform": "Wellcee",
+    "id": "1675594869048544",
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544",
+    "community": "阳光花城-168号楼",
+    "rent_int": 2900,
+    "area_m2": 40.0,
+    "bedroom": 1,
+    "bathroom": 1,
+    "floor": "5",
+    "deposit": 2900,
+    "rentType": "Whole apartment",
+    "timeType": "Long term",
+    "district": "Pudong",
+    "address": "阳光花城-168号楼",
+    "lng": 121.62345297079017,
+    "lat": 31.20960325736727,
+    "desc": "房子空间大 采光足 24小时管家安保 ，放心安心  2号线 直达龙阳 世纪大道 陆家嘴优美居住环境，停车方便，近地铁商圈，\n",
+    "dist_km": 4.5,
+    "tags": [
+      {
+        "isUserAdd": 0,
+        "name": "Pet Friendly",
+        "id": "15215327279063272",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Cozy Home",
+        "id": "16861253225776736",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Clean&Comfy",
+        "id": "16861253506365744",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "No Gender Limit",
+        "id": "16861253702041383",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Hustle & Bustle",
+        "id": "16861253946352255",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 1,
+        "name": "押一付一",
+        "id": "15835090459731147",
+        "type": "custom_tag"
+      }
+    ],
+    "layout": "1室1卫",
+    "unit_price": 72.5
+  },
+  {
+    "platform": "Wellcee",
+    "id": "1782465154307658",
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782465154307658",
+    "community": "锦三角花园-28号",
+    "rent_int": 3200,
+    "area_m2": 50.0,
+    "bedroom": 2,
+    "bathroom": 1,
+    "floor": "9",
+    "deposit": 3200,
+    "rentType": "Whole apartment",
+    "timeType": "No term limit",
+    "district": "Songjiang",
+    "address": "龙悦小区2区",
+    "lng": 121.3102923952457,
+    "lat": 31.12561137512391,
+    "desc": "9号线，九亭地铁站，九亭租房，上海租房，松江租房，两室一厅独厨独卫，电梯房，燃气厨房，转租，10月10号到期，跟房东签合同，停车便宜",
+    "dist_km": 5.6,
+    "tags": [
+      {
+        "isUserAdd": 0,
+        "name": "Private Kitchen",
+        "id": "1780398093198893012",
+        "type": "function_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Private Bathroom",
+        "id": "1780398093200253768",
+        "type": "function_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Elevator",
+        "id": "1780398093192851760",
+        "type": "function_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Cooking Allowed",
+        "id": "1780398093194136425",
+        "type": "function_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Sublet",
+        "id": "1780398093195143600",
+        "type": "function_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "两室一厅",
+        "id": "1780495897674103",
+        "type": "custom_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "LGBTQ Friendly",
+        "id": "1780398093263668059",
+        "type": "vibe_tag"
+      },
+      {
+        "isUserAdd": 0,
+        "name": "Pet Friendly",
+        "id": "1780398093270068462",
+        "type": "vibe_tag"
+      }
+    ],
+    "layout": "2室1卫",
+    "unit_price": 64.0
+  },
+  {
+    "platform": "Wellcee",
+    "id": "1782970871357871",
+    "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1782970871357871",
+    "community": "禹洲金桥国际",
+    "rent_int": 2500,
+    "area_m2": 20.0,
+    "bedroom": 1,
+    "bathroom": 1,
+    "floor": "16",
+    "deposit": 2500,
+    "rentType": "Shared apartment",
+    "timeType": "Long term",
+    "district": "Pudong",
+    "address": "禹洲金桥国际",
+    "lng": 121.61325585990159,
+    "lat": 31.25509994200068,
+    "desc": "金桥禹州国际性价比超高 视野光线特别好 近地铁站 华为小米 附近有商场 健身房",
+    "dist_km": 9.0,
+    "tags": [
+      {
+        "isUserAdd": 0,
+        "name": "Pet Friendly",
+        "id": "1780398093270068462",
+        "type": "vibe_tag"
+      }
+    ],
+    "layout": "1室1卫",
+    "unit_price": 125.0
+  }
+]
