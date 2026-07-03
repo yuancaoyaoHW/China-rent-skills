@@ -1248,6 +1248,18 @@
       "updated_at": "2026-07-03T02:19:11+00:00",
       "url": "https://sh.zu.ke.com/zufang/SH2053422561097678848.html"
     },
+    "https://sh.zu.ke.com/zufang/SH2063270475143839744.html": {
+      "area_m2": "58.0",
+      "community": "金海华城华美新苑",
+      "layout": "2室1厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 105,
+      "rent": 4000,
+      "title": "金海华城华美新苑 2室1厅",
+      "updated_at": "2026-07-03T03:03:40+00:00",
+      "url": "https://sh.zu.ke.com/zufang/SH2063270475143839744.html"
+    },
     "https://sh.zu.ke.com/zufang/SH2151609210171817984.html": {
       "area_m2": "55",
       "community": "金桥新村四街坊",
@@ -1537,6 +1549,6 @@
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
     }
   },
-  "updated_at": "2026-07-03T03:02:32+00:00",
+  "updated_at": "2026-07-03T03:03:40+00:00",
   "version": 1
 }
