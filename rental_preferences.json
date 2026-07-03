@@ -1573,6 +1573,18 @@
       "updated_at": "2026-07-03T12:00:00+00:00",
       "url": "https://www.douban.com/group/topic/492643771/"
     },
+    "https://www.douban.com/group/topic/492644949/": {
+      "area_m2": 30,
+      "community": "三林(11号线三林站)",
+      "layout": "1室1厅",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 116,
+      "rent": 3200,
+      "title": "个人转租11号线三林小一居室3200 30㎡",
+      "updated_at": "2026-07-03T07:13:40+00:00",
+      "url": "https://www.douban.com/group/topic/492644949/"
+    },
     "https://www.douban.com/group/topic/492656726/": {
       "area_m2": 0,
       "community": "汤臣豪园二期",
@@ -1611,6 +1623,6 @@
       "url": "https://www.douban.com/group/topic/492715796/"
     }
   },
-  "updated_at": "2026-07-03T07:04:05+00:00",
+  "updated_at": "2026-07-03T07:13:40+00:00",
   "version": 1
 }
