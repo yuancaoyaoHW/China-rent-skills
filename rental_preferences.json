@@ -1573,6 +1573,18 @@
       "updated_at": "2026-07-03T12:00:00+00:00",
       "url": "https://www.douban.com/group/topic/492643771/"
     },
+    "https://www.douban.com/group/topic/492644601/": {
+      "area_m2": 0,
+      "community": "张江前滩附近(2/7/13/18号线沿线)",
+      "layout": "1室1厅",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 119,
+      "rent": 2000,
+      "title": "房东直租！2K+ 无中介费 直达张江、前滩 一室户独厨",
+      "updated_at": "2026-07-03T09:14:19+00:00",
+      "url": "https://www.douban.com/group/topic/492644601/"
+    },
     "https://www.douban.com/group/topic/492644949/": {
       "area_m2": 30,
       "community": "三林(11号线三林站)",
@@ -1731,6 +1743,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T09:14:17+00:00",
+  "updated_at": "2026-07-03T09:14:19+00:00",
   "version": 1
 }
