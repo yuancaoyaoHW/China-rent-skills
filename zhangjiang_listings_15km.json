@@ -2968,6 +2968,62 @@
       "nearest_metro": "广兰路(地铁站) 2号线 278m",
       "nearest_mall": "天之骄子生活新天地 591m",
       "nearest_market": "联华超市(天之骄子店) 537m"
+    },
+    {
+      "rank": 109,
+      "score": 0,
+      "action": "contact",
+      "platform": "豆瓣",
+      "source_id": "492656726",
+      "title": "金科路地铁口！汤臣豪园二期 2800元精装一室户",
+      "rent": 2800,
+      "layout": "1室1厅",
+      "area_m2": 0,
+      "business_area": "张江",
+      "community": "汤臣豪园二期",
+      "address": "浦东 张江 金科路 汤臣豪园二期",
+      "subway": "2号线张江高科",
+      "commute": "距张江昆仑芯约3.8km",
+      "work": "3.80km",
+      "longitude": 121.584512,
+      "latitude": 31.209484,
+      "tags": "2800元; 1室1厅; 精装; 独立厨卫; 无中介费; 近2号线; 民水民电; 长泰广场1.7km; 汇智国际1.8km",
+      "risks": "豆瓣房东直租无中介费; 帖子称金科路0距离但高德测为张江高科站883m; 面积未标注; 联系方式13018801352",
+      "url": "https://www.douban.com/group/topic/492656726/",
+      "residential_priority": "normal",
+      "amenity_verified": true,
+      "amenity_status": "配套已核验",
+      "nearest_metro": "张江高科(地铁站) 2号线 883m",
+      "nearest_mall": "长泰国际商业广场 1732m",
+      "nearest_market": "尚优超市 1412m"
+    },
+    {
+      "rank": 110,
+      "score": 0,
+      "action": "contact",
+      "platform": "豆瓣",
+      "source_id": "492643771",
+      "title": "三林地铁口！尚桂苑 2000元一室户",
+      "rent": 2000,
+      "layout": "1室1厅",
+      "area_m2": 0,
+      "business_area": "三林",
+      "community": "尚桂苑",
+      "address": "浦东 三林 11号线三林站 尚桂苑",
+      "subway": "11号线三林",
+      "commute": "距张江昆仑芯约10.0km",
+      "work": "10.00km",
+      "longitude": 121.508613,
+      "latitude": 31.14624,
+      "tags": "2000元; 1室1厅; 独卫; 全配; 无中介费; 近11号线; 24h安保",
+      "risks": "豆瓣房东直租; 距离10km在通勤圈边界; 面积未标注; 与汤臣豪园同一联系方式(13018801352)疑为中介",
+      "url": "https://www.douban.com/group/topic/492643771/",
+      "residential_priority": "normal",
+      "amenity_verified": true,
+      "amenity_status": "配套已核验",
+      "nearest_metro": "上南路(地铁站) 11号线 267m",
+      "nearest_mall": "中房金谊广场 751m",
+      "nearest_market": "兴源百货便利店 508m"
     }
   ],
   "buildYears": {
@@ -3282,6 +3338,14 @@
     "阳光花城-168号楼": {
       "year": "2007年",
       "confidence": "high"
+    },
+    "汤臣豪园二期": {
+      "year": "待查",
+      "confidence": "low"
+    },
+    "尚桂苑": {
+      "year": "待查",
+      "confidence": "low"
     }
   },
   "amenities": [
@@ -3646,6 +3710,72 @@
       "latitude": 31.213611,
       "distance_m": 537,
       "address": "祖冲之路2305号F1层",
+      "source": "amap_place_around"
+    },
+    {
+      "community": "汤臣豪园二期",
+      "kind": "metro",
+      "label": "地",
+      "name": "张江高科(地铁站)",
+      "longitude": 121.59,
+      "latitude": 31.204,
+      "distance_m": 883,
+      "address": "2号线",
+      "source": "amap_place_around"
+    },
+    {
+      "community": "汤臣豪园二期",
+      "kind": "mall",
+      "label": "商",
+      "name": "长泰国际商业广场",
+      "longitude": 121.596,
+      "latitude": 31.199,
+      "distance_m": 1732,
+      "address": "祖冲之路1239弄",
+      "source": "amap_place_around"
+    },
+    {
+      "community": "汤臣豪园二期",
+      "kind": "market",
+      "label": "菜",
+      "name": "尚优超市",
+      "longitude": 121.58,
+      "latitude": 31.215,
+      "distance_m": 1412,
+      "address": "龙三路98弄",
+      "source": "amap_place_around"
+    },
+    {
+      "community": "尚桂苑",
+      "kind": "metro",
+      "label": "地",
+      "name": "上南路(地铁站)",
+      "longitude": 121.51,
+      "latitude": 31.148,
+      "distance_m": 267,
+      "address": "11号线",
+      "source": "amap_place_around"
+    },
+    {
+      "community": "尚桂苑",
+      "kind": "mall",
+      "label": "商",
+      "name": "中房金谊广场",
+      "longitude": 121.508,
+      "latitude": 31.149,
+      "distance_m": 751,
+      "address": "上南路",
+      "source": "amap_place_around"
+    },
+    {
+      "community": "尚桂苑",
+      "kind": "market",
+      "label": "菜",
+      "name": "兴源百货便利店",
+      "longitude": 121.51,
+      "latitude": 31.148,
+      "distance_m": 508,
+      "address": "上南路店",
       "source": "amap_place_around"
     }
   ]

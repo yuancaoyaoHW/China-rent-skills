@@ -1559,8 +1559,34 @@
       "title": "香楠小区 2室1厅",
       "updated_at": "2026-07-03T02:19:11+00:00",
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
+    },
+    "https://www.douban.com/group/topic/492656726/": {
+      "platform": "豆瓣",
+      "title": "金科路地铁口！汤臣豪园二期 2800元精装一室户",
+      "url": "https://www.douban.com/group/topic/492656726/",
+      "rent": 2800,
+      "rent_int": 2800,
+      "area_m2": 0,
+      "layout": "1室1厅",
+      "community": "汤臣豪园二期",
+      "pref": "like",
+      "rank": 0,
+      "updated_at": "2026-07-03T12:00:00+00:00"
+    },
+    "https://www.douban.com/group/topic/492643771/": {
+      "platform": "豆瓣",
+      "title": "三林地铁口！尚桂苑 2000元一室户",
+      "url": "https://www.douban.com/group/topic/492643771/",
+      "rent": 2000,
+      "rent_int": 2000,
+      "area_m2": 0,
+      "layout": "1室1厅",
+      "community": "尚桂苑",
+      "pref": "like",
+      "rank": 0,
+      "updated_at": "2026-07-03T12:00:00+00:00"
     }
   },
-  "updated_at": "2026-07-03T06:11:55+00:00",
+  "updated_at": "2026-07-03T12:00:00+00:00",
   "version": 1
 }

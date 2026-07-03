@@ -1,0 +1,62 @@
+[
+  {
+    "platform": "豆瓣",
+    "id": "492656726",
+    "url": "https://www.douban.com/group/topic/492656726/",
+    "title": "金科路地铁口！汤臣豪园二期 2800元精装一室户",
+    "rent_int": 2800,
+    "layout": "1室1厅",
+    "community": "汤臣豪园二期",
+    "business_area": "张江",
+    "address": "浦东 张江 金科路 汤臣豪园二期",
+    "metro": "2号线金科路",
+    "desc": "下楼即达2号线金科路站，5站到陆家嘴。精装一室户：1.8米大床+定制衣柜+飘窗书桌，独立厨卫。长泰广场、汇智国际、盒马鲜生步行3分钟。",
+    "contact": "13018801352",
+    "tags": [
+      "无中介费",
+      "押一付一",
+      "精装",
+      "独立厨卫",
+      "近地铁",
+      "民水民电"
+    ],
+    "longitude": 121.584512,
+    "latitude": 31.209484,
+    "geocode_precision": "",
+    "dist_km": 3.8059807750338637,
+    "nearest_metro": "张江高科地铁站1号口 883m",
+    "nearest_market": "尚优超市(杨镇小区龙三路98弄店) 1412m",
+    "amenity_verified": true,
+    "amenity_status": "配套已核验"
+  },
+  {
+    "platform": "豆瓣",
+    "id": "492643771",
+    "url": "https://www.douban.com/group/topic/492643771/",
+    "title": "三林地铁口！尚桂苑 2000元一室户",
+    "rent_int": 2000,
+    "layout": "1室1厅",
+    "community": "尚桂苑",
+    "business_area": "三林",
+    "address": "浦东 三林 11号线三林站 尚桂苑",
+    "metro": "11号线三林",
+    "desc": "步行1分钟直达11号线三林站，7站直达东方体育中心。独立一室户：1.8米床+衣柜+书桌，独立厨卫+燃气灶台。联华超市、菜鸟驿站楼下。",
+    "contact": "13018801352",
+    "tags": [
+      "无中介费",
+      "独卫",
+      "全配",
+      "近地铁",
+      "24h安保"
+    ],
+    "longitude": 121.508613,
+    "latitude": 31.14624,
+    "geocode_precision": "",
+    "dist_km": 10.048149128856075,
+    "nearest_metro": "上南路地铁站2号口 267m",
+    "nearest_mall": "中房金谊广场 751m",
+    "nearest_market": "兴源百货便利店(上南路店) 508m",
+    "amenity_verified": true,
+    "amenity_status": "配套已核验"
+  }
+]
