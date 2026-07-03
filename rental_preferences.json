@@ -1610,6 +1610,18 @@
       "updated_at": "2026-07-03T07:03:59+00:00",
       "url": "https://www.douban.com/group/topic/492664789/"
     },
+    "https://www.douban.com/group/topic/492712893/": {
+      "area_m2": null,
+      "community": "世纪大道附近(6号线沿线)",
+      "layout": "1室1厅",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 113,
+      "rent": 2800,
+      "title": "整租！世纪大道2.4.6.9整租一室户2800，独立厨卫",
+      "updated_at": "2026-07-03T07:22:28+00:00",
+      "url": "https://www.douban.com/group/topic/492712893/"
+    },
     "https://www.douban.com/group/topic/492715796/": {
       "area_m2": 53,
       "community": "洋泾(浦东内环)",
@@ -1659,6 +1671,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T07:17:20+00:00",
+  "updated_at": "2026-07-03T07:22:28+00:00",
   "version": 1
 }
