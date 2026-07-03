@@ -1634,6 +1634,18 @@
       "updated_at": "2026-07-03T08:25:37+00:00",
       "url": "https://www.douban.com/group/topic/492679211121/"
     },
+    "https://www.douban.com/group/topic/492709006/": {
+      "area_m2": 0,
+      "community": "东明路附近(6-13号线)",
+      "layout": "1室1厅",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 122,
+      "rent": 4000,
+      "title": "6-13号线东明路精装一室一厅4000月可办居住证",
+      "updated_at": "2026-07-03T09:12:34+00:00",
+      "url": "https://www.douban.com/group/topic/492709006/"
+    },
     "https://www.douban.com/group/topic/492712893/": {
       "area_m2": null,
       "community": "世纪大道附近(6号线沿线)",
@@ -1695,6 +1707,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T09:12:22+00:00",
+  "updated_at": "2026-07-03T09:12:34+00:00",
   "version": 1
 }
