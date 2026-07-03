@@ -1622,6 +1622,18 @@
       "updated_at": "2026-07-03T07:03:59+00:00",
       "url": "https://www.douban.com/group/topic/492664789/"
     },
+    "https://www.douban.com/group/topic/492679211/": {
+      "area_m2": 0,
+      "community": "锦镈苑",
+      "layout": "1室1厅",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 118,
+      "rent": 2000,
+      "title": "近锦绣路地铁站 锦镈苑朝南一室户2000元",
+      "updated_at": "2026-07-03T09:14:17+00:00",
+      "url": "https://www.douban.com/group/topic/492679211/"
+    },
     "https://www.douban.com/group/topic/492679211121/": {
       "area_m2": 0,
       "community": "锦镈苑",
@@ -1719,6 +1731,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T09:13:38+00:00",
+  "updated_at": "2026-07-03T09:14:17+00:00",
   "version": 1
 }
