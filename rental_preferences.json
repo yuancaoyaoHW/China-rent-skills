@@ -617,11 +617,11 @@
       "community": "颐谷南苑",
       "layout": "2室1厅",
       "platform": "安居客",
-      "pref": "like",
-      "rank": 71,
+      "pref": "dislike",
+      "rank": 53,
       "rent": 3550,
       "title": "拒绝低价引流你累我更累，颐谷南苑两室一厅，16号线周浦东地铁",
-      "updated_at": "2026-07-01T13:29:34+00:00",
+      "updated_at": "2026-07-03T07:39:26+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4635292159269899"
     },
     "https://sh.zu.anjuke.com/fangyuan/4635408522649605": {
@@ -1671,6 +1671,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T07:22:28+00:00",
+  "updated_at": "2026-07-03T07:39:26+00:00",
   "version": 1
 }
