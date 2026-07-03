@@ -53,11 +53,11 @@
       "community": "秀怡苑",
       "layout": "2室1厅",
       "platform": "安居客",
-      "pref": "like",
-      "rank": 18,
+      "pref": "dislike",
+      "rank": 15,
       "rent": 3850,
       "title": "实拍 秀沿路双南两房一厅 民水民电 燃气厨房 采光好",
-      "updated_at": "2026-07-01T13:20:49+00:00",
+      "updated_at": "2026-07-03T07:40:10+00:00",
       "url": "https://sh.zu.anjuke.com/fangyuan/4528846731090951"
     },
     "https://sh.zu.anjuke.com/fangyuan/4535115755400200": {
@@ -1671,6 +1671,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T07:39:57+00:00",
+  "updated_at": "2026-07-03T07:40:10+00:00",
   "version": 1
 }
