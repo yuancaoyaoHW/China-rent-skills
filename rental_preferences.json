@@ -1634,6 +1634,18 @@
       "updated_at": "2026-07-03T08:25:37+00:00",
       "url": "https://www.douban.com/group/topic/492679211121/"
     },
+    "https://www.douban.com/group/topic/492681503/": {
+      "area_m2": 0,
+      "community": "世纪公园附近(直达世纪大道)",
+      "layout": "1室1厅",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 120,
+      "rent": 2900,
+      "title": "上海直租公寓 直达世纪大道人民广场 2900起",
+      "updated_at": "2026-07-03T09:13:38+00:00",
+      "url": "https://www.douban.com/group/topic/492681503/"
+    },
     "https://www.douban.com/group/topic/492709006/": {
       "area_m2": 0,
       "community": "东明路附近(6-13号线)",
@@ -1707,6 +1719,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T09:12:34+00:00",
+  "updated_at": "2026-07-03T09:13:38+00:00",
   "version": 1
 }
