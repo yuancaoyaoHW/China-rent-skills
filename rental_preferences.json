@@ -1645,8 +1645,20 @@
       "title": "房东直租！2K+ 无中介费/直达张江/一室户独厨独卫",
       "updated_at": "2026-07-03T07:17:08+00:00",
       "url": "https://www.douban.com/group/topic/492728657/"
+    },
+    "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544": {
+      "area_m2": 40,
+      "community": "阳光花城-168号楼",
+      "layout": "1室1卫",
+      "platform": "Wellcee",
+      "pref": "dislike",
+      "rank": 108,
+      "rent": 2900,
+      "title": "阳光花城-168号楼 1室1卫",
+      "updated_at": "2026-07-03T07:17:20+00:00",
+      "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T07:17:08+00:00",
+  "updated_at": "2026-07-03T07:17:20+00:00",
   "version": 1
 }
