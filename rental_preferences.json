@@ -1260,6 +1260,18 @@
       "updated_at": "2026-07-01T13:40:44+00:00",
       "url": "https://sh.zu.ke.com/zufang/SH2177431171216965632.html"
     },
+    "https://sh.zu.ke.com/zufang/SH2178104644369121280.html": {
+      "area_m2": "89.0",
+      "community": "阳光苑二期",
+      "layout": "2室1厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 97,
+      "rent": 4000,
+      "title": "阳光苑二期 2室1厅",
+      "updated_at": "2026-07-03T02:23:51+00:00",
+      "url": "https://sh.zu.ke.com/zufang/SH2178104644369121280.html"
+    },
     "https://sh.zu.ke.com/zufang/SH2179541143702732800.html": {
       "area_m2": "52.00",
       "community": "京浦小区82支弄",
@@ -1441,6 +1453,6 @@
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
     }
   },
-  "updated_at": "2026-07-03T02:19:11+00:00",
+  "updated_at": "2026-07-03T02:23:51+00:00",
   "version": 1
 }
