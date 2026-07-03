@@ -1440,6 +1440,18 @@
       "updated_at": "2026-07-02T02:44:04+00:00",
       "url": "https://sh.zu.ke.com/zufang/rs%E7%94%B3%E5%9F%8E%E4%BD%B3%E8%8B%91%E4%BA%8C%E6%9C%9FA%E5%9D%97/"
     },
+    "https://sh.zu.ke.com/zufang/rs%E9%87%91%E6%B5%B7%E5%8D%8E%E5%9F%8E%E7%A6%8F%E6%B0%91%E4%BD%B3%E8%8B%91/": {
+      "area_m2": "75.0",
+      "community": "金海华城福民佳苑",
+      "layout": "2室1厅",
+      "platform": "贝壳",
+      "pref": "dislike",
+      "rank": 99,
+      "rent": 3500,
+      "title": "金海华城福民佳苑 2室1厅",
+      "updated_at": "2026-07-03T02:58:01+00:00",
+      "url": "https://sh.zu.ke.com/zufang/rs%E9%87%91%E6%B5%B7%E5%8D%8E%E5%9F%8E%E7%A6%8F%E6%B0%91%E4%BD%B3%E8%8B%91/"
+    },
     "https://sh.zu.ke.com/zufang/rs%E9%98%B3%E5%85%89%E8%8A%B1%E5%9F%8E/": {
       "area_m2": "30.0",
       "community": "阳光花城",
@@ -1465,6 +1477,6 @@
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
     }
   },
-  "updated_at": "2026-07-03T02:57:28+00:00",
+  "updated_at": "2026-07-03T02:58:01+00:00",
   "version": 1
 }
