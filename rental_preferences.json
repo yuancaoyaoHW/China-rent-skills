@@ -1559,22 +1559,8 @@
       "title": "香楠小区 2室1厅",
       "updated_at": "2026-07-03T02:19:11+00:00",
       "url": "https://sh.zu.ke.com/zufang/rs%E9%A6%99%E6%A5%A0%E5%B0%8F%E5%8C%BA/"
-    },
-    "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544": {
-      "platform": "Wellcee",
-      "title": "阳光花城-168号楼 1室1卫",
-      "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544",
-      "rent": 2900,
-      "rent_int": 2900,
-      "area_m2": 40.0,
-      "layout": "1室1卫",
-      "community": "阳光花城-168号楼",
-      "district": "Pudong",
-      "pref": "like",
-      "rank": 0,
-      "updated_at": "2026-07-03T11:30:00+00:00"
     }
   },
-  "updated_at": "2026-07-03T11:30:00+00:00",
+  "updated_at": "2026-07-03T06:11:55+00:00",
   "version": 1
 }
