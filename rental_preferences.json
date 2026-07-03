@@ -1598,6 +1598,18 @@
       "updated_at": "2026-07-03T12:00:00+00:00",
       "url": "https://www.douban.com/group/topic/492656726/"
     },
+    "https://www.douban.com/group/topic/492657287/": {
+      "area_m2": 0,
+      "community": "鑫丰苑",
+      "layout": "2室(次卧)",
+      "platform": "豆瓣",
+      "pref": "dislike",
+      "rank": 121,
+      "rent": 2500,
+      "title": "2号线世纪公园站鑫丰苑原始两房出次南2500",
+      "updated_at": "2026-07-03T09:12:22+00:00",
+      "url": "https://www.douban.com/group/topic/492657287/"
+    },
     "https://www.douban.com/group/topic/492664789/": {
       "area_m2": null,
       "community": "东城新村(锦安东路419弄)",
@@ -1683,6 +1695,6 @@
       "url": "https://www.wellcee.com/en/rent-apartment/shanghai/1675594869048544"
     }
   },
-  "updated_at": "2026-07-03T08:25:37+00:00",
+  "updated_at": "2026-07-03T09:12:22+00:00",
   "version": 1
 }
